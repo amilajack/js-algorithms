@@ -4,57 +4,49 @@
 //
 // For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.
 
-(function() {
+let canWinNim = function(n) {
 
-  const assertEquals = (number, numberToEqual) =>
-    console.log(number === numberToEqual)
+    let beadsCount = n
+    let turnCount = 0
 
-  const setCurrent = (currentPlayer) => {
-    this.player = currentPlayer
-  }
+    /**
+     * Determine who's the current user
+     * If even, user is oponent
+     */
+    let playerIsOponent = (turnCount) => turnCount / 2 % 1 === 0
 
-  // Determine who's the current user
-  // If even, user is oponent
-  let playerIsOponent = (turnCount) => turnCount / 2 % 1 === 0
+    /**
+     * Subtract optimal amount of
+     */
+    let subtractOptimalAmount = (itemAmount, turnCount) => {
 
-  let subtractOptimalAmount = function(itemAmount, turnCount) {
+        if (itemAmount >= 3) {
+          return itemAmount = itemAmount - 3
+        }
 
-    if (itemAmount >= 3) {
-      return itemAmount = itemAmount - 3
+        if (itemAmount === 2) {
+          return itemAmount = itemAmount - 2
+        }
+
+        if (itemAmount === 1) {
+          return itemAmount = itemAmount - 1
+        }
     }
 
-    if (itemAmount === 2) {
-      return itemAmount = itemAmount - 2
+    while (beadsCount > 0) {
+
+        turnCount = turnCount + 1
+        beadsCount = subtractOptimalAmount(beadsCount, turnCount)
+
+        if (beadsCount === 0)
+
+            if (playerIsOponent(turnCount))
+                return false;
+
+            else
+                return true;
     }
+}
 
-    if (itemAmount === 1) {
-      return itemAmount = itemAmount - 1
-    }
-  }
 
-  let beadsCount = 10
-  let turnCount = 0
-
-  while (beadsCount > 0) {
-
-    turnCount = turnCount + 1
-    beadsCount = subtractOptimalAmount(beadsCount, turnCount)
-
-    if (!playerIsOponent(turnCount)) {
-      console.log(`your beads: ${beadsCount}`)
-    }
-    else {
-      console.log(`opponent beads: ${beadsCount}`)
-    }
-
-    if (beadsCount === 0) {
-
-      if (playerIsOponent(turnCount)) {
-        throw Error('LOST!')
-      }
-      else {
-        throw Error('You won!')
-      }
-    }
-  }
-})()
+canWinNim(10);
