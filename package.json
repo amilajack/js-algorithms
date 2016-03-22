@@ -1,7 +1,7 @@
 {
   "name": "algorithims",
   "version": "1.0.0",
-  "description": "",
+  "description": "Repo of algos",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/amilajack/algorithims.git"
   },
-  "author": "",
+  "author": "Amila Welihinda",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amilajack/algorithims/issues"
