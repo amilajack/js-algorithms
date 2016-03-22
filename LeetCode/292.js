@@ -4,6 +4,8 @@
 //
 // For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.
 
+import assert from 'assert';
+
 let canWinNim = function(n) {
 
     let beadsCount = n
@@ -45,5 +47,5 @@ let canWinNim = function(n) {
     }
 }
 
-
-canWinNim(10);
+assert(canWinNim(10) === false);
+assert(canWinNim(1) === true);
