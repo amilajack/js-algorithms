@@ -16,44 +16,45 @@ import assert from 'assert';
 
 let canWinNim = function(n) {
 
-    let beadsCount = n
-    let turnCount = 0
+  let beadsCount = n
+  let turnCount = 0
 
-    /**
-     * Determine who's the current user
-     * If even, user is oponent
-     */
-    let playerIsOponent = (turnCount) => turnCount / 2 % 1 === 0
+  /**
+   * Determine who's the current user
+   * If even, user is oponent
+   */
+  let playerIsOponent = (turnCount) => turnCount / 2 % 1 === 0
 
-    /**
-     * Subtract optimal amount of
-     */
-    let subtractOptimalAmount = (itemAmount, turnCount) => {
+  /**
+   * Subtract optimal amount of
+   */
+  let subtractOptimalAmount = (itemAmount, turnCount) => {
 
-        if (itemAmount >= 3)
-          return itemAmount = itemAmount - 3
+    if (itemAmount >= 3)
+      return itemAmount = itemAmount - 3
 
-        if (itemAmount === 2)
-          return itemAmount = itemAmount - 2
+    if (itemAmount === 2)
+      return itemAmount = itemAmount - 2
 
-        if (itemAmount === 1)
-          return itemAmount = itemAmount - 1
-    }
+    if (itemAmount === 1)
+      return itemAmount = itemAmount - 1
+  }
 
-    while (beadsCount > 0) {
+  while (beadsCount > 0) {
 
-        turnCount = turnCount + 1
-        beadsCount = subtractOptimalAmount(beadsCount, turnCount)
+    turnCount = turnCount + 1
+    beadsCount = subtractOptimalAmount(beadsCount, turnCount)
 
-        if (beadsCount === 0)
+    if (beadsCount === 0)
 
-            if (playerIsOponent(turnCount))
-                return false;
+      if (playerIsOponent(turnCount))
+        return false;
 
-            else
-                return true;
-    }
+      else
+        return true;
+  }
 }
 
+// Assertions
 assert(canWinNim(10) === false);
 assert(canWinNim(1) === true);

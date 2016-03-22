@@ -26,7 +26,7 @@
     "while",
     "catch"
   ],
-  "requireSemicolons": false,
+  "disallowSemicolons": false,
   "disallowSpacesInsideParentheses": true,
   "disallowTrailingComma": true,
   "disallowTrailingWhitespace": true,
