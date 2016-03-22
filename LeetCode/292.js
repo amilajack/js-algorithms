@@ -20,17 +20,14 @@ let canWinNim = function(n) {
      */
     let subtractOptimalAmount = (itemAmount, turnCount) => {
 
-        if (itemAmount >= 3) {
+        if (itemAmount >= 3)
           return itemAmount = itemAmount - 3
-        }
 
-        if (itemAmount === 2) {
+        if (itemAmount === 2)
           return itemAmount = itemAmount - 2
-        }
 
-        if (itemAmount === 1) {
+        if (itemAmount === 1)
           return itemAmount = itemAmount - 1
-        }
     }
 
     while (beadsCount > 0) {
