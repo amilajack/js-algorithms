@@ -5,7 +5,8 @@ import babel from 'gulp-babel'
 const scripts = [
   'LeetCode/*',
   'Math/*',
-  'Reverse/*'
+  'Reverse/*',
+  'DataStructures/*'
 ]
 const distPath = './dist'
 

@@ -7,15 +7,18 @@
 import assert from 'assert'
 
 const ArrayDataStructure = function() {
-  this.array = []
+  this.items = []
 }
 
 /**
  * Insert
  * @desc Complexity: O(1)
  */
-ArrayDataStructure.prototype.insert = function (insertionItem) {
-  this.array.push(insertionItem)
+ArrayDataStructure.prototype.insert = function(...insertionItem) {
+  insertionItem.forEach(item => {
+    this.items.push(item)
+  })
+  return this
 }
 
 /**
@@ -24,9 +27,11 @@ ArrayDataStructure.prototype.insert = function (insertionItem) {
  * @return {string} item
  */
 ArrayDataStructure.prototype.search = function(searchItem) {
-  this.array.forEach(item => {
-    if (searchItem === item) return item
-  })
+  for (let item of this.items) {
+    if (searchItem === item) {
+      return item
+    }
+  }
 }
 
 /**
@@ -34,14 +39,25 @@ ArrayDataStructure.prototype.search = function(searchItem) {
  * @desc Complexity: O(n)
  */
 ArrayDataStructure.prototype.delete = function(deleteItem) {
-  this.array.forEach(item => {
-    if (deleteItem === item)
-      let itemIndex = this.array.indexOf(item)
-      this.array.splice(itemIndex, itemIndex + 1)
-  })
+  const item = this.search(deleteItem)
+  if (item) {
+    this.items.splice(this.items.indexOf(item), 1)
+  }
+  return this
 }
 
+// Assert insert
+const testingInsertArray = new ArrayDataStructure()
+testingInsertArray.insert(10, 20, 30)
+assert.deepEqual(testingInsertArray.items, [10, 20, 30])
 
-// Assertions
-const testingArray = new ArrayDataStructure()
-assert(testingArray === )
+// Assert search
+const testingSearchArray = new ArrayDataStructure()
+testingSearchArray.insert(10, 20, 30)
+assert.equal(testingSearchArray.search(20), 20)
+
+// Assert delete
+const testingDeleteArray = new ArrayDataStructure()
+testingDeleteArray.insert(10, 20, 30)
+testingDeleteArray.delete(30)
+assert.deepEqual(testingDeleteArray.items, [10, 20])
