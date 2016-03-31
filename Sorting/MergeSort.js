@@ -1,15 +1,34 @@
 /**
  * Merge sport
  *
- * Objective: Divide and conquer
+ * Objective: Sort small array and merge them
  *
- * 
+ *
  */
 
 import assert from 'assert'
 
-function MergeSort() {
-  this.items = []
+/**
+ *
+ */
+function divide(array) {
+
+}
+
+/**
+ * Merge
+ * @param  {array} arrays
+ * @return {array}
+ */
+function merge(...arrays) {
+
+  let mergedArray = []
+
+  for (let array of arrays) {
+
+  }
+
+  return mergedArray
 }
 
 /**
