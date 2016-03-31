@@ -8,10 +8,11 @@
 2. Install npm dependencies
  * `cd projectDirectoryHere && npm i`
 3. Run gulp
- * If **development** or **contribution**, `gulp watch` to comile and watch changes
+ * If **development** or **contribution**, `gulp watch` to compile and watch changes
  * Else, `gulp` to compile
 
 ## Todo
+- [ ] Add gulp `benchmark` task for sorting algorithms
 - [ ] Shortest Path
 - [ ] Merge Sort
 - [ ] Quick Sort

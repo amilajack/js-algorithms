@@ -69,17 +69,29 @@ HashMap.prototype.access = function(key) {
 
 /**
  * Delete
- * @desc   Complexity: O(n)
+ * @desc   Complexity: O(1)
  * @param  {string} item
  * @return this
  */
 HashMap.prototype.delete = function(key) {
 
+  let generatedHashCode = generateHashCode(key, this.mapLength)
+
+  this.items.splice([generatedHashCode], 1)
+
+  return this
 }
 
 
 // Assert insert
 const testingInsertHashMap = new HashMap()
 testingInsertHashMap.insert('some_random_key', 'some')
-let generatedHashCode = generateHashCode('some_random_key', testingInsertHashMap.mapLength)
-assert.equal(testingInsertHashMap.items[generatedHashCode], 'some')
+let generatedHashCodeInsert = generateHashCode('some_random_key', testingInsertHashMap.mapLength)
+assert.equal(testingInsertHashMap.items[generatedHashCodeInsert], 'some')
+
+// Assert delete
+const testingDeleteHashMap = new HashMap()
+testingDeleteHashMap.insert('some_random_key', 'some')
+testingDeleteHashMap.delete('some_random_key')
+let generatedHashCodeDelete = generateHashCode('some_random_key', testingDeleteHashMap.mapLength)
+assert.equal(testingDeleteHashMap.items[generatedHashCodeDelete], undefined)
