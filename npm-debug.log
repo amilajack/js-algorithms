@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/amila/.nvm/versions/node/v5.9.1/bin/node',
+1 verbose cli   '/Users/amila/.nvm/versions/node/v5.9.1/bin/npm',
+1 verbose cli   'adduser' ]
+2 info using npm@3.8.3
+3 info using node@v5.9.1
+4 verbose stack Error: canceled
+4 verbose stack     at Interface.<anonymous> (/Users/amila/.nvm/versions/node/v5.9.1/lib/node_modules/npm/node_modules/read/lib/read.js:66:13)
+4 verbose stack     at emitNone (events.js:80:13)
+4 verbose stack     at Interface.emit (events.js:179:7)
+4 verbose stack     at Interface._ttyWrite (readline.js:691:16)
+4 verbose stack     at ReadStream.onkeypress (readline.js:106:10)
+4 verbose stack     at emitTwo (events.js:100:13)
+4 verbose stack     at ReadStream.emit (events.js:185:7)
+4 verbose stack     at emitKeys (readline.js:1251:14)
+4 verbose stack     at next (native)
+4 verbose stack     at ReadStream.onData (readline.js:919:36)
+5 verbose cwd /Users/amila/Documents/Projects/algorithims
+6 error Darwin 15.4.0
+7 error argv "/Users/amila/.nvm/versions/node/v5.9.1/bin/node" "/Users/amila/.nvm/versions/node/v5.9.1/bin/npm" "adduser"
+8 error node v5.9.1
+9 error npm  v3.8.3
+10 error canceled
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

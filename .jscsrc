@@ -21,11 +21,6 @@
     "beforeOpeningRoundBrace": true
   },
   "disallowSpacesInsideArrayBrackets": true,
-  "requireSpaceBeforeKeywords": [
-    "else",
-    "while",
-    "catch"
-  ],
   "disallowSemicolons": true,
   "disallowSpacesInsideParentheses": true,
   "disallowTrailingComma": true,

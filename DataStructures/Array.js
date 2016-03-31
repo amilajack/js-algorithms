@@ -46,18 +46,19 @@ ArrayDataStructure.prototype.delete = function(deleteItem) {
   return this
 }
 
+
 // Assert insert
-const testingInsertArray = new ArrayDataStructure()
+let testingInsertArray = new ArrayDataStructure()
 testingInsertArray.insert(10, 20, 30)
 assert.deepEqual(testingInsertArray.items, [10, 20, 30])
 
 // Assert search
-const testingSearchArray = new ArrayDataStructure()
+let testingSearchArray = new ArrayDataStructure()
 testingSearchArray.insert(10, 20, 30)
 assert.equal(testingSearchArray.search(20), 20)
 
 // Assert delete
-const testingDeleteArray = new ArrayDataStructure()
+let testingDeleteArray = new ArrayDataStructure()
 testingDeleteArray.insert(10, 20, 30)
 testingDeleteArray.delete(30)
 assert.deepEqual(testingDeleteArray.items, [10, 20])
