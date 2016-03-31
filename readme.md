@@ -8,10 +8,21 @@
 2. Install npm dependencies
  * `cd projectDirectoryHere && npm i`
 3. Run gulp
- * For **development** or **contribution**, `gulp watch`
- * Else, `gulp`
+ * If **development** or **contribution**, `gulp watch` to comile and watch changes
+ * Else, `gulp` to compile
 
-## Contributing:
+## Todo
+- [ ] Shortest Path
+- [ ] Merge Sort
+- [ ] Quick Sort
+- [ ] Shell Sort
+- [ ] Heap Sort
+- [ ] Bucket Sort
+- [ ] Radix Sort
+- [ ] Bubble Sort
+- [ ] Selection Sort
+
+## Contributing
 
 * Requirements:
  * Time-space complexities of each method (insert, delete, access, etc)
