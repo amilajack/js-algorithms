@@ -19,3 +19,5 @@ assert.isBeween = function(number, min, max) {
   return number > min && number < max
 }
 assert.isBeween(Math.randomBetween(1, 10), 1, 10)
+
+export default Math.randomBetween

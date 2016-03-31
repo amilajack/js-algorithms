@@ -6,6 +6,7 @@ const scripts = [
   'LeetCode/*',
   'Math/*',
   'Reverse/*',
+  'Strings/*',
   'DataStructures/*'
 ]
 const distPath = './dist'
