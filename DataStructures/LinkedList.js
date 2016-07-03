@@ -1,0 +1,37 @@
+import assert from 'assert'
+
+function LinkedList() {
+  this.links = []
+}
+
+LinkedList.prototype = {
+
+  /**
+   * @desc   Complexity: O(1)
+   * @param  {string} item
+   * @return this
+   */
+  insert: function(item) {
+
+  },
+
+  /**
+   * Insert
+   * @desc   Complexity: O(1)
+   * @param  {string} item
+   * @return this
+   */
+  get: function() {
+
+  },
+
+  /**
+   * Insert
+   * @desc   Complexity: O(1)
+   * @param  {string} item
+   * @return this
+   */
+  delete: function() {
+
+  }
+}
