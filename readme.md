@@ -12,6 +12,7 @@
  * Otherwise, `gulp` to compile
 
 ## Todo
+- [ ] String permutations
 - [ ] Add gulp `benchmark` task for sorting algorithms
 - [ ] Shortest Path
 - [ ] Merge Sort
