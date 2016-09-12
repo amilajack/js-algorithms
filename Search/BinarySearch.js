@@ -6,8 +6,6 @@ function BinarySearch(items, element) {
     return items[0];
   }
 
-  console.log(items[middleIndex], element);
-
   if (items[middleIndex] <= element) {
     return BinarySearch(items.splice(middleIndex, items.length - 1), element);
   }
