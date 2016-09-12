@@ -11,23 +11,28 @@
  */
 function UniqueCharacter(string) {
   const map = {};
-  let allCharsUnique = true;
+  let stringHasUniqueChar = false;
 
   for (let i = 0; i < string.length; i++) {
     const char = string[i];
 
-    // Lookup is O(n)
-    if (map[char]) {
-      allCharsUnique = false;
-      return true;
+    // If map has no elements, add initial
+    // Base case
+    if (i === 0) {
+      // Insertion is O(n)
+      map[char] = char;
     }
-
-    // Insertion is O(n)
-    map[char] = char;
+    else {
+      // Lookup is O(n)
+      if (map[char] !== char) {
+        stringHasUniqueChar = true;
+        return true;
+      }
+    }
   }
 
-  return allCharsUnique;
+  return stringHasUniqueChar;
 }
 
-console.log(UniqueCharacter('aaaaaaaaaaaaaa') === true);
-console.log(UniqueCharacter('aaaaaaaabaaaaa') === false);
+console.log(UniqueCharacter('aaaaaaaaaaaaaa') === false);
+console.log(UniqueCharacter('aaaaaaaabaaaaa') === true);
