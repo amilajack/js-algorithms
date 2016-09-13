@@ -27,5 +27,8 @@
     "gulp-babel": "^6.1.2",
     "gulp-jscs": "^3.0.2",
     "gulp-newer": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
   }
 }
