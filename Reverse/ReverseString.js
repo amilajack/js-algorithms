@@ -1,10 +1,10 @@
 /**
  * A short example showing how to reverse a string
  */
+const assert = require('assert')
 
-import assert from 'assert'
 
-function reverseString(string) {
+function SlowReverseString(string) {
 
   let
     reversedString = '',
@@ -18,5 +18,5 @@ function reverseString(string) {
 }
 
 
-// Assert reverseString
-assert.equal(reverseString('some'), 'emos')
+// Assert SlowReverseString
+assert.equal(SlowReverseString('some'), 'emos')

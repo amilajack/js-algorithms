@@ -27,6 +27,6 @@ function Flatten(twoDimentionalArray, collector = []) {
 
 expect(
   Flatten([[1, 3, 4, 5], [13, 15, 41, 54,]])
-    .sort((a, b) => (a < b))
+    .sort((a, b) => (a < b ? )
 )
   .to.eql([1, 3, 4, 5, 13, 15, 41, 54])

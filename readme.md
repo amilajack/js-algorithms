@@ -1,3 +1,7 @@
+## JS Algos
+============
+A list of Computer Science concepts **solved** and **explained** in Javascript
+
 ## Getting started
 
 ```bash
@@ -6,17 +10,17 @@ npm test
 ```
 
 ## Planned Implementations
-- [ ] String permutations
-- [ ] Add gulp `benchmark` task for sorting algorithms
-- [ ] Shortest Path
-- [ ] Merge Sort
-- [ ] Quick Sort
-- [ ] Shell Sort
-- [ ] Heap Sort
-- [ ] Bucket Sort
-- [ ] Radix Sort
-- [ ] Bubble Sort
-- [ ] Selection Sort
+- [ ] Data Structures
+- [ ] Recursion
+- [ ] Challenge Questions
+- [ ] Time and Space Complexity/Runtime
+- [ ] Search Algorithms
+- [ ] Sorting Algorithms
+- [ ] Bitwise Operations
+
+## Planned Changes
+- [ ] Migrate to mocha tests
+- [ ] Add Travis support
 
 ## Contributing
 

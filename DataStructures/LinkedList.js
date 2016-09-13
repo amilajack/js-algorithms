@@ -11,7 +11,7 @@ LinkedList.prototype = {
    * @param  {string} item
    * @return this
    */
-  insert: function(item) {
+  insert(item) {
 
   },
 
@@ -21,7 +21,7 @@ LinkedList.prototype = {
    * @param  {string} item
    * @return this
    */
-  get: function() {
+  get() {
 
   },
 
@@ -31,7 +31,7 @@ LinkedList.prototype = {
    * @param  {string} item
    * @return this
    */
-  delete: function() {
+  delete() {
 
   }
 }
