@@ -12,12 +12,14 @@ const expect = require('chai').expect
 
 function Set() {
   this.items = []
-  this.itemsLength = 0
-  this.setLength = 50
+  // this.itemsLength = 0
 }
 
 Set.prototype = {
+
   /**
+   * Complexity: O(2n)
+   *
    * The runtime cost of this is O(2n) because we need to compute
    * the hash and lookup the element. Each of these operations is O(1)
    */
@@ -28,6 +30,8 @@ Set.prototype = {
   },
 
   /**
+   * Complexity: O(2n) / n/a
+   *
    * Accessing values in a Set is O(2n) because we only need
    * to compute the hash
    */
@@ -36,15 +40,20 @@ Set.prototype = {
   },
 
   /**
-   * Accessing values in a Set is O(1)
+   * Complexity: O(2n) / n/a
    */
-  remove() {
+  remove(value) {
     this.items[Hash(value)] = undefined
-    this.itemsLength--
+    // Updating the itemsLength would increase insertion complexity to O(3n)
+    // this.itemsLength--
   },
 
   /**
+   * Complexity: O(n)
    *
+   * This complexity is a bit weird in Javascript. The array needs to be filtered
+   * to remove null values, which are added when creating an array with a fixed
+   * length (ex. array[42] = 'some')
    */
   all() {
     return this.items.filter(i => !!i)
@@ -58,3 +67,5 @@ Set_1.add('some')
 expect(Set_1.all()).to.eql(['some']);
 Set_1.add('who')
 expect(Set_1.all()).to.eql(['some', 'who']);
+Set_1.remove('who')
+expect(Set_1.all()).to.eql(['some']);
