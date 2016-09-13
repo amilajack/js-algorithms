@@ -35,10 +35,9 @@ function UniqueCharacters(string) {
         stringHasUniqueChar = false;
         return false;
       }
-      else {
-        // Insertion is O(n)
-        map[char] = char;
-      }
+
+      // Insertion is O(n)
+      map[char] = char;
     }
   }
 

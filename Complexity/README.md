@@ -7,6 +7,7 @@
 
 # Examples of O(n)
 * Iterating over elements in an array
+* `.find()`, `.map()`, `.filter()`
 * `===`, iterates over each char to check equality
 
 # Examples of O(n^2)
