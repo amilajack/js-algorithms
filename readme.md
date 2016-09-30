@@ -1,8 +1,11 @@
-## JS Algos
+JS Algos
 ============
 A list of Computer Science concepts **solved** and **explained** in Javascript
 
 ## Getting started
+
+## Requirements:
+* Latest version of node and npm
 
 ```bash
 npm install
