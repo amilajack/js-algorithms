@@ -5,7 +5,7 @@ A list of Computer Science concepts **solved** and **explained** in Javascript
 ## Getting started
 
 ## Requirements:
-* Latest version of node and npm
+* **Latest version of node and npm**
 
 ```bash
 npm install
@@ -23,6 +23,7 @@ npm test
 
 ## Planned Changes
 - [ ] Migrate to mocha tests
+- [ ] Move tests to separate modules
 - [ ] Add Travis support
 
 ## Contributing
