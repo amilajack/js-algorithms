@@ -29,6 +29,7 @@
     "gulp-newer": "^1.1.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "eslint-plugin-flowtype-errors": "^1.2.3"
   }
 }

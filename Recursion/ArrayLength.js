@@ -1,5 +1,6 @@
 /**
  * Recursively find the length of an array
+ * @flow
  */
 
 export default function getLength(array) {

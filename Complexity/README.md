@@ -13,3 +13,4 @@
 # Examples of O(n^2)
 * Nested `for` loop
 * Assigning new values inside a `for` loop
+* `===` inside a `for` loop: iterates over each char to check equality of each char

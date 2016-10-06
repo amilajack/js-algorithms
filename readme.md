@@ -14,7 +14,11 @@ npm test
 
 ## Planned Implementations
 - [ ] Data Structures
+- [ ] Programming Paradigms
 - [ ] Recursion
+- [ ] Interpreter
+- [ ] Compiler
+- [ ] AST
 - [ ] Challenge Questions
 - [ ] Time and Space Complexity/Runtime
 - [ ] Search Algorithms
