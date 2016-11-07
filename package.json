@@ -4,8 +4,8 @@
   "description": "Repo of algos",
   "main": "index.js",
   "scripts": {
-    "test": "",
-    "precommit": "npm run test-all"
+    "lint": "eslint --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
