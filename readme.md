@@ -2,11 +2,10 @@ JS Algos
 ============
 A list of Computer Science concepts **solved** and **explained** in Javascript
 
-## Getting started
-
 ## Requirements:
-* **Latest version of node and npm**
+* **node >= 6 and npm >= 3**
 
+# Getting Started
 ```bash
 npm install
 npm test
@@ -31,7 +30,6 @@ npm test
 - [ ] Add Travis support
 
 ## Contributing
-
 * Requirements:
  * Time-space complexities of each method (insert, delete, access, etc)
 * Please feel free to contribute any design patters, algorithms, or other kinds of code
