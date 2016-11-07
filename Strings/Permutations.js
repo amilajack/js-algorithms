@@ -12,6 +12,6 @@
  * Permutations can be calculate by using the formula:
  *
  */
-function Permutation() {
+export default function Permutation() {
 
 }

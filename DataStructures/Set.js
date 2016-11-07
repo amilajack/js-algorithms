@@ -6,12 +6,12 @@
  *
  * @TODO: Add support for object literals
  */
-const Hash = require('./_Hash');
-const expect = require('chai').expect;
+const Hash = require('./_Hash')
+import { expect } from 'chai'
 
 
 function Set() {
-  this.items = [];
+  this.items = []
   // this.itemsLength = 0
 }
 
@@ -24,7 +24,7 @@ Set.prototype = {
    * the hash and lookup the element. Each of these operations is O(1)
    */
   add(value) {
-    this.items[Hash(value)] = value;
+    this.items[Hash(value)] = value
     // Updating the itemsLength would increase insertion complexity to O(3n)
     // this.itemsLength++
   },
@@ -36,14 +36,14 @@ Set.prototype = {
    * to compute the hash
    */
   contains(value) {
-    return !!this.items[Hash(value)];
+    return !!this.items[Hash(value)]
   },
 
   /**
    * Complexity: O(2n) / n/a
    */
   remove(value) {
-    this.items[Hash(value)] = undefined;
+    this.items[Hash(value)] = undefined
     // Updating the itemsLength would increase insertion complexity to O(3n)
     // this.itemsLength--
   },
@@ -56,16 +56,16 @@ Set.prototype = {
    * length (ex. array[42] = 'some')
    */
   all() {
-    return this.items.filter(i => !!i);
+    return this.items.filter(i => !!i)
   }
-};
+}
 
 // Assert insert
-const Set_1 = new Set();
+const Set_1 = new Set()
 
-Set_1.add('some');
-expect(Set_1.all()).to.eql(['some']);
-Set_1.add('who');
-expect(Set_1.all()).to.eql(['some', 'who']);
-Set_1.remove('who');
-expect(Set_1.all()).to.eql(['some']);
+Set_1.add('some')
+expect(Set_1.all()).to.eql(['some'])
+Set_1.add('who')
+expect(Set_1.all()).to.eql(['some', 'who'])
+Set_1.remove('who')
+expect(Set_1.all()).to.eql(['some'])

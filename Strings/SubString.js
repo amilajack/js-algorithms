@@ -4,17 +4,17 @@
  *
  * Complexity: O(n^2), where n is the length of the substring (Math.abs(start - end))
  */
-const expect = require('chai').expect;
+import { expect } from 'chai'
 
 
 function SubString(string, start = 0, end = string.length) {
-  let substring = '';
+  let substring = ''
 
   for (let i = start; i < end + 1; i++) {
-    substring += string[i];
+    substring += string[i]
   }
 
-  return substring;
+  return substring
 }
 
-expect(SubString('some', 2, 3)).to.equal('me');
+expect(SubString('some', 2, 3)).to.equal('me')

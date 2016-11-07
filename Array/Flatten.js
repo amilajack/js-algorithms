@@ -7,7 +7,7 @@
  *
  * Complexity: O(n^2)
  */
-const expect = require('chai').expect
+import { expect } from 'chai'
 
 
 function Flatten(twoDimentionalArray, collector = []) {

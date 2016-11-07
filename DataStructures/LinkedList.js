@@ -1,7 +1,7 @@
-import assert from 'assert';
+import assert from 'assert'
 
 function LinkedList() {
-  this.links = [];
+  this.links = []
 }
 
 LinkedList.prototype = {
@@ -34,4 +34,4 @@ LinkedList.prototype = {
   delete() {
 
   }
-};
+}

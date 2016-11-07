@@ -4,11 +4,11 @@
  *
  * Permutation of 5 = 1 * 2 * 3 * 4 * 5
  */
-function Factorial(number, product = 1) {
+export default function Factorial(number: number, product: number = 1): number {
   switch (number) {
     case 1:
-      return product;
+      return product
     default:
-      return Factorial(number, (product - 1));
+      return Factorial(number, (product - 1))
   }
 }

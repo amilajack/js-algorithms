@@ -17,33 +17,33 @@
  *                     operations is O(n)
  */
 function UniqueCharacters(string) {
-  const map = {};
-  let stringHasUniqueChar = true;
+  const map = {}
+  let stringHasUniqueChar = true
 
   for (let i = 0; i < string.length; i++) {
-    const char = string[i];
+    const char = string[i]
 
     // If map has no elements, add initial
     // Base case
     if (i === 0) {
       // Insertion is O(n)
-      map[char] = char;
+      map[char] = char
     } else {
       // Lookup is O(n)
       if (map[char] === char) {
-        stringHasUniqueChar = false;
-        return false;
+        stringHasUniqueChar = false
+        return false
       }
 
       // Insertion is O(n)
-      map[char] = char;
+      map[char] = char
     }
   }
 
-  return stringHasUniqueChar;
+  return stringHasUniqueChar
 }
 
-console.log(UniqueCharacters('aaaaaaaaaaaaaa') === false);
-console.log(UniqueCharacters('aaaaaaaabaaaaa') === false);
-console.log(UniqueCharacters('abc') === true);
-console.log(UniqueCharacters('def') === true);
+console.log(UniqueCharacters('aaaaaaaaaaaaaa') === false)
+console.log(UniqueCharacters('aaaaaaaabaaaaa') === false)
+console.log(UniqueCharacters('abc') === true)
+console.log(UniqueCharacters('def') === true)

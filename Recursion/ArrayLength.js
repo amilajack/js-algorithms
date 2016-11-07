@@ -16,10 +16,10 @@
 export default function getLength(array: number[]): number {
   switch (Array.isArray(array)) {
     case true: {
-      const [first, ...rest] = array;
-      return 1 + getLength(rest);
+      const [first, ...rest] = array
+      return 1 + getLength(rest)
     }
     default:
-      return 0;
+      return 0
   }
 }

@@ -7,7 +7,7 @@
  *
  * @complexity: O(n(log(logn)))
  */
-const { expect } = require('chai')
+import { expect } from 'chai'
 
 function PrimeNumberGenerator(limit: number = 100): number[] {
   const primeNumbers = []

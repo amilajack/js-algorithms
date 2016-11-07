@@ -13,5 +13,5 @@
 // removed by your friend.
 
 const canWinNim = function (n) {
-  return n / 4 % 1 !== 0;
-};
+  return n / 4 % 1 !== 0
+}

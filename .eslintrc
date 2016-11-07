@@ -10,13 +10,13 @@
     "comma-dangle": ["error", "never"],
     "consistent-return": 2,
     "func-names": 2,
-    "fp/no-class": "error",             # TODO: In progress
-    "fp/no-delete": "error",
-    "fp/no-events": "error",
-    "fp/no-let": "error",
-    "fp/no-loops": "error",
-    "fp/no-mutating-assign": "error",
-    "flowtype-errors/show-errors": 1,
+    "flowtype-errors/show-errors": 2,
+    # "fp/no-class": "error",             # TODO: In progress
+    # "fp/no-delete": "error",
+    # "fp/no-events": "error",
+    # "fp/no-let": "error",
+    # "fp/no-loops": "error",
+    # "fp/no-mutating-assign": "error",
     # "fp/no-mutation": "error",          # TODO: In progress
     # "fp/no-nil": "error",               # TODO: In progress
     # "fp/no-proxy": "error",             # TODO: In progress
@@ -32,12 +32,13 @@
     "new-cap": 0,
     "no-implicit-coercion": "error",
     "no-mixed-operators": 0,
+    "no-plusplus": 0,
     "no-use-before-define": 0,
     "no-nested-ternary": 0,
     "no-underscore-dangle": 0,
     "no-console": 0,
     "no-var": "error",
-    "semi": 0,
+    "semi": ["error", "never"],
     "promise/param-names": 2,
     "promise/always-return": 2,
     "promise/catch-or-return": 2,

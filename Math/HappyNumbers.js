@@ -18,8 +18,8 @@
  * Question: Determine if a number is 'happy' or not
  */
 
-import assert from 'assert';
-import 'babel-polyfill';
+import assert from 'assert'
+import 'babel-polyfill'
 
 /**
  * Calculate if a number is happy or unhappy
@@ -27,43 +27,43 @@ import 'babel-polyfill';
  * @return boolean
  */
 export default function HappyNumberChecker(number: number): boolean {
-  const numbers = [];
-  let currentNumber = calc(number);
-  const infiniteLoopPreventionLimit = 0;
+  const numbers = []
+  let currentNumber = calc(number)
+  const infiniteLoopPreventionLimit = 0
 
   while (!numbers.includes(1) && infiniteLoopPreventionLimit < 1000) {
-    currentNumber = calc(currentNumber);
+    currentNumber = calc(currentNumber)
 
     if (numbers.includes(currentNumber)) {
-      return false;
+      return false
     }
 
-    numbers.push(currentNumber);
-    infiniteLoopPreventionLimit++;
+    numbers.push(currentNumber)
+    infiniteLoopPreventionLimit++
 
     if (currentNumber === 1) {
-      return true;
+      return true
     }
   }
 }
 
 function calc(number: number): number {
-  const castedNumber = number.toString();
+  const castedNumber = number.toString()
 
-  let index;
-  let sum = 0;
+  let index
+  let sum = 0
 
   for (index = 0; index < castedNumber.length; index++) {
-    const int = parseInt(castedNumber[index], 10);
-    const result = int * int;
+    const int = parseInt(castedNumber[index], 10)
+    const result = int * int
 
-    sum += result;
+    sum += result
   }
 
-  return sum;
+  return sum
 }
 
 // Assert calc
-assert(calc(36), 45);
-assert(HappyNumberChecker(7), true);
-assert(HappyNumberChecker(2), false);
+assert(calc(36), 45)
+assert(HappyNumberChecker(7), true)
+assert(HappyNumberChecker(2), false)

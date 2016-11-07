@@ -5,7 +5,8 @@
  * @complexity: O(n^2)
  * @flow
  */
-const { expect } = require('chai')
+import { expect } from 'chai'
+
 
 function SelectionSort(elements: number[]): number[] {
   const length = elements.length

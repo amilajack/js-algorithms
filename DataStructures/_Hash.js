@@ -4,7 +4,7 @@
  * @return number
  */
 function Hash(key, mapLength = 50) {
-  return key.hashCode() % mapLength;
+  return key.hashCode() % mapLength
 }
 
 /**
@@ -14,13 +14,13 @@ function Hash(key, mapLength = 50) {
 String.prototype.hashCode = function () {
   let
     hash = 5381,
-    index = this.length;
+    index = this.length
 
   while (index) {
-    hash = (hash * 33) ^ this.charCodeAt(--index);
+    hash = (hash * 33) ^ this.charCodeAt(--index)
   }
 
-  return hash >>> 0;
-};
+  return hash >>> 0
+}
 
-module.exports = Hash;
+module.exports = Hash
