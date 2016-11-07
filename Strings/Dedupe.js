@@ -4,7 +4,6 @@
  * Complexity: O(n^3)
  */
 function Dedupe(string, concatenatedString = '') {
-
   if (string.length === 0) {
     return '';
   }

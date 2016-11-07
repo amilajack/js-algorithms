@@ -28,8 +28,7 @@ function UniqueCharacters(string) {
     if (i === 0) {
       // Insertion is O(n)
       map[char] = char;
-    }
-    else {
+    } else {
       // Lookup is O(n)
       if (map[char] === char) {
         stringHasUniqueChar = false;

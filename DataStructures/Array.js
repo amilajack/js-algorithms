@@ -4,61 +4,61 @@
 // least one array index or key. The simplest type of data structure is a
 // linear array, also called one-dimensional array = Wikipedia
 
-import assert from 'assert'
+import assert from 'assert';
 
-const ArrayDataStructure = function() {
-  this.items = []
-}
+const ArrayDataStructure = function () {
+  this.items = [];
+};
 
 /**
  * Insert
  * @desc Complexity: O(1)
  */
-ArrayDataStructure.prototype.insert = function(...insertionItem) {
+ArrayDataStructure.prototype.insert = function (...insertionItem) {
   insertionItem.forEach(item => {
-    this.items.push(item)
-  })
-  return this
-}
+    this.items.push(item);
+  });
+  return this;
+};
 
 /**
  * Search
  * @desc   Complexity: O(n)
  * @return {string} item
  */
-ArrayDataStructure.prototype.search = function(searchItem) {
-  for (let item of this.items) {
+ArrayDataStructure.prototype.search = function (searchItem) {
+  for (const item of this.items) {
     if (searchItem === item) {
-      return item
+      return item;
     }
   }
-}
+};
 
 /**
  * Delete
  * @desc Complexity: O(n)
  */
-ArrayDataStructure.prototype.delete = function(deleteItem) {
-  const item = this.search(deleteItem)
+ArrayDataStructure.prototype.delete = function (deleteItem) {
+  const item = this.search(deleteItem);
   if (item) {
-    this.items.splice(this.items.indexOf(item), 1)
+    this.items.splice(this.items.indexOf(item), 1);
   }
-  return this
-}
+  return this;
+};
 
 
 // Assert insert
-let testingInsertArray = new ArrayDataStructure()
-testingInsertArray.insert(10, 20, 30)
-assert.deepEqual(testingInsertArray.items, [10, 20, 30])
+const testingInsertArray = new ArrayDataStructure();
+testingInsertArray.insert(10, 20, 30);
+assert.deepEqual(testingInsertArray.items, [10, 20, 30]);
 
 // Assert search
-let testingSearchArray = new ArrayDataStructure()
-testingSearchArray.insert(10, 20, 30)
-assert.equal(testingSearchArray.search(20), 20)
+const testingSearchArray = new ArrayDataStructure();
+testingSearchArray.insert(10, 20, 30);
+assert.equal(testingSearchArray.search(20), 20);
 
 // Assert delete
-let testingDeleteArray = new ArrayDataStructure()
-testingDeleteArray.insert(10, 20, 30)
-testingDeleteArray.delete(30)
-assert.deepEqual(testingDeleteArray.items, [10, 20])
+const testingDeleteArray = new ArrayDataStructure();
+testingDeleteArray.insert(10, 20, 30);
+testingDeleteArray.delete(30);
+assert.deepEqual(testingDeleteArray.items, [10, 20]);

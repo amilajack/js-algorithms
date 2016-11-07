@@ -4,5 +4,5 @@
 // you climb to the top?
 
 function permutation() {
-  
+
 }

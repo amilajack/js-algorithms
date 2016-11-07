@@ -2,7 +2,7 @@
  * A smal example that genrates a random string of letters and numbers
  */
 
-import randomNumber from './RandomNumber'
+import randomNumber from './RandomNumber';
 
 /**
  * Random string
@@ -10,20 +10,19 @@ import randomNumber from './RandomNumber'
  * @return string
  */
 function randomString(randomStringLength) {
-
   const
-    dictionary = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    dictionary = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
   let
     generatedRandomString = '',
-    index
+    index;
 
   for (index = 0; index < randomStringLength; index++) {
-    let randomDictionaryIndex = Math.floor(randomNumber(0, dictionary.length))
-    generatedRandomString += dictionary[randomDictionaryIndex]
+    const randomDictionaryIndex = Math.floor(randomNumber(0, dictionary.length));
+    generatedRandomString += dictionary[randomDictionaryIndex];
   }
 
-  return generatedRandomString
+  return generatedRandomString;
 }
 
-export default randomString
+export default randomString;

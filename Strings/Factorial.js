@@ -7,7 +7,7 @@
 function Factorial(number, product = 1) {
   switch (number) {
     case 1:
-      return product
+      return product;
     default:
       return Factorial(number, (product - 1));
   }

@@ -1,4 +1,19 @@
 {
-  "presets": ["es2015", "stage-0"],
-  "retainLines": true
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": 6.7
+      },
+      "loose": true
+    }],
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "transform-runtime"
+    "syntax-flow",
+    "tcomb",
+    "transform-flow-strip-types"
+  ]
 }

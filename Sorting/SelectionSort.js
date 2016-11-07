@@ -1,4 +1,10 @@
-// @flow
+/**
+ * For each element, check if there are any other elements smaller than it.
+ * If there are, swap those elements.
+ *
+ * @complexity: O(n^2)
+ * @flow
+ */
 const { expect } = require('chai')
 
 function SelectionSort(elements: number[]): number[] {
@@ -7,9 +13,9 @@ function SelectionSort(elements: number[]): number[] {
   for (let i = 0; i < length; i++) {
     let lowestIndex = i
 
-    for (let j = i + 1; j < length; j++) {
-      if (elements[j] < elements[lowestIndex]) {
-        lowestIndex = j
+    for (let k = i + 1; k < length; k++) {
+      if (elements[k] < elements[lowestIndex]) {
+        lowestIndex = k
       }
     }
 
@@ -21,7 +27,7 @@ function SelectionSort(elements: number[]): number[] {
   return elements
 }
 
-function swap(items, firstIndex, secondIndex){
+function swap(items: number[], firstIndex: number, secondIndex: number) {
   const temp = items[firstIndex]
   items[firstIndex] = items[secondIndex]
   items[secondIndex] = temp

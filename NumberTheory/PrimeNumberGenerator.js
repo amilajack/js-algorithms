@@ -9,7 +9,7 @@
  */
 const { expect } = require('chai')
 
-function PrimeNumberGenerator(limit = 100) {
+function PrimeNumberGenerator(limit = 100): number[] {
   const primeNumbers = []
 
   for (let i = 1; i <= limit; i++) {

@@ -6,7 +6,7 @@
  *
  */
 
-import assert from 'assert'
+import assert from 'assert';
 
 /**
  *
@@ -21,20 +21,19 @@ function divide(array) {
  * @return {array}
  */
 function merge(...arrays) {
+  const mergedArray = [];
 
-  let mergedArray = []
-
-  for (let array of arrays) {
+  for (const array of arrays) {
 
   }
 
-  return mergedArray
+  return mergedArray;
 }
 
 /**
  * Sort
  * @desc Complexity: O(n)
  */
-MergeSort.prototype.sort = function() {
+MergeSort.prototype.sort = function () {
 
-}
+};

@@ -1,22 +1,20 @@
 /**
  * A short example showing how to reverse a string
  */
-const assert = require('assert')
+import assert from 'assert';
 
 
 function SlowReverseString(string) {
-
-  let
-    reversedString = '',
-    index
+  let reversedString = '',
+  let index;
 
   for (index = string.length - 1; index >= 0; index--) {
-    reversedString += string[index]
+    reversedString += string[index];
   }
 
-  return reversedString
+  return reversedString;
 }
 
 
 // Assert SlowReverseString
-assert.equal(SlowReverseString('some'), 'emos')
+assert.equal(SlowReverseString('some'), 'emos');
