@@ -16,7 +16,10 @@
  *                     string will need to be iterated over. Each of those
  *                     operations is O(n)
  */
-function UniqueCharacters(string) {
+import { expect } from 'chai'
+
+
+function UniqueCharacters(string: string): boolean {
   const map = {}
   let stringHasUniqueChar = true
 
@@ -43,7 +46,7 @@ function UniqueCharacters(string) {
   return stringHasUniqueChar
 }
 
-console.log(UniqueCharacters('aaaaaaaaaaaaaa') === false)
-console.log(UniqueCharacters('aaaaaaaabaaaaa') === false)
-console.log(UniqueCharacters('abc') === true)
-console.log(UniqueCharacters('def') === true)
+expect(UniqueCharacters('aaaaaaaaaaaaaa')).to.equal(false)
+expect(UniqueCharacters('aaaaaaaabaaaaa')).to.equal(false)
+expect(UniqueCharacters('abc')).to.equal(true)
+expect(UniqueCharacters('def')).to.equal(true)

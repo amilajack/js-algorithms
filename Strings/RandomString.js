@@ -1,14 +1,16 @@
 /**
  * A smal example that genrates a random string of letters and numbers
+ * @flow
  */
 
+import { expect } from 'chai'
 import randomNumber from '../Math/RandomNumber'
 
 
 /**
  * Generate a random string
  */
-export default function randomString(randomStringLength: number): string {
+export default function RandomString(randomStringLength: number): string {
   const dictionary =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
@@ -22,3 +24,5 @@ export default function randomString(randomStringLength: number): string {
 
   return generatedRandomString
 }
+
+expect(RandomString(10)).to.not.equal(RandomString(10))

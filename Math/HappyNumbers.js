@@ -17,9 +17,9 @@
  *
  * Question: Determine if a number is 'happy' or not
  */
-
 import assert from 'assert'
 import 'babel-polyfill'
+
 
 /**
  * Calculate if a number is happy or unhappy
@@ -29,7 +29,7 @@ import 'babel-polyfill'
 export default function HappyNumberChecker(number: number): boolean {
   const numbers = []
   let currentNumber = calc(number)
-  const infiniteLoopPreventionLimit = 0
+  let infiniteLoopPreventionLimit = 0
 
   while (!numbers.includes(1) && infiniteLoopPreventionLimit < 1000) {
     currentNumber = calc(currentNumber)

@@ -1,4 +1,11 @@
-function BinarySearch(items, element) {
+/**
+ * @flow
+ * @TODO
+ */
+import { expect } from 'chai'
+
+
+function BinarySearch(items: number[], element: ?number): number {
   const middleIndex = Math.floor(items.length / 2)
 
   // Base Case
@@ -13,5 +20,5 @@ function BinarySearch(items, element) {
   return BinarySearch(items.splice(0, middleIndex), element)
 }
 
-console.log(BinarySearch([1, 3, 5, 13, 25, 50], 25) === 25)
-console.log(BinarySearch([1, 13, 35, 713, 3525, 26650], 26650) === 26650)
+expect(BinarySearch([1, 3, 5, 13, 25, 50], 25)).to.equal(25)
+expect(BinarySearch([1, 13, 35, 713, 3525, 26650], 26650)).to.equal(26650)

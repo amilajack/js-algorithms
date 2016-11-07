@@ -10,14 +10,13 @@ import assert from 'assert'
  * @param  {number}  max
  * @return {integer}
  */
-Math.randomBetween = function (min, max) {
+export default function RandomBetween(min: number, max: number): boolean {
   return Math.random() * (max - min)
 }
 
 // Assert randomBetween
-assert.isBeween = function (number, min, max) {
+export function isBeween(number: number, min: number, max: number): boolean {
   return number > min && number < max
 }
-assert.isBeween(Math.randomBetween(1, 10), 1, 10)
 
-export default Math.randomBetween
+assert.isBeween(Math.randomBetween(1, 10), 1, 10)

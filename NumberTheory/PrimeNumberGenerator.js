@@ -6,6 +6,7 @@
  * by 'a'
  *
  * @complexity: O(n(log(logn)))
+ * @flow
  */
 import { expect } from 'chai'
 

@@ -2,6 +2,7 @@
  * Remove all the duplicates in a string
  *
  * Complexity: O(n^3)
+ * @flow
  */
 import { expect } from 'chai'
 

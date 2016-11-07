@@ -11,6 +11,8 @@
  *
  * Permutations can be calculate by using the formula:
  *
+ * @flow
+ * @TODO
  */
 export default function Permutation() {
 

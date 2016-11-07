@@ -1,20 +1,21 @@
 /**
  * A short example showing how to reverse a string
+ * @flow
  */
-import assert from 'assert';
+import { expect } from 'chai'
 
 
-function SlowReverseString(string) {
-  let reversedString = '',
-  let index;
+function SlowReverseString(string: string): string {
+  let reversedString = ''
+  let index
 
   for (index = string.length - 1; index >= 0; index--) {
-    reversedString += string[index];
+    reversedString += string[index]
   }
 
-  return reversedString;
+  return reversedString
 }
 
 
 // Assert SlowReverseString
-assert.equal(SlowReverseString('some'), 'emos');
+expect(SlowReverseString('some')).to.equal('emos')
