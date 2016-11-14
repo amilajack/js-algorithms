@@ -3,7 +3,7 @@ JS Algos
 A list of Computer Science concepts **solved** and **explained** in Javascript
 
 [![Build Status](https://travis-ci.org/amilajack/js-algorithms.svg?branch=master)](https://travis-ci.org/amilajack/js-algorithms)
-[![Dependency Status](https://img.shields.io/david/amilajack/js-algorithms.svg)](https://david-dm.org/amilajack/js-algorithms)
+[![David](https://img.shields.io/david/dev/amilajack/js-algorithms.svg?maxAge=86400)](https://david-dm.org/amilajack/js-algorithms?type=dev)
 
 ## Requirements:
 * **node >= 6 and npm >= 3**
