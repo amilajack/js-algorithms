@@ -7,11 +7,17 @@ const { expect } = require('chai')
 type num = number;
 
 type vector = {
-  magnitude: number,
-  direction: number
+  magnitude: num,
+  direction: num
 }
 
-function VectorCalculate(coords: vector[]): Object {
+type result = {
+  xMag: num,
+  yMag: num,
+  totalMag: num
+}
+
+function VectorCalculate(coords: vector[]): result {
   const x = coords.map((e: vector): num => e.magnitude * Math.cos(radsToDegrees(e.direction)))
   const y = coords.map((e: vector): num => e.magnitude * Math.sin(radsToDegrees(e.direction)))
 
