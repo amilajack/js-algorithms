@@ -33,6 +33,7 @@ function sum(nums: num[]): num {
 function radsToDegrees(rad: num): num {
   return rad * Math.PI / 180
 }
+
 expect(VectorCalculate([
   {
     direction: 155,
