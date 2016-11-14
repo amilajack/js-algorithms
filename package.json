@@ -4,8 +4,8 @@
   "description": "Repo of algos",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty .",
-    "test": "npm run lint"
+    "lint": "eslint --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty .",
+    "test": "npm run lint && babel-node **/*.js"
   },
   "repository": {
     "type": "git",

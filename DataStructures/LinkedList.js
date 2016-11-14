@@ -1,36 +1,18 @@
-import assert from 'assert'
-
+/* eslint-disable */
 function LinkedList() {
   this.links = []
 }
 
 LinkedList.prototype = {
 
-  /**
-   * @desc   Complexity: O(1)
-   * @param  {string} item
-   * @return this
-   */
-  insert(item) {
+  insert(item: any) {
 
   },
 
-  /**
-   * Insert
-   * @desc   Complexity: O(1)
-   * @param  {string} item
-   * @return this
-   */
   get() {
 
   },
 
-  /**
-   * Insert
-   * @desc   Complexity: O(1)
-   * @param  {string} item
-   * @return this
-   */
   delete() {
 
   }

@@ -18,7 +18,6 @@
  * Question: Determine if a number is 'happy' or not
  */
 import assert from 'assert'
-import 'babel-polyfill'
 
 
 /**

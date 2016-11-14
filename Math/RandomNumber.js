@@ -6,9 +6,6 @@ import assert from 'assert'
 
 /**
  * Return a random number between a min and max
- * @param  {number}  min
- * @param  {number}  max
- * @return {integer}
  */
 export default function RandomBetween(min: number, max: number): boolean {
   return Math.random() * (max - min)

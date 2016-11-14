@@ -5,7 +5,7 @@
 import { expect } from 'chai'
 
 
-function BinarySearch(items: number[], element: ?number): number {
+function BinarySearch(items: number[], element: number): number {
   const middleIndex = Math.floor(items.length / 2)
 
   // Base Case

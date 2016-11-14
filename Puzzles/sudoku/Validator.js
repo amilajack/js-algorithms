@@ -1,5 +1,10 @@
-// Validate if a board is invald
-const { expect } = require('chai')
+// Validate if a sudoku board is invald
+// @flow
+/* eslint-disable */
+import { expect } from 'chai'
+
+
+type grid = Array<Array<number>>
 
 const values = [
   [1, 4, 2, 6, 7, 2, 6, 7, 7],
@@ -13,29 +18,32 @@ const values = [
   [1, 4, 1, 6, 7, 2, 6, 7, 7]
 ]
 
-const some = [
+const _grid: grid = [
   [0, 0], [1, 0], [2, 0],
   [0, 1], [1, 1], [2, 1],
   [0, 2], [1, 2], [2, 2]
 ]
 
-function dupeRight(array) {
-  return array.map(each => [each[0] + 3, each[1]])
+function dupeRight(array: grid): grid {
+  return array.map((each: number[]): number[] => [each[0] + 3, each[1]])
 }
 
-function dupeBottom(array) {
-  return array.map(each => [each[0], each[1] + 3])
+function dupeBottom(array: grid): grid {
+  return array.map((each: number[]): number[] => [each[0], each[1] + 3])
+}
+
+function flatten(array: grid): grid {
+  return array.reduce((p: any, c: any): any[] => [...p, ...c], [])
 }
 
 /**
  * @complexity Time Compexity: O(n^2)
  *             where n is the number of rows of the matrices
- * @param {number}
  */
-function dupe(rowCount = 3) {
+function dupe(rowCount: number = 3): grid {
   const items = []
 
-  items.push(some)
+  items.push(_grid)
 
   for (let start = 0; start < rowCount; start++) {
     for (let inner = 0; inner < rowCount; inner++) {
@@ -60,14 +68,14 @@ function dupe(rowCount = 3) {
 //
 
 // Test dupeRight
-expect(dupeRight(some)).to.eql([
+expect(dupeRight(_grid)).to.eql([
   [3, 0], [4, 0], [5, 0],
   [3, 1], [4, 1], [5, 1],
   [3, 2], [4, 2], [5, 2]
 ])
 
 // Test dupeBottom
-expect(dupeBottom(some)).to.eql([
+expect(dupeBottom(_grid)).to.eql([
   [0, 3], [1, 3], [2, 3],
   [0, 4], [1, 4], [2, 4],
   [0, 5], [1, 5], [2, 5]
@@ -81,10 +89,10 @@ let hasDupe = false
 
 console.log(loo)
 
-loo.every(e => {
+loo.every((e: grid): boolean => {
   const doo = new Set()
 
-  e.every(item => {
+  e.every((item: number[]): boolean => {
     const x = item[0]
     const y = item[1]
 
@@ -94,6 +102,7 @@ loo.every(e => {
     }
 
     doo.add(values[y][x])
+    return false
   })
 
   return hasDupe

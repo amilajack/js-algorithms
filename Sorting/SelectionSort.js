@@ -5,6 +5,9 @@
  * @complexity: O(n^2)
  * @flow
  */
+
+/* eslint no-param-reassign: 0 */
+
 import { expect } from 'chai'
 
 

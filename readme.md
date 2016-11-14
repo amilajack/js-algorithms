@@ -15,7 +15,7 @@ npm install
 npm test
 
 # Running files
-babel SomeFileHere.js
+babel-node SomeFileHere.js
 ```
 
 ## Planned Implementations

@@ -12,6 +12,6 @@
 // game: no matter 1, 2, or 3 stones you remove, the last stone will always be
 // removed by your friend.
 
-const canWinNim = function (n) {
+export default function canWinNim(n: number): boolean {
   return n / 4 % 1 !== 0
 }

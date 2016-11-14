@@ -1,7 +1,8 @@
 /**
  * Calculate the resultant vector of a given series of component vectors
+ * @flow
  */
-const { expect } = require('chai')
+import { expect } from 'chai'
 
 
 type num = number;

@@ -5,74 +5,59 @@
  *
  * TODO: Bucket collision detection and handling
  */
-const Hash = require('./_Hash')
 import { expect } from 'chai'
+import Hash from './Hash'
 
-function Map() {
+function HashMap() {
   this.items = []
   this.mapLength = 50
 }
 
-/**
- * Insert
- * @desc   Complexity: O(1)
- * @param  {string} item
- * @return this
- */
-Map.prototype.insert = function (key, value) {
+HashMap.prototype.insert = function insert(key: any, value: any): this {
   const generatedHashCode = Hash(key, this.mapLength)
   this.items[generatedHashCode] = value
   return this
 }
 
-Map.prototype.all = function () {
-  return this.items.filter(i => !!i)
+HashMap.prototype.all = function all(): any[] {
+  return this.items.filter((i: any): boolean => !!i)
 }
 
 /**
  * Search
  *
  * TODO:   Convert bucket type to array, loop through when accessing
- *
  * @desc   Complexity: N/A, depends on strength of hash
- * @param  {string} item
- * @return mixed
  */
-Map.prototype.get = function (key) {
+HashMap.prototype.get = function get(key: any): any {
   const generatedHashCode = Hash(key, this.mapLength)
   return this.items[generatedHashCode]
 }
 
-/**
- * Delete
- * @desc   Complexity: O(1)
- * @param  {string} item
- * @return this
- */
-Map.prototype.delete = function (key) {
+HashMap.prototype.remove = function remove(key: any): this {
   const generatedHashCode = Hash(key, this.mapLength)
   this.items.splice([generatedHashCode], 1)
   return this
 }
 
 // Assert insert
-const Map_1 = new Map()
+const MapOne = new Map()
 
-Map_1.insert('some_random_key', 'some')
-const generatedHashCodeInsert = Hash('some_random_key', Map_1.mapLength)
+MapOne.insert('some_random_key', 'some')
+const generatedHashCodeInsert = Hash('some_random_key', MapOne.mapLength)
 
-expect(Map_1.items[generatedHashCodeInsert]).to.equal('some')
-expect(Map_1.all()).to.eql(['some'])
-Map_1.insert('moo', 'foo')
-expect(Map_1.all()).to.eql(['some', 'foo'])
-expect(Map_1.get('moo')).to.equal('foo')
+expect(MapOne.items[generatedHashCodeInsert]).to.equal('some')
+expect(MapOne.all()).to.eql(['some'])
+MapOne.insert('moo', 'foo')
+expect(MapOne.all()).to.eql(['some', 'foo'])
+expect(MapOne.get('moo')).to.equal('foo')
 
-// Assert delete
-const Map_2 = new Map()
+// Assert remove
+const MapTwo = new Map()
 
-Map_2.insert('some_random_key', 'some')
-expect(Map_2.get('some_random_key')).to.equal('some')
+MapTwo.insert('some_random_key', 'some')
+expect(MapTwo.get('some_random_key')).to.equal('some')
 
-Map_2.delete('some_random_key')
-generatedHashCodeDelete = Hash('some_random_key', Map_2.mapLength)
-expect(Map_2.items[generatedHashCodeDelete]).to.equal(undefined)
+MapTwo.remove('some_random_key')
+const generatedHashCodeDelete = Hash('some_random_key', MapTwo.mapLength)
+expect(MapTwo.items[generatedHashCodeDelete]).to.equal(undefined)

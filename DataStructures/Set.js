@@ -6,8 +6,8 @@
  *
  * @TODO: Add support for object literals
  */
-const Hash = require('./_Hash')
 import { expect } from 'chai'
+import Hash from './Hash'
 
 
 function Set() {
@@ -23,10 +23,11 @@ Set.prototype = {
    * The runtime cost of this is O(2n) because we need to compute
    * the hash and lookup the element. Each of these operations is O(1)
    */
-  add(value) {
+  add(value: any): boolean {
     this.items[Hash(value)] = value
     // Updating the itemsLength would increase insertion complexity to O(3n)
     // this.itemsLength++
+    return true
   },
 
   /**
@@ -35,14 +36,14 @@ Set.prototype = {
    * Accessing values in a Set is O(2n) because we only need
    * to compute the hash
    */
-  contains(value) {
+  contains(value: any): boolean {
     return !!this.items[Hash(value)]
   },
 
   /**
    * Complexity: O(2n) / n/a
    */
-  remove(value) {
+  remove(value: any) {
     this.items[Hash(value)] = undefined
     // Updating the itemsLength would increase insertion complexity to O(3n)
     // this.itemsLength--
@@ -55,17 +56,17 @@ Set.prototype = {
    * to remove null values, which are added when creating an array with a fixed
    * length (ex. array[42] = 'some')
    */
-  all() {
-    return this.items.filter(i => !!i)
+  all(): number[] {
+    return this.items.filter((i: number): boolean => !!i)
   }
 }
 
 // Assert insert
-const Set_1 = new Set()
+const _Set = new Set()
 
-Set_1.add('some')
-expect(Set_1.all()).to.eql(['some'])
-Set_1.add('who')
-expect(Set_1.all()).to.eql(['some', 'who'])
-Set_1.remove('who')
-expect(Set_1.all()).to.eql(['some'])
+_Set.add('some')
+expect(_Set.all()).to.eql(['some'])
+_Set.add('who')
+expect(_Set.all()).to.eql(['some', 'who'])
+_Set.remove('who')
+expect(_Set.all()).to.eql(['some'])

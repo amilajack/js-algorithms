@@ -6,27 +6,25 @@
  * new array every single time
  *
  * Complexity: O(n^2)
+ * @flow
  */
 import { expect } from 'chai'
 
 
-function Flatten(twoDimentionalArray, collector = []) {
-  switch (twoDimentionalArray.length > 0) {
-    case true:
-      // ES5
-      // const first = twoDimentionalArray[0];
-      // const rest = twoDimentionalArray.splice(1);
-      const [first, ...rest] = twoDimentionalArray
-      // ES5
-      // return Flatten(rest, first.concat(collector))
+type num = number
+
+export default function Flatten(array: Array<Array<num>>, collector: num[] = []): num[] {
+  switch (array.length > 0) {
+    case true: {
+      const [first, ...rest] = array
       return Flatten(rest, [...first, ...collector])
+    }
     default:
       return collector
   }
 }
 
 expect(
-  Flatten([[1, 3, 4, 5], [13, 15, 41, 54,]])
-    .sort((a, b) => (a < b ? )
+  Flatten([[1, 3, 4, 5], [13, 15, 41, 54]])
 )
-  .to.eql([1, 3, 4, 5, 13, 15, 41, 54])
+.to.eql([13, 15, 41, 54, 1, 3, 4, 5])

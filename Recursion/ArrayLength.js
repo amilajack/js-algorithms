@@ -13,6 +13,8 @@
  * @flow
  */
 
+/* eslint no-unused-vars: 0 */
+
 export default function getLength(array: number[]): number {
   switch (Array.isArray(array)) {
     case true: {

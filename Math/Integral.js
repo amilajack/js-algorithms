@@ -4,32 +4,34 @@
 import { expect } from 'chai'
 
 
-function integ(coefs) {
+type num = number
+
+function integ(coefs: num[]): num[] {
   const newCoefs = coefs.map(
-    (coef, index) => coef / (coefs.length - index)
+    (coef: num, index: num): num => coef / (coefs.length - index)
   )
 
   return [...newCoefs, 0]
 }
 
-function addExp(coefs: number, x: number): number {
+function addExp(coefs: num[], x: num): num {
   let sum = 0
-  const some = coefs.map((a: number, index: number): number =>
-    Math.pow(x, coefs.length - index - 1) * a
+  const some = coefs.map((a: num, index: num): num =>
+    (x ** coefs.length - index - 1) * a
   )
 
-  for (const e of some) {
+  some.forEach((e: number) => {
     sum += e
-  }
+  })
 
   return sum
 }
 
-function areaExact(coefs, a, b) {
+function areaExact(coefs: num[], a: num, b: num): num {
   return addExp(integ(coefs), b) - addExp(integ(coefs), a)
 }
 
-function areaNumerical(coefs, delta = 1, a, b) {
+function areaNumerical(coefs: num[], delta: num = 1, a: num, b: num): num {
   let sum = 0
 
   for (let i = a; i < b; i += delta) {
