@@ -1,7 +1,7 @@
 // Validate if a board is invald
-import { expect } from 'chai'
+const { expect } = require('chai')
 
-const no = [
+const values = [
   [1, 4, 2, 6, 7, 2, 6, 7, 7],
   [1, 4, 1, 6, 7, 2, 6, 7, 7],
   [1, 4, 1, 6, 7, 2, 6, 7, 7],
@@ -19,10 +19,6 @@ const some = [
   [0, 2], [1, 2], [2, 2]
 ]
 
-function flatten(array) {
-  return array.reduce((prev, next) => [...prev, ...next], [])
-}
-
 function dupeRight(array) {
   return array.map(each => [each[0] + 3, each[1]])
 }
@@ -33,7 +29,7 @@ function dupeBottom(array) {
 
 /**
  * @complexity Time Compexity: O(n^2)
- *             where n is the number of rows of the board
+ *             where n is the number of rows of the matrices
  * @param {number}
  */
 function dupe(rowCount = 3) {
@@ -83,6 +79,8 @@ expect(flatten([[1, 3], [6, 5]])).to.eql([1, 3, 6, 5])
 const loo = dupe()
 let hasDupe = false
 
+console.log(loo)
+
 loo.every(e => {
   const doo = new Set()
 
@@ -90,12 +88,12 @@ loo.every(e => {
     const x = item[0]
     const y = item[1]
 
-    if (doo.add(no[y][x])) {
+    if (doo.add(values[y][x])) {
       hasDupe = true
       return false
     }
 
-    doo.add(no[y][x])
+    doo.add(values[y][x])
   })
 
   return hasDupe

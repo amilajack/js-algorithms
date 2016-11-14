@@ -6,12 +6,11 @@
       },
       "loose": true
     }],
-    "stage-0",
-    "react"
+    "stage-0"
   ],
   "plugins": [
     "add-module-exports",
-    "transform-runtime"
+    "transform-runtime",
     "syntax-flow",
     "tcomb",
     "transform-flow-strip-types"

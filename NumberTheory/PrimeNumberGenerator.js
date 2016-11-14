@@ -10,6 +10,7 @@
  */
 import { expect } from 'chai'
 
+
 function PrimeNumberGenerator(limit: number = 100): number[] {
   const primeNumbers = []
 
@@ -37,4 +38,3 @@ function PrimeNumberGenerator(limit: number = 100): number[] {
 
 // Test
 expect(PrimeNumberGenerator(10)).to.eql([1, 2, 3, 5, 7])
-console.log(PrimeNumberGenerator())
