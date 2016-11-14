@@ -1,18 +1,19 @@
+// @flow
 /* eslint no-bitwise: 0 */
 export default function Hash(key: string, mapLength: number = 50): number {
-  return key.hashCode() % mapLength
+  return hashCode(key) % mapLength
 }
 
 /**
  * Get the character code of a string
  * @return integer
  */
-export function hashCode(): number {
+export function hashCode(string: string): number {
   let hash = 5381
-  let index = this.length
+  let index = string.length
 
   while (index) {
-    hash = (hash * 33) ^ this.charCodeAt(--index)
+    hash = (hash * 33) ^ string.charCodeAt(--index)
   }
 
   return hash >>> 0

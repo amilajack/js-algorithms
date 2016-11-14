@@ -3,6 +3,7 @@
  *
  * Solution: Find the index closest to the 'middle' of an array. Then add the
  *           elements that follow it to separate
+ * @flow
  */
 import { expect } from 'chai'
 

@@ -16,8 +16,10 @@
  * Ex. 2 -> 4 -> 16 -> 37 -> 58 -> 89 -> 145 -> 42 -> 20 -> 4
  *
  * Question: Determine if a number is 'happy' or not
+ *
+ * @flow
  */
-import assert from 'assert'
+import { expect } from 'chai'
 
 
 /**
@@ -44,6 +46,8 @@ export default function HappyNumberChecker(number: number): boolean {
       return true
     }
   }
+
+  return false
 }
 
 function calc(number: number): number {
@@ -63,6 +67,6 @@ function calc(number: number): number {
 }
 
 // Assert calc
-assert(calc(36), 45)
-assert(HappyNumberChecker(7), true)
-assert(HappyNumberChecker(2), false)
+expect(calc(36)).to.equal(45)
+expect(HappyNumberChecker(7)).to.equal(true)
+expect(HappyNumberChecker(2)).to.equal(false)

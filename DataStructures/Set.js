@@ -5,6 +5,7 @@
  * which they were inserted.
  *
  * @TODO: Add support for object literals
+ * @flow
  */
 import { expect } from 'chai'
 import Hash from './Hash'
@@ -44,7 +45,7 @@ Set.prototype = {
    * Complexity: O(2n) / n/a
    */
   remove(value: any) {
-    this.items[Hash(value)] = undefined
+    this.items[Hash(value)] = null
     // Updating the itemsLength would increase insertion complexity to O(3n)
     // this.itemsLength--
   },
@@ -57,7 +58,7 @@ Set.prototype = {
    * length (ex. array[42] = 'some')
    */
   all(): number[] {
-    return this.items.filter((i: number): boolean => !!i)
+    return this.items.filter((i: number): boolean => !!i) // eslint-disable-line
   }
 }
 

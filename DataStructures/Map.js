@@ -4,6 +4,7 @@
  * maps.
  *
  * TODO: Bucket collision detection and handling
+ * @flow
  */
 import { expect } from 'chai'
 import Hash from './Hash'
@@ -13,7 +14,7 @@ function HashMap() {
   this.mapLength = 50
 }
 
-HashMap.prototype.insert = function insert(key: any, value: any): this {
+HashMap.prototype.insert = function insert(key: any, value: any): HashMap {
   const generatedHashCode = Hash(key, this.mapLength)
   this.items[generatedHashCode] = value
   return this
@@ -34,14 +35,14 @@ HashMap.prototype.get = function get(key: any): any {
   return this.items[generatedHashCode]
 }
 
-HashMap.prototype.remove = function remove(key: any): this {
+HashMap.prototype.remove = function remove(key: any): HashMap {
   const generatedHashCode = Hash(key, this.mapLength)
-  this.items.splice([generatedHashCode], 1)
+  this.items.splice(generatedHashCode, 1)
   return this
 }
 
 // Assert insert
-const MapOne = new Map()
+const MapOne = new HashMap()
 
 MapOne.insert('some_random_key', 'some')
 const generatedHashCodeInsert = Hash('some_random_key', MapOne.mapLength)
@@ -53,7 +54,7 @@ expect(MapOne.all()).to.eql(['some', 'foo'])
 expect(MapOne.get('moo')).to.equal('foo')
 
 // Assert remove
-const MapTwo = new Map()
+const MapTwo = new HashMap()
 
 MapTwo.insert('some_random_key', 'some')
 expect(MapTwo.get('some_random_key')).to.equal('some')

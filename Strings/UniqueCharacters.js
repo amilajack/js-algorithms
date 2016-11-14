@@ -15,6 +15,7 @@
  *                     needs to be iterated over and every character in each
  *                     string will need to be iterated over. Each of those
  *                     operations is O(n)
+ * @flow
  */
 import { expect } from 'chai'
 

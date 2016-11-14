@@ -1,7 +1,7 @@
 {
-  "name": "algorithims",
+  "name": "js-algos",
   "version": "1.0.0",
-  "description": "Repo of algos",
+  "description": "A Repo of algorithms written in javascript and explained",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty .",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amilajack/algorithims.git"
+    "url": "git+https://github.com/amilajack/js-algorithims.git"
   },
   "author": "Amila Welihinda",
   "license": "ISC",

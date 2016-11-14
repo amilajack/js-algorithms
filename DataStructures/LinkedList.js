@@ -1,3 +1,4 @@
+// @flow
 /* eslint-disable */
 function LinkedList() {
   this.links = []
