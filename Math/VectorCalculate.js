@@ -11,7 +11,7 @@ type vector = {
   direction: number
 }
 
-function VectorCalculate(coords: vector[]): vector {
+function VectorCalculate(coords: vector[]): Object {
   const x = coords.map((e: vector): num => e.magnitude * Math.cos(radsToDegrees(e.direction)))
   const y = coords.map((e: vector): num => e.magnitude * Math.sin(radsToDegrees(e.direction)))
 
@@ -23,15 +23,19 @@ function VectorCalculate(coords: vector[]): vector {
 }
 
 function pythag(x: num, y: num): num {
-  return Math.round(Math.sqrt((x ** 2) + (y ** 2)))
+  return round(Math.sqrt((x ** 2) + (y ** 2)))
 }
 
 function sum(nums: num[]): num {
-  return Math.round(nums.reduce(((p: num, c: num): num => p + c), 0))
+  return round(nums.reduce(((p: num, c: num): num => p + c), 0))
 }
 
 function radsToDegrees(rad: num): num {
-  return rad * Math.PI / 180
+  return round(rad * Math.PI / 180)
+}
+
+function round(number: num): num {
+  return Math.round(number * 1000) / 1000
 }
 
 expect(VectorCalculate([
@@ -45,7 +49,7 @@ expect(VectorCalculate([
   }
 ]))
 .to.eql({
-  xMag: -201,
-  yMag: 94,
+  xMag: -201.176,
+  yMag: 93.874,
   totalMag: 222
 })
