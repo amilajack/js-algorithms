@@ -10,8 +10,12 @@ A list of Computer Science concepts **solved** and **explained** in Javascript
 
 # Getting Started
 ```bash
+npm i -g babel-cli
 npm install
 npm test
+
+# Running files
+babel SomeFileHere.js
 ```
 
 ## Planned Implementations
