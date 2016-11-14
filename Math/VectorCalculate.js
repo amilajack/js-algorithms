@@ -11,7 +11,7 @@ type vector = {
   direction: number
 }
 
-function VectorCalculate(coords: Object[]): Object {
+function VectorCalculate(coords: vector[]): vector {
   const x = coords.map((e: vector): num => e.magnitude * Math.cos(radsToDegrees(e.direction)))
   const y = coords.map((e: vector): num => e.magnitude * Math.sin(radsToDegrees(e.direction)))
 
