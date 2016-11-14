@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/amilajack/algorithims#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.0",
     "babel-plugin-add-module-exports": "^0.2.1",
