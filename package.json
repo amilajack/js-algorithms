@@ -4,11 +4,18 @@
   "description": "A Repo of algorithms written in javascript and explained",
   "main": "index.js",
   "scripts": {
+    "flow": "flow",
     "lint": "eslint --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty .",
-    "test": "npm run lint && jest"
+    "spec": "jest !flow-typed .",
+    "test": "npm run lint && npm run spec"
   },
   "jest": {
-    "testRegex": "[a-z].*\\.js$"
+    "testRegex": "[a-z].*\\.js$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/flow-typed/",
+      "coverage"
+    ]
   },
   "repository": {
     "type": "git",

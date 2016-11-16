@@ -1,8 +1,4 @@
 [ignore]
-.*/node_modules/fbjs/.*
-.*/app/main.js
-.*/app/dist/.*
-.*/release/.*
 .*/git/.*
 
 [include]

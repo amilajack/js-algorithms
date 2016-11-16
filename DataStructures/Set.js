@@ -49,8 +49,8 @@ Set.prototype = {
    * to remove null values, which are added when creating an array with a fixed
    * length (ex. array[42] = 'some')
    */
-  all(): number[] {
-    return this.items.filter((i: number): bool => !!i) // eslint-disable-line
+  all(): any[] {
+    return this.items.filter((i: any): bool => !!i) // eslint-disable-line
   }
 }
 

@@ -1,1 +1,4 @@
-flow-typed
+[
+  "flow-typed",
+  "node_modules"
+]

@@ -1,5 +1,8 @@
 // @flow
 /* eslint no-bitwise: 0 */
+import { expect } from 'chai'
+
+
 export default function Hash(key: string, mapLength: number = 50): number {
   return hashCode(key) % mapLength
 }
@@ -7,7 +10,7 @@ export default function Hash(key: string, mapLength: number = 50): number {
 /**
  * Get the character code of a string
  */
-export function hashCode(string: string): number {
+function hashCode(string: string): number {
   let hash = 5381
   let index = string.length
 
@@ -17,3 +20,7 @@ export function hashCode(string: string): number {
 
   return hash >>> 0
 }
+
+test('Hash', () => {
+  expect(Hash('133')).to.be.a('number')
+})

@@ -13,7 +13,13 @@
 // removed by your friend.
 //
 // @flow
+import { expect } from 'chai'
+
 
 export default function canWinNim(n: number): bool {
   return n / 4 % 1 !== 0
 }
+
+test('canWinNim()', () => {
+  expect(canWinNim(4)).to.equal(false)
+})

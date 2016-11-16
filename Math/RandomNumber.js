@@ -20,4 +20,6 @@ export function isBeween(number: num, min: num, max: num): bool {
   return number > min && number < max
 }
 
-assert(isBeween(RandomBetween(1, 10), 1, 10))
+test('RandomBetween()', () => {
+  assert(isBeween(RandomBetween(1, 10), 1, 10))
+})

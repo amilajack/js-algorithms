@@ -37,4 +37,6 @@ function swap(items: number[], firstIndex: number, secondIndex: number) {
   items[secondIndex] = temp
 }
 
-expect(SelectionSort([122, 3, 2, 5, 33, 22, 11])).to.eql([2, 3, 5, 11, 22, 33, 122])
+test('SelectionSort()', () => {
+  expect(SelectionSort([122, 3, 2, 5, 33, 22, 11])).to.eql([2, 3, 5, 11, 22, 33, 122])
+})

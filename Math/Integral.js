@@ -42,5 +42,7 @@ function areaNumerical(coefs: num[], delta: num = 1, a: num, b: num): num {
   return sum
 }
 
-expect(areaExact([3, 4, 5], 0, 3)).to.equal(60)
-expect(Math.round(areaNumerical([3, 4, 5], 0.001, 0, 3))).to.equal(60)
+test('some', () => {
+  expect(areaExact([3, 4, 5], 0, 3)).to.equal(60)
+  expect(Math.round(areaNumerical([3, 4, 5], 0.001, 0, 3))).to.equal(60)
+})

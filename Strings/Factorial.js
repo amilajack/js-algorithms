@@ -2,22 +2,30 @@
  * What is a factorial? I think an example is better than an explaination in this
  * case:
  *
- * Permutation of 5 = 1 * 2 * 3 * 4 * 5
+ * Factorial(4, 1)
+ * 4 * Factorial(3)
+ * 4 * 3 * Factorial(2)
+ * 4 * 3 * 2 * Factorial(1)
+ * 4 * 3 * 2 * 1
  *
  * @flow
  */
 import { expect } from 'chai'
 
 
-export default function Factorial(number: number, product: number = 1): number {
+type num = number
+
+export default function Factorial(number: num, product: num = 1): num {
   switch (number) {
     case 1:
       return product
     default:
-      return Factorial(number, (product - 1))
+      return Factorial(number - 1, product * number)
   }
 }
 
 test('Factorial', () => {
+  expect(Factorial(1)).to.equal(1)
+  expect(Factorial(3)).to.equal(6)
   expect(Factorial(10)).to.equal(3628800)
 })

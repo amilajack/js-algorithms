@@ -2,8 +2,9 @@
 // flow-typed version: 94e9f7e0a4/chai_v3.5.x/flow_>=v0.24.0
 
 /* @flow */
-declare module 'chai' {
-  declare type ExpectChain<T> = {
+declare module "chai" {
+
+    declare type ExpectChain<T> = {
         and: ExpectChain<T>,
         at: ExpectChain<T>,
         be: ExpectChain<T>,
@@ -95,11 +96,11 @@ declare module 'chai' {
         calledWithExactly: (...args: Array<mixed>) => ExpectChain<T>,
     };
 
-  declare function expect<T>(actual: T): ExpectChain<T>;
+    declare function expect<T>(actual: T): ExpectChain<T>;
 
-  declare function use(plugin: (chai: Object, utils: Object) => void): void;
+    declare function use(plugin: (chai: Object, utils: Object) => void): void;
 
-  declare var config: {
+    declare var config: {
         includeStack: boolean,
         showDiff: boolean,
         truncateThreshold: boolean

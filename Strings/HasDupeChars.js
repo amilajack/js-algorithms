@@ -20,34 +20,19 @@
 import { expect } from 'chai'
 
 
-function UniqueCharacters(string: string): bool {
-  const map = {}
-  let stringHasUniqueChar = true
+function HasDupeChars(string: string): bool {
+  const set = new Set()
 
-  for (let i = 0; i < string.length; i++) {
-    const char = string[i]
-
-    // If map has no elements, add initial
-    // Base case
-    if (i === 0) {
-      // Insertion is O(n)
-      map[char] = char
-    } else {
-      // Lookup is O(n)
-      if (map[char] === char) {
-        stringHasUniqueChar = false
-        return false
-      }
-
-      // Insertion is O(n)
-      map[char] = char
-    }
-  }
-
-  return stringHasUniqueChar
+  return string.split('').some((e: string): bool => {
+    if (set.has(e)) return true
+    set.add(e)
+    return false
+  })
 }
 
-expect(UniqueCharacters('aaaaaaaaaaaaaa')).to.equal(false)
-expect(UniqueCharacters('aaaaaaaabaaaaa')).to.equal(false)
-expect(UniqueCharacters('abc')).to.equal(true)
-expect(UniqueCharacters('def')).to.equal(true)
+test('HasDupeChars()', () => {
+  expect(HasDupeChars('aaaaaaaaaaaaaa')).to.equal(true)
+  expect(HasDupeChars('aaaaaaaabaaaaa')).to.equal(true)
+  expect(HasDupeChars('abc')).to.equal(false)
+  expect(HasDupeChars('def')).to.equal(false)
+})
