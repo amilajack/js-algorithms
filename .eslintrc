@@ -46,7 +46,11 @@
     "promise/no-native": 0,
     "flowtype/define-flow-type": 2,
     "flowtype/require-parameter-type": 2,
-    "flowtype/require-return-type": [   # TODO: In progress
+    "flowtype/require-valid-file-annotation": [
+      2,
+      "always"
+    ],
+    "flowtype/require-return-type": [
       2,
       "always",
       {

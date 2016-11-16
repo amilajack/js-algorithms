@@ -12,4 +12,6 @@
  * new pointers to objects.
  *
  * All you have to do is change the pointers intead of
+ *
+ * @flow
  */
