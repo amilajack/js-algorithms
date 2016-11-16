@@ -16,9 +16,10 @@ function CheckAddition(target: number, list: number[]): boolean {
 
   return list.some((n: number): boolean => {
     const m = target - n
-    return set.has(m)
+    return set.has(m) && m !== n
   })
 }
 
 expect(CheckAddition(16, [1, 3, 4, 5, 6, 11])).to.equal(true)
 expect(CheckAddition(16, [1, 3, 4, 5, 6])).to.equal(false)
+expect(CheckAddition(10, [2, 3, 5])).to.equal(false)

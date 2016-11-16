@@ -13,45 +13,37 @@ import Hash from './Hash'
 
 function Set() {
   this.items = []
-  // this.itemsLength = 0
+  this.itemsLength = 0
 }
 
 Set.prototype = {
 
   /**
-   * Complexity: O(2n)
-   *
-   * The runtime cost of this is O(2n) because we need to compute
-   * the hash and lookup the element. Each of these operations is O(1)
+   * Complexity: O(n)
    */
   add(value: any): boolean {
     this.items[Hash(value)] = value
-    // Updating the itemsLength would increase insertion complexity to O(3n)
-    // this.itemsLength++
+    this.itemsLength++
     return true
   },
 
   /**
-   * Complexity: O(2n) / n/a
-   *
-   * Accessing values in a Set is O(2n) because we only need
-   * to compute the hash
+   * Complexity: O(1)
    */
   contains(value: any): boolean {
     return !!this.items[Hash(value)]
   },
 
   /**
-   * Complexity: O(2n) / n/a
+   * Complexity: O(1)
    */
   remove(value: any) {
     this.items[Hash(value)] = null
-    // Updating the itemsLength would increase insertion complexity to O(3n)
-    // this.itemsLength--
+    this.itemsLength--
   },
 
   /**
-   * Complexity: O(n)
+   * Complexity: O(1)
    *
    * This complexity is a bit weird in Javascript. The array needs to be filtered
    * to remove null values, which are added when creating an array with a fixed

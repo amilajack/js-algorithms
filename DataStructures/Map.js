@@ -9,6 +9,7 @@
 import { expect } from 'chai'
 import Hash from './Hash'
 
+
 function HashMap() {
   this.items = []
   this.mapLength = 50
