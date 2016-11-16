@@ -24,7 +24,9 @@ export default function Flatten(array: Array<Array<num>>, collector: num[] = [])
   }
 }
 
-expect(
-  Flatten([[1, 3, 4, 5], [13, 15, 41, 54]])
-)
-.to.eql([13, 15, 41, 54, 1, 3, 4, 5])
+test('Flatten', () => {
+  expect(
+    Flatten([[1, 3, 4, 5], [13, 15, 41, 54]])
+  )
+  .to.eql([13, 15, 41, 54, 1, 3, 4, 5])
+})

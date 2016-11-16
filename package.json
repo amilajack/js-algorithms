@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty .",
-    "test": "npm run lint && babel-node **/*.js"
+    "test": "npm run lint && jest"
+  },
+  "jest": {
+    "testRegex": "[a-z].*\\.js$"
   },
   "repository": {
     "type": "git",
@@ -43,6 +46,7 @@
     "eslint-plugin-promise": "^3.3.2",
     "eslint-plugin-react": "^6.6.0",
     "flow-bin": "^0.35.0",
+    "jest-cli": "^17.0.2",
     "tcomb": "^3.2.15"
   },
   "engines": {

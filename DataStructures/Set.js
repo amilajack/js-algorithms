@@ -21,7 +21,7 @@ Set.prototype = {
   /**
    * Complexity: O(n)
    */
-  add(value: any): boolean {
+  add(value: any): bool {
     this.items[Hash(value)] = value
     this.itemsLength++
     return true
@@ -30,7 +30,7 @@ Set.prototype = {
   /**
    * Complexity: O(1)
    */
-  contains(value: any): boolean {
+  contains(value: any): bool {
     return !!this.items[Hash(value)]
   },
 
@@ -50,16 +50,18 @@ Set.prototype = {
    * length (ex. array[42] = 'some')
    */
   all(): number[] {
-    return this.items.filter((i: number): boolean => !!i) // eslint-disable-line
+    return this.items.filter((i: number): bool => !!i) // eslint-disable-line
   }
 }
 
-// Assert insert
-const _Set = new Set()
+test('Set', () => {
+  // Assert insert
+  const _Set = new Set()
 
-_Set.add('some')
-expect(_Set.all()).to.eql(['some'])
-_Set.add('who')
-expect(_Set.all()).to.eql(['some', 'who'])
-_Set.remove('who')
-expect(_Set.all()).to.eql(['some'])
+  _Set.add('some')
+  expect(_Set.all()).to.eql(['some'])
+  _Set.add('who')
+  expect(_Set.all()).to.eql(['some', 'who'])
+  _Set.remove('who')
+  expect(_Set.all()).to.eql(['some'])
+})

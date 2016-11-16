@@ -16,7 +16,7 @@ export default function RandomBetween(min: num, max: num): number {
 }
 
 // Assert randomBetween
-export function isBeween(number: num, min: num, max: num): boolean {
+export function isBeween(number: num, min: num, max: num): bool {
   return number > min && number < max
 }
 

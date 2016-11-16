@@ -34,5 +34,7 @@ function FastMiddleShift(string: string, char: string): string {
   return string.substring(0, middleIndex) + char + string.substring(middleIndex)
 }
 
-expect(SlowMiddleShift('some', 'e')).to.equal('soeme')
-expect(FastMiddleShift('some', 'e')).to.equal('soeme')
+test('FastMiddleShift', () => {
+  expect(SlowMiddleShift('some', 'e')).to.equal('soeme')
+  expect(FastMiddleShift('some', 'e')).to.equal('soeme')
+})

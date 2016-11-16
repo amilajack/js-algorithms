@@ -6,7 +6,6 @@ export default function Hash(key: string, mapLength: number = 50): number {
 
 /**
  * Get the character code of a string
- * @return integer
  */
 export function hashCode(string: string): number {
   let hash = 5381

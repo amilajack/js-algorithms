@@ -24,10 +24,8 @@ import { expect } from 'chai'
 
 /**
  * Calculate if a number is happy or unhappy
- *
- * @return boolean
  */
-export default function HappyNumberChecker(number: number): boolean {
+export default function HappyNumberChecker(number: number): bool {
   const numbers = []
   let currentNumber = calc(number)
   let infiniteLoopPreventionLimit = 0
@@ -59,7 +57,6 @@ function calc(number: number): number {
   for (index = 0; index < castedNumber.length; index++) {
     const int = parseInt(castedNumber[index], 10)
     const result = int * int
-
     sum += result
   }
 
@@ -67,6 +64,8 @@ function calc(number: number): number {
 }
 
 // Assert calc
-expect(calc(36)).to.equal(45)
-expect(HappyNumberChecker(7)).to.equal(true)
-expect(HappyNumberChecker(2)).to.equal(false)
+test('HappyNumberChecker', () => {
+  expect(calc(36)).to.equal(45)
+  expect(HappyNumberChecker(7)).to.equal(true)
+  expect(HappyNumberChecker(2)).to.equal(false)
+})

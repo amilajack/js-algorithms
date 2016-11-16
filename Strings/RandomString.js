@@ -25,4 +25,6 @@ export default function RandomString(randomStringLength: number): string {
   return generatedRandomString
 }
 
-expect(RandomString(10)).to.not.equal(RandomString(10))
+test('RandomString', () => {
+  expect(RandomString(10)).to.not.equal(RandomString(10))
+})

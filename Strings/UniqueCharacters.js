@@ -20,7 +20,7 @@
 import { expect } from 'chai'
 
 
-function UniqueCharacters(string: string): boolean {
+function UniqueCharacters(string: string): bool {
   const map = {}
   let stringHasUniqueChar = true
 

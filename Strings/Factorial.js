@@ -18,4 +18,6 @@ export default function Factorial(number: number, product: number = 1): number {
   }
 }
 
-expect(Factorial(10)).to.equal(3628800)
+test('Factorial', () => {
+  expect(Factorial(10)).to.equal(3628800)
+})

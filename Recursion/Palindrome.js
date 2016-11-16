@@ -3,6 +3,6 @@
  * @TODO
  */
 /* eslint-disable */
-export default function Palindrome(string: string): boolean {
+export default function Palindrome(string: string): bool {
 
 }

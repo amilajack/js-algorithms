@@ -18,4 +18,6 @@ function SlowReverseString(string: string): string {
 
 
 // Assert SlowReverseString
-expect(SlowReverseString('some')).to.equal('emos')
+test('ReverseString', () => {
+  expect(SlowReverseString('some')).to.equal('emos')
+})

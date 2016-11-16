@@ -66,46 +66,21 @@ function dupe(rowCount: number = 3): grid {
 //
 // Tests
 //
+test('Sudoku', () => {
+  // Test dupeRight
+  expect(dupeRight(_grid)).to.eql([
+    [3, 0], [4, 0], [5, 0],
+    [3, 1], [4, 1], [5, 1],
+    [3, 2], [4, 2], [5, 2]
+  ])
 
-// Test dupeRight
-expect(dupeRight(_grid)).to.eql([
-  [3, 0], [4, 0], [5, 0],
-  [3, 1], [4, 1], [5, 1],
-  [3, 2], [4, 2], [5, 2]
-])
+  // Test dupeBottom
+  expect(dupeBottom(_grid)).to.eql([
+    [0, 3], [1, 3], [2, 3],
+    [0, 4], [1, 4], [2, 4],
+    [0, 5], [1, 5], [2, 5]
+  ])
 
-// Test dupeBottom
-expect(dupeBottom(_grid)).to.eql([
-  [0, 3], [1, 3], [2, 3],
-  [0, 4], [1, 4], [2, 4],
-  [0, 5], [1, 5], [2, 5]
-])
-
-// Test flatten
-expect(flatten([[1, 3], [6, 5]])).to.eql([1, 3, 6, 5])
-
-const loo = dupe()
-let hasDupe = false
-
-console.log(loo)
-
-loo.every((e: grid): boolean => {
-  const doo = new Set()
-
-  e.every((item: number[]): boolean => {
-    const x = item[0]
-    const y = item[1]
-
-    if (doo.add(values[y][x])) {
-      hasDupe = true
-      return false
-    }
-
-    doo.add(values[y][x])
-    return false
-  })
-
-  return hasDupe
+  // Test flatten
+  expect(flatten([[1, 3], [6, 5]])).to.eql([1, 3, 6, 5])
 })
-
-console.log(hasDupe)

@@ -45,18 +45,20 @@ function round(number: num): num {
   return Math.round(number * 1000) / 1000
 }
 
-expect(VectorCalculate([
-  {
-    direction: 155,
-    magnitude: 100
-  },
-  {
-    direction: 155,
-    magnitude: 122
-  }
-]))
-.to.eql({
-  xMag: -201.176,
-  yMag: 93.874,
-  totalMag: 222
+test('CalculateVector', () => {
+  expect(VectorCalculate([
+    {
+      direction: 155,
+      magnitude: 100
+    },
+    {
+      direction: 155,
+      magnitude: 122
+    }
+  ]))
+  .to.eql({
+    xMag: -201.176,
+    yMag: 93.874,
+    totalMag: 222
+  })
 })
