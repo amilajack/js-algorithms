@@ -20,7 +20,7 @@ function addExp(coefs: num[], x: num): num {
     (x ** coefs.length - index - 1) * a
   )
 
-  some.forEach((e: number) => {
+  some.forEach((e: num) => {
     sum += e
   })
 
