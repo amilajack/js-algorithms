@@ -14,7 +14,7 @@ import { expect } from 'chai'
 function CheckAddition(target: number, list: number[]): bool {
   const set = new Set(list)
 
-  return list.some((n: number, i): bool => {
+  return list.some((n: number): bool => {
     const m = target - n
     return set.has(m) && m !== n
   })

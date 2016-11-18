@@ -5,6 +5,6 @@
 //
 // @flow
 
-export default function Permutation() {
+export default function StepsToTop() {
 
 }
