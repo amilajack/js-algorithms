@@ -35,13 +35,15 @@ export default class Stack {
   }
 
   pop(): any {
-    return this.items.length ?
-     ((): any => {
-       const item = this.items[this.items.length - 1]
-       this.items.splice(this.items.length - 1, 1)
-       return item
-     })()
-     : false
+    const isEnd = !!this.items.length
+
+    if (isEnd) {
+      const item = this.items[this.items.length - 1]
+      this.items.splice(this.items.length - 1, 1)
+      return item
+    }
+
+    return false
   }
 
   push(item: any): Stack {
