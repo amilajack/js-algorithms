@@ -1,6 +1,4 @@
-/**
- * @flow
- */
+// @flow
 import { expect } from 'chai'
 
 
@@ -17,7 +15,7 @@ function integ(coefs: num[]): num[] {
 function addExp(coefs: num[], x: num): num {
   let sum = 0
   const some = coefs.map((a: num, index: num): num =>
-    (x ** coefs.length - index - 1) * a
+    (x ** (coefs.length - index - 1)) * a
   )
 
   some.forEach((e: num) => {
@@ -42,7 +40,7 @@ function areaNumerical(coefs: num[], delta: num = 1, a: num, b: num): num {
   return sum
 }
 
-test('some', () => {
+test('Integral', () => {
   expect(areaExact([3, 4, 5], 0, 3)).to.equal(60)
   expect(Math.round(areaNumerical([3, 4, 5], 0.001, 0, 3))).to.equal(60)
 })
