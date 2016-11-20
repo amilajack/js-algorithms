@@ -13,16 +13,11 @@ function integ(coefs: num[]): num[] {
 }
 
 function addExp(coefs: num[], x: num): num {
-  let sum = 0
-  const some = coefs.map((a: num, index: num): num =>
-    (x ** (coefs.length - index - 1)) * a
-  )
-
-  some.forEach((e: num) => {
-    sum += e
-  })
-
-  return sum
+  return coefs
+    .map((a: num, index: num): num =>
+      (x ** (coefs.length - index - 1)) * a
+    )
+    .reduce(((c: num, p: num): num => c + p), 0)
 }
 
 function areaExact(coefs: num[], a: num, b: num): num {

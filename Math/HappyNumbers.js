@@ -26,18 +26,18 @@ import { expect } from 'chai'
  * Calculate if a number is happy or unhappy
  */
 export default function HappyNumberChecker(number: number): bool {
-  const numbers = []
+  const numbers = new Set()
   let currentNumber = calc(number)
   let infiniteLoopPreventionLimit = 0
 
-  while (!numbers.includes(1) && infiniteLoopPreventionLimit < 1000) {
+  while (!numbers.has(1) && infiniteLoopPreventionLimit < 1000) {
     currentNumber = calc(currentNumber)
 
-    if (numbers.includes(currentNumber)) {
+    if (numbers.has(currentNumber)) {
       return false
     }
 
-    numbers.push(currentNumber)
+    numbers.add(currentNumber)
     infiniteLoopPreventionLimit++
 
     if (currentNumber === 1) {

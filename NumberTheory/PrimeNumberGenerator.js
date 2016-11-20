@@ -39,4 +39,5 @@ function PrimeNumberGenerator(limit: number = 100): number[] {
 // Test
 test('PrimeNumberGenerator()', () => {
   expect(PrimeNumberGenerator(10)).to.eql([1, 2, 3, 5, 7])
+  expect(PrimeNumberGenerator(20)).to.eql([1, 2, 3, 5, 7, 11, 13, 17, 19])
 })
