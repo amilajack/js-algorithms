@@ -6,7 +6,7 @@
   "scripts": {
     "flow": "flow",
     "lint": "eslint --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty .",
-    "spec": "jest !flow-typed .",
+    "spec": "NODE_ENV=production jest !flow-typed .",
     "test": "npm run lint && npm run spec"
   },
   "jest": {

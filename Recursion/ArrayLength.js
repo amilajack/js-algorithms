@@ -18,10 +18,10 @@ import { expect } from 'chai'
 
 
 export default function ArrayLength(array: number[]): number {
-  switch (Array.isArray(array)) {
+  switch (array.length !== 0) {
     case true: {
-      const [first, ...rest] = array
-      return 1 + ArrayLength(rest)
+      array.splice(0, 1)
+      return 1 + ArrayLength(array)
     }
     default:
       return 0

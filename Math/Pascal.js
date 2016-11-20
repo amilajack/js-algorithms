@@ -55,15 +55,17 @@ function PascalRecursive(number: num, list: pt = []): pt {
 // function PascalIterative(number: number) {}
 
 // Tests
-expect(PascalRecursive(2)).to.eql([
-  [1],
-  [1, 1]
-])
+test('PascalRecursive()', () => {
+  expect(PascalRecursive(2)).to.eql([
+    [1],
+    [1, 1]
+  ])
 
-expect(PascalRecursive(5)).to.eql([
-  [1],
-  [1, 1],
-  [1, 2, 1],
-  [1, 3, 3, 1],
-  [1, 4, 6, 4, 1]
-])
+  expect(PascalRecursive(5)).to.eql([
+    [1],
+    [1, 1],
+    [1, 2, 1],
+    [1, 3, 3, 1],
+    [1, 4, 6, 4, 1]
+  ])
+})

@@ -28,5 +28,5 @@ export default function FibonacciRecursive(number: num): num[] {
 // FibonacciMemoizeRecursive (DP)
 
 test('Fibonacci()', () => {
-  expect(FibonacciRecursive()(10)).to.eql([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
+  expect(FibonacciRecursive(10)).to.eql([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
 })
