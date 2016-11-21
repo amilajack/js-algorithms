@@ -1,17 +1,22 @@
 /**
- * Here's how this works:
+ * A palindrome is any string that can be reversed and still be the same.
+ * An example of one is 'radar', since it is spelled the same even after
+ * being reversed. One method to check if a
+ *
+ * Here's how this works recursively:
  *
  * Palindrome('radar')
- * Palindrome('ada')
- * Palindrome('d')
+ * true && Palindrome('ada')
+ * true && true && Palindrome('d')
+ * true && true && true && true
  *
  * @flow
- * @TODO
+ * @complexity: O(n)
  */
 import { expect } from 'chai'
 
 
-export default function Palindrome(string: string): bool {
+export default function PalindromeRecursive(string: string): bool {
   // Base case
   if (string.length < 2) return true
 
@@ -20,13 +25,13 @@ export default function Palindrome(string: string): bool {
     return false
   }
 
-  return Palindrome(string.slice(1, string.length - 1))
+  return PalindromeRecursive(string.slice(1, string.length - 1))
 }
 
-test('Palindrome()', () => {
-  Palindrome('radar')
-  expect(Palindrome('')).to.equal(true)
-  expect(Palindrome('a')).to.equal(true)
-  expect(Palindrome('aa')).to.equal(true)
-  expect(Palindrome('radar')).to.equal(true)
+test('PalindromeRecursive()', () => {
+  PalindromeRecursive('radar')
+  expect(PalindromeRecursive('')).to.equal(true)
+  expect(PalindromeRecursive('a')).to.equal(true)
+  expect(PalindromeRecursive('aa')).to.equal(true)
+  expect(PalindromeRecursive('radar')).to.equal(true)
 })

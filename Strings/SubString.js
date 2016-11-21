@@ -4,7 +4,6 @@
  *
  * Complexity: O(n^2), where n is the length of the substring (Math.abs(start - end))
  * @flow
- * @TODO
  */
 import { expect } from 'chai'
 

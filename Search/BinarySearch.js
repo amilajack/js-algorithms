@@ -1,7 +1,4 @@
-/**
- * @flow
- * @TODO
- */
+// @flow
 import { expect } from 'chai'
 
 

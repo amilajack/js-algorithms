@@ -4,7 +4,6 @@
  * Their order cannot be guaranteed to be the same as the order in
  * which they were inserted.
  *
- * @TODO: Add support for object literals
  * @flow
  */
 import { expect } from 'chai'
