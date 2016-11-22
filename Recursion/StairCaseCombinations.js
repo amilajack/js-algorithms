@@ -19,7 +19,21 @@ import { expect } from 'chai'
 
 type num = number
 
-export default function StairCaseCombinations(stairs: number): number {
+export default function StairCaseCombinationSlow(stairs: num): num {
+  if (stairs <= 0) return 0
+  if (stairs === 1) return 1
+  if (stairs === 2) return 2
+  return (
+    StairCaseCombinationSlow(stairs - 1) +
+    StairCaseCombinationSlow(stairs - 2)
+  )
+}
+
+// This method of solving the problem uses dynamic programming. Its
+// recurses and then save the computation for later in case it is necessary
+// again. This is called memoization
+// @TODO
+export function StairCaseCombinationDP(stairs: num): num {
   let comb = 0
 
   return (function recurse(steps: num, sum: num = 0): num | any {
@@ -39,5 +53,5 @@ export default function StairCaseCombinations(stairs: number): number {
   }(stairs))
 }
 
-expect(StairCaseCombinations(4)).to.equal(5)
-expect(StairCaseCombinations(2)).to.equal(2)
+expect(StairCaseCombinationSlow(4)).to.equal(5)
+expect(StairCaseCombinationSlow(2)).to.equal(2)
