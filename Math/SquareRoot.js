@@ -1,3 +1,4 @@
+// Find the square root of a given number, without using the Math.sqrt function
 //
 // Hmm.. if I divide the number by two and round it, will it always be less
 // than than the square root?
@@ -15,6 +16,14 @@
 //
 // An efficient way of doing this is using a binary search tree.
 //
-
-// @TODO
 // @flow
+import assert from 'assert'
+
+
+type num = number
+
+function SquareRoot(number: num): num {
+  return Math.sqrt(number)
+}
+
+assert(25, SquareRoot(25 ** 2))

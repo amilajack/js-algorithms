@@ -51,8 +51,26 @@ function PascalRecursive(number: num, list: pt = []): pt {
   }
 }
 
-// @TODO
-// function PascalIterative(number: number) {}
+function PascalIterative(number: number): pt {
+  if (number === 0) return []
+  if (number <= 1) return [[1]]
+  if (number <= 2) return [[1], [1, 1]]
+
+  const rows = [[1], [1, 1]]
+
+  for (let i = 2; i < number; i++) {
+    const some = [1]
+
+    for (let j = 0; j < rows[i - 1].length - 1; j++) {
+      some.push(rows[i - 1][j] + rows[i - 1][j + 1])
+    }
+
+    some.push(1)
+    rows.push(some)
+  }
+
+  return rows
+}
 
 // Tests
 test('PascalRecursive()', () => {
@@ -62,6 +80,19 @@ test('PascalRecursive()', () => {
   ])
 
   expect(PascalRecursive(5)).to.eql([
+    [1],
+    [1, 1],
+    [1, 2, 1],
+    [1, 3, 3, 1],
+    [1, 4, 6, 4, 1]
+  ])
+
+  expect(PascalIterative(2)).to.eql([
+    [1],
+    [1, 1]
+  ])
+
+  expect(PascalIterative(5)).to.eql([
     [1],
     [1, 1],
     [1, 2, 1],
