@@ -19,22 +19,17 @@ babel-node SomeFileHere.js
 ```
 
 ## Planned Implementations
+- [ ] Algorithms
 - [ ] Data Structures
 - [ ] Programming Paradigms
-- [ ] Recursion
 - [ ] Interpreter
 - [ ] Compiler
-- [ ] AST
+- [ ] AST Parser
 - [ ] Challenge Questions
-- [ ] Time and Space Complexity/Runtime
+- [ ] Time/Space Complexity Analysis
 - [ ] Search Algorithms
 - [ ] Sorting Algorithms
 - [ ] Bitwise Operations
-
-## Planned Changes
-- [ ] Migrate to mocha tests
-- [ ] Move tests to separate modules
-- [ ] Add Travis support
 
 ## Contributing
 * Requirements:
