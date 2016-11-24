@@ -3,6 +3,8 @@
 // Each time you can either climb 1 or 2 steps. In how many distinct ways can
 // you climb to the top?
 //
+// Here's the recursion tree:
+//
 //                  4
 //                /   \
 //               1     2
@@ -19,6 +21,8 @@ import { expect } from 'chai'
 
 type num = number
 
+// Use recursion to find number of steps
+// @complexity: O(2^n)
 export default function StairCaseCombinationSlow(stairs: num): num {
   if (stairs <= 0) return 0
   if (stairs === 1) return 1
@@ -32,26 +36,33 @@ export default function StairCaseCombinationSlow(stairs: num): num {
 // This method of solving the problem uses dynamic programming. Its
 // recurses and then save the computation for later in case it is necessary
 // again. This is called memoization
-// @TODO
+//
+// climbStairs(n)     = climbStairs(n - 1) + climbStairs(n - 2)
+// climbStairs(n - 1) = climbStairs(n - 2) + climbStairs(n - 3)
+// climbStairs(n - 2) = climbStairs(n - 3) + climbStairs(n - 4)
+//
+// @complexity: O(2^(n+1)
+const dict: Map<num, num> = new Map()
+
 export function StairCaseCombinationDP(stairs: num): num {
-  let comb = 0
+  if (stairs <= 0) return 0
+  if (stairs === 1) return 1
+  if (stairs === 2) return 2
 
-  return (function recurse(steps: num, sum: num = 0): num | any {
-    switch (steps) {
-      case sum:
-        comb += 1
-        return comb
-      default:
-        recurse(steps, sum + 1)
+  if (dict.has(stairs)) return dict.get(stairs)
 
-        if (steps - sum > 1) {
-          recurse(steps, sum + 2)
-        }
+  const res =
+    StairCaseCombinationDP(stairs - 1) +
+    StairCaseCombinationDP(stairs - 2)
 
-        return comb
-    }
-  }(stairs))
+  dict.set(stairs, res)
+
+  return res
 }
 
-expect(StairCaseCombinationSlow(4)).to.equal(5)
-expect(StairCaseCombinationSlow(2)).to.equal(2)
+test('StairCaseCombination', () => {
+  expect(StairCaseCombinationSlow(4)).to.equal(5)
+  expect(StairCaseCombinationSlow(2)).to.equal(2)
+  expect(StairCaseCombinationDP(4)).to.equal(5)
+  expect(StairCaseCombinationDP(2)).to.equal(2)
+})

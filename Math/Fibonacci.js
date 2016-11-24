@@ -24,9 +24,27 @@ export default function FibonacciRecursive(number: num): num[] {
   })()
 }
 
-// @TODO
-// FibonacciMemoizeRecursive (DP)
+const dict: Map<num, num> = new Map()
+
+export function FibonacciRecursiveDP(stairs: num): num {
+  if (stairs <= 0) return 0
+  if (stairs === 1) return 1
+
+  // Memoize stair count
+  if (dict.has(stairs)) return dict.get(stairs)
+
+  const res =
+    FibonacciRecursiveDP(stairs - 1) +
+    FibonacciRecursiveDP(stairs - 2)
+
+  dict.set(stairs, res)
+
+  return res
+}
+
+// @TODO: FibonacciBinetsTheorem
 
 test('Fibonacci()', () => {
   expect(FibonacciRecursive(10)).to.eql([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
+  expect(FibonacciRecursiveDP(10)).to.equal(55)
 })
