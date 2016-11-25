@@ -2,7 +2,8 @@
  * Find the substring of a number given a start and end index. Note that a
  * substring is a part of a string.
  *
- * Complexity: O(n^2), where n is the length of the substring (Math.abs(start - end))
+ * @complexity: O(n^2), where n is the length of the substring
+ *
  * @flow
  */
 import { expect } from 'chai'

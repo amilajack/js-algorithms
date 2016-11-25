@@ -22,8 +22,30 @@ import assert from 'assert'
 
 type num = number
 
-function SquareRoot(number: num): num {
-  return Math.sqrt(number)
+const tries: num[] = []
+
+function SquareRootRecursive(number: num, increm: num = number): num {
+  if (number <= 1) return 1
+  if (number <= 4) return 4
+
+  if (
+    Math.abs(Math.abs(increm) - Math.abs(number)) < 2
+  ) return increm
+
+  if (increm ** 2 > number) {
+    tries.push(increm / 2)
+    return SquareRootRecursive(number, increm / 2)
+  }
+
+  const who =
+    (tries[tries.length - 1] + tries[tries.length - 2]) / 2
+
+  return SquareRootRecursive(number, who)
 }
 
-assert(25, SquareRoot(25 ** 2))
+// @TODO: Taylor Series Method
+// @TODO: Newtonian Method Method
+// @TODO: Babylonian Method Method
+
+console.log(SquareRootRecursive(25))
+// assert(25, SquareRootRecursive(25 ** 2))
