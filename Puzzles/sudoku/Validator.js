@@ -1,6 +1,5 @@
 // Validate if a sudoku board is invald
 // @flow
-/* eslint-disable */
 import { expect } from 'chai'
 
 

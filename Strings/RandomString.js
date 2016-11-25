@@ -10,14 +10,14 @@ import randomNumber from '../Math/RandomNumber'
 /**
  * Generate a random string
  */
-export default function RandomString(randomStringLength: number): string {
+export default function RandomString(stringLength: number): string {
   const dictionary =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
   let generatedRandomString = ''
   let index
 
-  for (index = 0; index < randomStringLength; index++) {
+  for (index = 0; index < stringLength; index++) {
     const randomDictionaryIndex = Math.floor(randomNumber(0, dictionary.length))
     generatedRandomString += dictionary[randomDictionaryIndex]
   }
@@ -26,5 +26,6 @@ export default function RandomString(randomStringLength: number): string {
 }
 
 test('RandomString', () => {
-  expect(RandomString(10)).to.not.equal(RandomString(10))
+  expect(RandomString(10)).to.be.a('string')
+  expect(RandomString(10).length).to.equal(10)
 })

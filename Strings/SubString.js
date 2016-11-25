@@ -22,4 +22,6 @@ function SubString(string: str, start: num = 0, end: num = string.length): str {
   return substring
 }
 
-expect(SubString('some', 2, 3)).to.equal('me')
+test('SubString()', () => {
+  expect(SubString('some', 2, 3)).to.equal('me')
+})
