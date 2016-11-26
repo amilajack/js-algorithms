@@ -12,17 +12,10 @@ import { expect } from 'chai'
 type num = number
 
 export default function Sum(first: num, second: num): num {
-  const items = []
+  const _first = new Array(first)
+  const _second = new Array(second)
 
-  for (let i = 0; i < first; i++) {
-    items.push('_')
-  }
-
-  for (let i = 0; i < second; i++) {
-    items.push('_')
-  }
-
-  return items.length
+  return [..._first, ..._second].length
 }
 
 test('Sum()', () => {
