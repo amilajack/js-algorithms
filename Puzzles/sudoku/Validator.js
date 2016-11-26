@@ -3,7 +3,7 @@
 import { expect } from 'chai'
 
 
-type grid = Array<Array<number>>
+type grid = number[][]
 
 const values = [
   [1, 4, 2, 6, 7, 2, 6, 7, 7],

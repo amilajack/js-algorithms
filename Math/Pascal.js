@@ -17,7 +17,7 @@ import { expect } from 'chai'
 
 
 type num = number
-type pt = Array<Array<number>>
+type pt = number[][]
 
 function PascalRecursive(number: num, list: pt = []): pt {
   switch (list.length) {

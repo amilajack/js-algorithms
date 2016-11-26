@@ -5,7 +5,7 @@ import { expect } from 'chai'
 
 const items = []
 
-export default function DivideArray(array: number[]): Array<Array<number>> {
+export default function DivideArray(array: number[]): number[][] {
   switch (array.length) {
     case 1:
       items.push(array)
