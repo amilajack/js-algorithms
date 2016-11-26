@@ -9,7 +9,7 @@ import { expect } from 'chai'
  * Create a new string and append
  * @complexity O(n)
  */
-function ReverseStringSlow(string: string): string {
+function ReverseStringIterative(string: string): string {
   let reversedString = ''
   let index
 
@@ -27,7 +27,7 @@ function ReverseStringSlow(string: string): string {
  *
  * 'some' -> 'eoms' -> 'emos'
  */
-function ReverseStringInplace(string: string): string {
+function ReverseStringIterativeInplace(string: string): string {
   const _string = string.split('')
 
   for (let i = 0; i < Math.floor(_string.length / 2); i++) {
@@ -40,8 +40,7 @@ function ReverseStringInplace(string: string): string {
   return _string.join('')
 }
 
-// Assert ReverseStringSlow
 test('ReverseString', () => {
-  expect(ReverseStringSlow('some')).to.equal('emos')
-  expect(ReverseStringInplace('some')).to.equal('emos')
+  expect(ReverseStringIterative('some')).to.equal('emos')
+  expect(ReverseStringIterativeInplace('some')).to.equal('emos')
 })

@@ -17,35 +17,39 @@
 // An efficient way of doing this is using a binary search tree.
 //
 // @flow
-import assert from 'assert'
+import { expect } from 'chai'
 
 
 type num = number
 
-const tries: num[] = []
+/**
+ * @complexity: O(log(n))
+ */
+export default function SquareRoot(number: num): num {
+  let sqrt = 1
+  let head = 1
+  let tail = number
 
-function SquareRootRecursive(number: num, increm: num = number): num {
-  if (number <= 1) return 1
-  if (number <= 4) return 4
+  while (sqrt ** 2 !== number) {
+    const middle = Math.floor((tail + head) / 2)
+    sqrt = middle
 
-  if (
-    Math.abs(Math.abs(increm) - Math.abs(number)) < 2
-  ) return increm
-
-  if (increm ** 2 > number) {
-    tries.push(increm / 2)
-    return SquareRootRecursive(number, increm / 2)
+    if (sqrt ** 2 > number) {
+      tail = middle
+    } else {
+      head = middle
+    }
   }
 
-  const who =
-    (tries[tries.length - 1] + tries[tries.length - 2]) / 2
-
-  return SquareRootRecursive(number, who)
+  return sqrt
 }
 
 // @TODO: Taylor Series Method
 // @TODO: Newtonian Method Method
 // @TODO: Babylonian Method Method
 
-console.log(SquareRootRecursive(25))
-// assert(25, SquareRootRecursive(25 ** 2))
+test('SquareRoot()', () => {
+  expect(SquareRoot(9)).to.equal(3)
+  expect(SquareRoot(25)).to.equal(5)
+  expect(SquareRoot(4)).to.equal(2)
+})
