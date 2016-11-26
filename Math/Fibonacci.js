@@ -6,7 +6,7 @@ type num = number
 
 const list = []
 
-export default function FibonacciRecursive(number: num): num[] {
+function FibonacciRecursive(number: num): num[] {
   return ((): num[] => {
     switch (list.length) {
       case 0:
@@ -26,7 +26,7 @@ export default function FibonacciRecursive(number: num): num[] {
 
 const dict: Map<num, num> = new Map()
 
-export function FibonacciRecursiveDP(stairs: num): num {
+function FibonacciRecursiveDP(stairs: num): num {
   if (stairs <= 0) return 0
   if (stairs === 1) return 1
 

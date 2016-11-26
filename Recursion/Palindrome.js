@@ -16,7 +16,7 @@
 import { expect } from 'chai'
 
 
-export default function PalindromeRecursive(string: string): bool {
+function PalindromeRecursive(string: string): bool {
   // Base case
   if (string.length < 2) return true
 
@@ -28,7 +28,7 @@ export default function PalindromeRecursive(string: string): bool {
   return PalindromeRecursive(string.slice(1, string.length - 1))
 }
 
-export function PalindromeIterative(string: string): bool {
+function PalindromeIterative(string: string): bool {
   const _string = string
     .toLowerCase()
     .replace(/ /g, '')

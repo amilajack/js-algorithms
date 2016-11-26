@@ -19,7 +19,7 @@ let permutations = 0
 /**
  * @complexity: O(n!), where n is the length of the string
  */
-export default function StringPermutationsRecursive(string: string): number {
+function StringPermutationsRecursive(string: string): number {
   if (string.length === 1) {
     permutations++
   }
@@ -38,7 +38,7 @@ export default function StringPermutationsRecursive(string: string): number {
 /**
  * @complexity: O(n), where n is the length of the string
  */
-export function StringPermutationsRecursiveFactorial(string: string): number {
+function StringPermutationsRecursiveFactorial(string: string): number {
   return Factorial(string.length)
 }
 

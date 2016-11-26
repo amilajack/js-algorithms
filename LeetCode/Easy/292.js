@@ -16,10 +16,10 @@
 import { expect } from 'chai'
 
 
-export default function canWinNim(n: number): bool {
+function CanWinNim(n: number): bool {
   return n / 4 % 1 !== 0
 }
 
-test('canWinNim()', () => {
-  expect(canWinNim(4)).to.equal(false)
+test('CanWinNim()', () => {
+  expect(CanWinNim(4)).to.equal(false)
 })

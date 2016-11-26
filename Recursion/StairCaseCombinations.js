@@ -23,7 +23,7 @@ type num = number
 
 // Use recursion to find number of steps
 // @complexity: O(2^n)
-export default function StairCaseCombinationSlow(stairs: num): num {
+function StairCaseCombinationSlow(stairs: num): num {
   if (stairs <= 0) return 0
   if (stairs === 1) return 1
   if (stairs === 2) return 2
@@ -44,7 +44,7 @@ export default function StairCaseCombinationSlow(stairs: num): num {
 // @complexity: O(2^(n+1)
 const dict: Map<num, num> = new Map()
 
-export function StairCaseCombinationDP(stairs: num): num {
+function StairCaseCombinationDP(stairs: num): num {
   if (stairs <= 0) return 0
   if (stairs === 1) return 1
   if (stairs === 2) return 2

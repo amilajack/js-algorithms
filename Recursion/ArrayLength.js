@@ -17,7 +17,7 @@
 import { expect } from 'chai'
 
 
-export default function ArrayLength(array: number[]): number {
+function ArrayLength(array: number[]): number {
   switch (array.length !== 0) {
     case true: {
       array.splice(0, 1)

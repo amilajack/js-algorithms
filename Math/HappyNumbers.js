@@ -25,7 +25,7 @@ import { expect } from 'chai'
 /**
  * Calculate if a number is happy or unhappy
  */
-export default function HappyNumberChecker(number: number): bool {
+function HappyNumberChecker(number: number): bool {
   const numbers = new Set()
   let currentNumber = calc(number)
   let infiniteLoopPreventionLimit = 0

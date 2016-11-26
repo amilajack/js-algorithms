@@ -26,7 +26,7 @@ export default function FactorialRecursive(number: num, product: num = 1): num {
   }
 }
 
-export function FactorialIterative(number: num): num {
+function FactorialIterative(number: num): num {
   let factorial = 1
   let current = 1
 
