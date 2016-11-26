@@ -28,10 +28,34 @@ export default function PalindromeRecursive(string: string): bool {
   return PalindromeRecursive(string.slice(1, string.length - 1))
 }
 
-test('PalindromeRecursive()', () => {
+export function PalindromeIterative(string: string): bool {
+  const _string = string
+    .toLowerCase()
+    .replace(/ /g, '')
+    .replace(/,/g, '')
+    .replace(/'.'/g, '')
+    .replace(/:/g, '')
+    .split('')
+
+  for (let i = 0; i < Math.floor(_string.length / 2); i++) {
+    if (_string[_string.length - 1 - i] !== _string[i]) return false
+  }
+
+  return true
+}
+
+// test('Palindrome()', () => {
   PalindromeRecursive('radar')
   expect(PalindromeRecursive('')).to.equal(true)
   expect(PalindromeRecursive('a')).to.equal(true)
   expect(PalindromeRecursive('aa')).to.equal(true)
+  expect(PalindromeRecursive('ab')).to.equal(false)
   expect(PalindromeRecursive('radar')).to.equal(true)
-})
+
+  expect(PalindromeIterative('')).to.equal(true)
+  expect(PalindromeIterative('a')).to.equal(true)
+  expect(PalindromeIterative('aa')).to.equal(true)
+  expect(PalindromeIterative('ab')).to.equal(false)
+  expect(PalindromeIterative('radar')).to.equal(true)
+  expect(PalindromeIterative('A man, a plan, a canal: Panama')).to.equal(true)
+// })
