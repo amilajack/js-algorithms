@@ -1,4 +1,6 @@
-// We have discussed Backtracking and Knight’s tour problem in Set 1. Let us
+// Taken from http://www.geeksforgeeks.org/backttracking-set-2-rat-in-a-maze/
+//
+//  We have discussed Backtracking and Knight’s tour problem in Set 1. Let us
 // discuss Rat in a Maze as another example problem that can be solved using Backtracking.
 //
 // A Maze is given as N*N binary matrix of blocks where source block is the
