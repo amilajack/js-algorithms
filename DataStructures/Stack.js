@@ -55,14 +55,16 @@ export default class Stack {
     return this.items.length === 0
   }
 
-  peek() {}
+  peek(): any {
+    return this.items[this.items.length - 1]
+  }
 }
 
-test('Stack', () => {
+// test('Stack', () => {
   const stack = new Stack(['a', 'b', 'c'])
   expect(stack.push('d').items).to.eql(['a', 'b', 'c', 'd'])
   expect(((): any[] => {
     stack.pop()
     return stack.items
   })()).to.eql(['a', 'b', 'c'])
-})
+// })

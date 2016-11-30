@@ -1,5 +1,4 @@
 // @flow
-/* eslint no-bitwise: 0 */
 import { expect } from 'chai'
 
 
