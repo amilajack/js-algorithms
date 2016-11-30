@@ -27,15 +27,15 @@ const maze1 = [
   [1, 0, 0, 0],
   [1, 1, 0, 1],
   [0, 1, 0, 0],
-  [1, 1, 1, 2]
+  [1, 1, 1, 1]
 ]
 
 // 1 solution
 const maze2 = [
   [1, 0, 1, 1],
-  [1, 1, 0, 1],
-  [0, 1, 0, 1],
-  [1, 1, 1, 2]
+  [1, 1, 1, 1],
+  [0, 0, 0, 1],
+  [1, 1, 1, 1]
 ]
 
 // 2 solution
@@ -43,7 +43,7 @@ const maze3 = [
   [1, 0, 1, 1],
   [1, 1, 1, 1],
   [0, 1, 0, 1],
-  [1, 1, 1, 2]
+  [1, 1, 1, 1]
 ]
 
 const solutions = []
@@ -51,7 +51,7 @@ const solutions = []
 export default function Maze(maze: mazeType, x: num, y: num, path: mazeType = []) {
   const mazeLength = maze.length
 
-  if (maze[x][y] === 2) {
+  if (x === maze.length - 1 && y === maze.length - 1) {
     solutions.push(path)
   }
 
@@ -70,10 +70,15 @@ export default function Maze(maze: mazeType, x: num, y: num, path: mazeType = []
 test('Maze()', () => {
   Maze(maze1, 0, 0)
   expect(solutions.length).to.equal(1)
+  expect(solutions[0]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]])
 
   Maze(maze2, 0, 0)
-  expect(solutions.length).to.equal(2)
+  expect(solutions.length).to.eql(2)
+  expect(solutions[1]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]])
 
   Maze(maze3, 0, 0)
-  expect(solutions.length).to.equal(4)
+  expect(solutions.length).to.eql(4)
+  expect(solutions[2]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]])
+  expect(solutions.length).to.eql(4)
+  expect(solutions[3]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]])
 })

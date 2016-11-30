@@ -57,9 +57,9 @@ function _merge(first: number[], second: number[]): number[] {
   // expect(_merge([2], [1])).to.eql([1, 2])
   // expect(_merge([1, 3, 4], [3, 4, 5, 6])).to.eql([1, 3, 3, 4, 4, 5, 6])
   // expect(_divide([1, 2, 3, 4, 5])).to.eql([[5], [4], [3], [2], [1]])
-  expect(MergeSortRecursive([])).to.eql([])
-  _items = []
+expect(MergeSortRecursive([])).to.eql([])
+_items = []
   // expect(MergeSortRecursive([1])).to.eql([1])
-  _items = []
-  expect(MergeSortRecursive([1, 3, 2, 10, 7, 5, 4])).to.eql([1, 2, 3, 4, 5, 7, 10])
+_items = []
+expect(MergeSortRecursive([1, 3, 2, 10, 7, 5, 4])).to.eql([1, 2, 3, 4, 5, 7, 10])
 // })
