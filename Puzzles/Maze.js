@@ -1,7 +1,8 @@
 // Taken from http://www.geeksforgeeks.org/backttracking-set-2-rat-in-a-maze/
 //
 //  We have discussed Backtracking and Knight’s tour problem in Set 1. Let us
-// discuss Rat in a Maze as another example problem that can be solved using Backtracking.
+// discuss Rat in a Maze as another example problem that can be solved using
+// Backtracking.
 //
 // A Maze is given as N*N binary matrix of blocks where source block is the
 // upper left most block i.e., maze[0][0] and destination block is lower
@@ -69,16 +70,12 @@ export default function Maze(maze: mazeType, x: num, y: num, path: mazeType = []
 
 test('Maze()', () => {
   Maze(maze1, 0, 0)
-  expect(solutions.length).to.equal(1)
   expect(solutions[0]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]])
 
   Maze(maze2, 0, 0)
-  expect(solutions.length).to.eql(2)
   expect(solutions[1]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]])
 
   Maze(maze3, 0, 0)
-  expect(solutions.length).to.eql(4)
   expect(solutions[2]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]])
-  expect(solutions.length).to.eql(4)
   expect(solutions[3]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]])
 })
