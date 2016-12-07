@@ -60,11 +60,13 @@ export default class Stack {
   }
 }
 
-// test('Stack', () => {
-const stack = new Stack(['a', 'b', 'c'])
-expect(stack.push('d').items).to.eql(['a', 'b', 'c', 'd'])
-expect(((): any[] => {
-  stack.pop()
-  return stack.items
-})()).to.eql(['a', 'b', 'c'])
-// })
+test('Stack', () => {
+  const stack = new Stack(['a', 'b', 'c'])
+
+  expect(stack.push('d').items).to.eql(['a', 'b', 'c', 'd'])
+
+  expect(((): any[] => {
+    stack.pop()
+    return stack.items
+  })()).to.eql(['a', 'b', 'c'])
+})

@@ -21,9 +21,6 @@ export default class Tree {
 
   remove() {}
 
-  /**
-   * (2^(n + 1)) - 1
-   */
   find(value: any, node: Node): bool {
     if (node.value === value) return true
     if (node.children.length < 1) return false
@@ -31,8 +28,6 @@ export default class Tree {
     for (const child of node.children) {
       this.find(value, child)
     }
-
-    return !!found
   }
 }
 

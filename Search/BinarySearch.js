@@ -2,7 +2,9 @@
 import { expect } from 'chai'
 
 
-function BinarySearchRecursive(items: number[], element: number): number {
+type num = number
+
+function BinarySearchRecursive(items: num[], element: num): num {
   const middleIndex = Math.floor(items.length / 2)
 
   // Base Case
@@ -17,7 +19,7 @@ function BinarySearchRecursive(items: number[], element: number): number {
   return BinarySearchRecursive(items.splice(0, middleIndex), element)
 }
 
-function BinarySearchIterative(items: number[], element: number): number {
+function BinarySearchIterative(items: num[], element: num): num {
   let low = 0
   let high = items.length - 1
 

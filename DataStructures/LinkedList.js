@@ -3,7 +3,7 @@
 // ex. A list of objects with values and nexts to other values
 //
 // vowels: ['a', next] -> ['b', next] -> ['c', next]
-//         ^^^^^^^^^^^^^^ node                   ^ data  ^ next
+//         ^^^^^^^^^^^   node             ^ data  ^ next
 //
 // Random Access: O(n)
 // Insertion/Deletion: O(1)
