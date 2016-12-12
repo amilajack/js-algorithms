@@ -27,7 +27,7 @@ function PrimeNumberGenerator(limit: number = 100): number[] {
         primeNumbers[d] !== 1 &&
         primeNumbers[d] % primeNumbers[i] === 0
       ) {
-        // Perform in-place mutation for better performance
+        // Perform in-place mutation for better memory efficiency
         primeNumbers.splice(d, 1)
       }
     }
