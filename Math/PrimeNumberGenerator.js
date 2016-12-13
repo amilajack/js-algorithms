@@ -5,7 +5,7 @@
  * For each int 'a' until the given limit, check if each following int 'b' is divisible
  * by 'a'
  *
- * @complexity: O(n(log(logn)))
+ * @complexity: O(n(logn))
  * @flow
  */
 import { expect } from 'chai'
