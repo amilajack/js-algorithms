@@ -6,6 +6,24 @@ type num = number
 
 const list = []
 
+function FibonacciIterative(target: number): num[] {
+  const sequence = []
+
+  if (target >= 1) {
+    sequence.push(1)
+  }
+
+  if (target >= 2) {
+    sequence.push(1)
+  }
+
+  for (let i = 2; i < target; i++) {
+    sequence.push(sequence[i - 1] + sequence[i - 2])
+  }
+
+  return sequence
+}
+
 function FibonacciRecursive(number: num): num[] {
   return ((): num[] => {
     switch (list.length) {
@@ -45,6 +63,12 @@ function FibonacciRecursiveDP(stairs: num): num {
 // @TODO: FibonacciBinetsTheorem
 
 test('Fibonacci()', () => {
+  expect(FibonacciIterative(0)).to.eql([])
+
+  expect(FibonacciIterative(1)).to.eql([1])
+  expect(FibonacciIterative(1)).to.eql([1, 1])
+
   expect(FibonacciRecursive(10)).to.eql([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
   expect(FibonacciRecursiveDP(10)).to.equal(55)
+  expect(FibonacciIterative(10)).to.eql([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
 })

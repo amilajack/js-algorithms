@@ -15,6 +15,8 @@
 // Can you do it in O(n) time complexity and O(1) space complexity?
 //
 // @flow
+import { expect } from 'chai'
+
 
 function CircularArrayLoop(nums: number[]): bool {
   const _nums = new Set()
@@ -34,4 +36,6 @@ function CircularArrayLoop(nums: number[]): bool {
   return false
 }
 
-console.log(CircularArrayLoop([2, -1, 1, 2, 2]))
+test('CircularArrayLoop()', () => {
+  expect(CircularArrayLoop([2, -1, 1, 2, 2])).to.be.an('array')
+})
