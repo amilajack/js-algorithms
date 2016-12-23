@@ -12,7 +12,7 @@
     "add-module-exports",
     "transform-runtime",
     "syntax-flow",
-    "tcomb",
+    /*"tcomb",*/
     "transform-flow-strip-types"
   ]
 }

@@ -12,8 +12,6 @@
 //
 // Write the code that will take a string and make this conversion given a
 // number of rows:
-
-
 import { expect } from 'chai'
 
 
@@ -26,13 +24,17 @@ function ZigZag(string: string, number: number): string {
 
   while (output.length < string.length) {
     output[i] = string[index]
+    console.log(index, middle)
+
     if (rowNumber !== Math.floor(number / 2)) {
       if (index + number + 1 > string.length) {
         rowNumber++; index = rowNumber
+      } else if (number % 2 === 0) {
+        index += number
       } else {
         index += number + 1
       }
-    } else if (index + 2 > string.length) {
+    } else if (index + middle > string.length) {
       rowNumber++; index = rowNumber
     } else {
       index += middle
@@ -44,3 +46,5 @@ function ZigZag(string: string, number: number): string {
 }
 
 expect(ZigZag('PAYPALISHIRING', 3)).to.equal('PAHNAPLSIIGYIR')
+expect(ZigZag('ABC', 2)).to.equal('ACB')
+expect(ZigZag('ABC', 3)).to.equal('ABC')
