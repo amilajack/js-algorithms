@@ -9,13 +9,8 @@ const list = []
 function FibonacciIterative(target: number): num[] {
   const sequence = []
 
-  if (target >= 1) {
-    sequence.push(1)
-  }
-
-  if (target >= 2) {
-    sequence.push(1)
-  }
+  if (target >= 1) sequence.push(1)
+  if (target >= 2) sequence.push(1)
 
   for (let i = 2; i < target; i++) {
     sequence.push(sequence[i - 1] + sequence[i - 2])

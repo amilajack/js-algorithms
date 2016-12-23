@@ -7,7 +7,6 @@
  * @flow
  */
 import { expect } from 'chai'
-import Hash from './Hash'
 
 
 function HashMap() {

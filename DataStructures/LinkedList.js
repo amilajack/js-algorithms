@@ -27,13 +27,6 @@ class LinkedList {
     return !!this.head
   }
 
-  // Remove first link
-  remove() {
-    if (!this.isEmpty() && this.head.hasNext()) {
-      this.head = this.head.next
-    }
-  }
-
   has() {}
 
   next() {}
@@ -56,6 +49,8 @@ class Node {
 
   next: Node | bool = false
 
+  head: Node
+
   constructor(data: any = {}, next: Node | bool = false) {
     this.data = data
     this.next = next
@@ -63,6 +58,26 @@ class Node {
 
   hasNext(): bool {
     return this.next !== false
+  }
+
+  // Remove first link
+  remove() {
+    if (!this.isEmpty() && this.head.hasNext()) {
+      this.head = this.head.next
+    }
+  }
+
+  /**
+   * Append after node
+   */
+  append(data: any): bool {
+    const node = new Node(data)
+    const { next } = this
+
+    node.next = next
+    this.next = node
+
+    return true
   }
 }
 
