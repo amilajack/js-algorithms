@@ -24,7 +24,6 @@ function ZigZag(string: string, number: number): string {
 
   while (output.length < string.length) {
     output[i] = string[index]
-    console.log(index, middle)
 
     if (rowNumber !== Math.floor(number / 2)) {
       if (index + number + 1 > string.length) {

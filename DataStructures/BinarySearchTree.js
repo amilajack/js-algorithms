@@ -1,5 +1,5 @@
 // @flow
-/* eslint no-param-reassign: 0, consistent-return: 0 */
+/* eslint no-param-reassign: 0, consistent-return: 0, no-restricted-syntax: 0 */
 import { expect } from 'chai'
 
 
@@ -24,7 +24,11 @@ class Node {
 export default class BinarySearchTree {
   root: Node;
 
-  items = []
+  items = [];
+
+  constructor(items: Array<number>) {
+    for (const item of items) this.add(item)
+  }
 
   toArray(node?: Node): bool | void {
     if (!node) node = this.root
@@ -41,7 +45,7 @@ export default class BinarySearchTree {
     if (node.right) this.toArray(node.right)
   }
 
-  insert(element: number, root?: Node): bool {
+  add(element: number, root?: Node): bool {
     let _root = root
 
     if (!this.root) {
@@ -61,7 +65,7 @@ export default class BinarySearchTree {
         _root.left = new Node(element)
         return true
       }
-      return this.insert(element, _root.left)
+      return this.add(element, _root.left)
     }
 
     if (!_root.right) {
@@ -69,7 +73,7 @@ export default class BinarySearchTree {
       return true
     }
 
-    return this.insert(element, _root.right)
+    return this.add(element, _root.right)
   }
 
   remove() {}
@@ -77,16 +81,16 @@ export default class BinarySearchTree {
   find() {}
 }
 
-const bTree = new BinarySearchTree()
-bTree.insert(10, bTree.root)
-bTree.insert(2, bTree.root)
-bTree.insert(8, bTree.root)
-bTree.insert(9, bTree.root)
-bTree.insert(3, bTree.root)
-
+const bTree = new BinarySearchTree([10, 2, 8, 9, 3])
+bTree.add(11)
 bTree.toArray()
+expect(bTree.items).to.eql([2, 3, 8, 9, 10, 11])
 
-expect(bTree.items).to.eql([2, 3, 8, 9, 10])
+const bTreeTwo = new BinarySearchTree([])
+bTree.toArray()
+expect(bTreeTwo.items).to.eql([])
 
-// expect(bTree.toArray()).to.eql([1, 3, 2, 6, 7, 13])
-// expect(bTree.toArray()).to.eql([1, 3, 2, 6, 7, 13])
+// const bTreeThree = new BinarySearchTree([1, 2, 3])
+// bTreeThree.remove(1)
+// bTree.toArray()
+// expect(bTreeThree.items).to.eql([2, 3])

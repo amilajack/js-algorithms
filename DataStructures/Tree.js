@@ -34,7 +34,3 @@ export default class Tree {
 const soo = new Tree()
 const doo = soo.add(soo.root, 'value')
 soo.add(doo, 'no')
-console.log(soo.find('no', soo.root))
-console.log(soo.find('value', soo.root))
-console.log(soo.find('fuck', soo.root))
-console.log(soo)

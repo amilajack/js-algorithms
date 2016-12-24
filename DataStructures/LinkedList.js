@@ -85,8 +85,6 @@ const linkedList = new LinkedList()
 linkedList.insert('soo')
 linkedList.insert('doo')
 
-console.log(JSON.stringify(linkedList))
-
 expect(linkedList.head.data).to.eql({})
 expect(linkedList.head.next.data).to.equal('doo')
 expect(linkedList.head.next.next.data).to.equal('soo')
