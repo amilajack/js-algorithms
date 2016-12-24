@@ -47,15 +47,15 @@
     "eslint-config-airbnb": "^13.0.0",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-flowtype": "^2.29.1",
-    "eslint-plugin-flowtype-errors": "^2.0.1",
+    "eslint-plugin-flowtype-errors": "^2.0.2",
     "eslint-plugin-fp": "^2.2.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.0.2",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.8.0",
-    "flow-bin": "^0.37.0",
+    "flow-bin": "^0.37.4",
     "jest-cli": "^18.0.0",
-    "tcomb": "^3.2.15"
+    "tcomb": "^3.2.16"
   },
   "engines": {
     "node": ">=6",

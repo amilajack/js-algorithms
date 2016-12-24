@@ -1,3 +1,4 @@
+/* eslint no-restricted-syntax: 0 */
 // @flow
 //
 // Given two strings, write a method to decide if one is a permutation of the
@@ -5,23 +6,42 @@
 import { expect } from 'chai'
 
 
+/**
+ * Complexity: O(n)
+ */
 function PermutationString(first: string, second: string): bool {
   if (first.length !== second.length) return false
 
-  const _first = new Set(first)
-  const _second = new Set(second)
+  const _first: Map<string, number> = new Map()
 
-  if (_first.size !== _second.size) return false
+  for (const char of first) {
+    if (_first.has(char)) {
+      const some = _first.get(char)
+      _first.set(char, some + 1)
+    } else {
+      _first.set(char, 1)
+    }
+  }
 
-  console.log(_first.values(), _second.values())
+  for (const _char of second) {
+    if (_first.has(_char)) {
+      const foo = _first.get(_char)
+      if (foo) {
+        _first.set(_char, foo - 1)
+      }
+    }
+  }
 
-  for (const char of _first.values()) {
-    if (!_second.has(char)) return false
+  for (const val of _first.values()) {
+    if (val !== 0) return false
   }
 
   return true
 }
 
+/**
+ * Complexity: O(nlogn)
+ */
 function PermutationStringInPlace(first: string, second: string): bool {
   if (first.length !== second.length) return false
 
@@ -43,4 +63,5 @@ expect(PermutationStringInPlace('abc', 'ab')).to.equal(false)
 expect(PermutationString('abcdef', 'xyz')).to.equal(false)
 
 expect(PermutationStringInPlace('foo', 'off')).to.equal(false)
-// expect(PermutationString('foo', 'off')).to.equal(false)
+expect(PermutationString('foo', 'off')).to.equal(false)
+expect(PermutationString('foo', 'offa')).to.equal(false)
