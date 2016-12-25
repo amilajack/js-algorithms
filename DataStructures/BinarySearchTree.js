@@ -60,6 +60,8 @@ export default class BinarySearchTree {
       return true
     }
 
+    console.log(_root.data, element)
+
     if (_root.data > element) {
       if (!_root.left) {
         _root.left = new Node(element)

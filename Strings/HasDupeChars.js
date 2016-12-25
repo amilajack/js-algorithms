@@ -21,13 +21,8 @@ import { expect } from 'chai'
 
 
 function HasDupeChars(string: string): bool {
-  const set = new Set()
-
-  return string.split('').some((e: string): bool => {
-    if (set.has(e)) return true
-    set.add(e)
-    return false
-  })
+  const set = new Set(string)
+  return set.size !== string.length
 }
 
 test('HasDupeChars()', () => {
