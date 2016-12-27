@@ -27,13 +27,10 @@ export default function isBalanced(root: TreeNode): bool {
   const sec = TreeHeight(root.right)
 
   const greatestPlusDiff =
-    ((first > sec ? first : sec) -
-    (first > sec ? sec : first))
+    ((first > sec ? first : sec) - (first > sec ? sec : first))
     <= 1
 
-  if (greatestPlusDiff) {
-    return isBalanced(root.left) && isBalanced(root.right)
-  }
-
-  return false
+  return greatestPlusDiff
+    ? isBalanced(root.left) && isBalanced(root.right)
+    : false
 }
