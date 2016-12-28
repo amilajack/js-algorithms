@@ -21,6 +21,7 @@
 
 /**
  * Definition for a binary tree node.
+ *
  * function TreeNode(val) {
  *     this.val = val;
  *     this.left = this.right = null;
@@ -29,7 +30,7 @@
 
 let items = []
 
-function convertToArray(node: Object) {
+export function convertToArray(node: Object) {
   if (node.val) items.push(node.val)
   if (node.left) items.push(node.val)
   if (node.right) items.push(node.val)
@@ -47,9 +48,7 @@ function convertToArray(node: Object) {
  * [2, 2], 1 to 2, (2 ** 1) - 1
  * [3, 4, 4, 3], 3 to 6, diff = (2 ** 2) - 1
  */
-function isSymmetric(root: Object): bool {
-  // convertToArray(root)
-
+export default function isSymmetric(root: Object): bool {
   items = [1, 2, 2, 3, 5, 4, 3]
   // items = [1, 2, 2, 3, 4, 4, 3]
 
@@ -82,17 +81,7 @@ function isSymmetric(root: Object): bool {
     }
 
     if (stop > 100) break
-
-    console.log(
-      start,
-      pwr,
-      sub,
-      end,
-      middle
-    )
   }
 
   return true
 }
-
-console.log(isSymmetric())

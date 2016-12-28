@@ -17,7 +17,7 @@ function MaxDepth(root: TreeNode, count: number = 0): number {
   const first = MaxDepth(root.left, count)
   const sec = MaxDepth(root.right, count)
 
-  return (first > sec ? first : sec) + 1
+  return Math.max(first, sec) + 1
 }
 
 const t = new TreeNode(1)
