@@ -8,9 +8,7 @@ function BinarySearchRecursive(items: num[], element: num): num {
   const middleIndex = Math.floor(items.length / 2)
 
   // Base Case
-  if (items.length === 1) {
-    return items[0]
-  }
+  if (items.length === 1) return items[0]
 
   if (items[middleIndex] <= element) {
     return BinarySearchRecursive(items.splice(middleIndex, items.length - 1), element)
