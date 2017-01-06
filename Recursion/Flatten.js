@@ -24,17 +24,16 @@ export default function Flatten(array: Array<Array<num>>, collector: num[] = [])
   }
 }
 
-let items = []
+export function FlattenRecrusive(items: Array<any>): Array<any> {
+  let concatedItems = []
 
-// [1, [2, [ [3, 4], 5], 6]]
-export function FlattenRecursive(array: Array<any> | num): Array<num> {
-  for (let i = 0; i < array.length; i++) {
-    Array.isArray(array[i])
-      ? FlattenRecursive(array[i])
-      : items.push(array[i])
+  for (let i = 0; i < items.length; i++) {
+    Array.isArray(items[i])
+      ? concatedItems = concatedItems.concat(FlattenRecrusive(items[i]))
+      : concatedItems.push(items[i])
   }
 
-  return items
+  return concatedItems
 }
 
 test('Flatten', () => {
