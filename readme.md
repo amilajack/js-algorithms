@@ -14,7 +14,7 @@ npm i -g babel-cli
 npm install
 npm test
 
-# Running files
+# Running/testing files
 babel-node SomeFileHere.js
 ```
 
