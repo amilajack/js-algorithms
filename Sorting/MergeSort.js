@@ -2,10 +2,11 @@
  * MergeSort is an efficient algorithm that utilizes the divide-and-conquer paradigm
  *
  * Notes:
- * -Has best, average, and worst case of O(nlgn)
- * -Stable
- * -Not in-place. Requires O(n) space since each recursive call on MergeSort
- *  creates temporary arrays to store values
+ * - Has best, average, and worst case of O(nlgn)
+ * - Stable
+ * - Not in-place. Requires O(n) space since each recursive call on MergeSort
+ *   creates temporary arrays to store values
+ *
  * @flow
  */
 import { expect } from 'chai'
@@ -17,7 +18,7 @@ export default function MergeSortRecursive(items: number[]): number[] {
 
 let _items: Array<Array<number>> = []
 
-function _divide(array: number[]): any {
+function _divide(array: Array<number>): any {
   switch (array.length) {
     case 1:
       _items.push(array)
@@ -35,7 +36,7 @@ function _divide(array: number[]): any {
 
 // The 'target' array is the array that we'll merge into. This array will be
 // shorter in length so that we don't access an array index that's out of bounds
-function _merge(first: number[], second: number[]): number[] {
+function _merge(first: Array<number>, second: Array<number>): Array<number> {
   const merged = []
   const [target, source] = first.length > second.length
                             ? [first, second]
@@ -61,14 +62,9 @@ function _merge(first: number[], second: number[]): number[] {
   return merged
 }
 
-// test('MergeSortRecursive()', () => {
-  // expect(_merge([1, 3, 4], [3, 4, 5])).to.eql([1, 3, 3, 4, 4, 5])
-  // expect(_merge([2], [1])).to.eql([1, 2])
-  // expect(_merge([1, 3, 4], [3, 4, 5, 6])).to.eql([1, 3, 3, 4, 4, 5, 6])
-  // expect(_divide([1, 2, 3, 4, 5])).to.eql([[5], [4], [3], [2], [1]])
-expect(MergeSortRecursive([])).to.eql([])
+expect(MergeSortRecursive([]))
+    .to.eql([])
+
 _items = []
-  // expect(MergeSortRecursive([1])).to.eql([1])
-_items = []
-expect(MergeSortRecursive([1, 3, 2, 10, 7, 5, 4])).to.eql([1, 2, 3, 4, 5, 7, 10])
-// })
+expect(MergeSortRecursive([1, 3, 2, 10, 7, 5, 4]))
+    .to.eql([1, 2, 3, 4, 5, 7, 10])
