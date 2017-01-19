@@ -43,6 +43,7 @@ app/node_modules
 
 # Packaged and compiled files
 dist
+flow-typed
 .eslintcache
 
 # Env configuration

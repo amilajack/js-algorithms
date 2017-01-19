@@ -9,8 +9,8 @@
  * -Not stable (Other implementations of QuickSort are)
  * -In-place (Other implementations of QuickSort aren't)
  * -This implementation uses randomly selected pivots for better performance
- * @flow
  */
+// @flow
 import { expect } from 'chai'
 
 
