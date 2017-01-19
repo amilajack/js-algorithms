@@ -1,4 +1,13 @@
-// @flow
+/**
+ * MergeSort is an efficient algorithm that utilizes the divide-and-conquer paradigm
+ *
+ * Notes:
+ * -Has best, average, and worst case of O(nlgn)
+ * -Stable
+ * -Not in-place. Requires O(n) space since each recursive call on MergeSort
+ *  creates temporary arrays to store values
+ * @flow
+ */
 import { expect } from 'chai'
 
 

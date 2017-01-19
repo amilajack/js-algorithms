@@ -1,4 +1,16 @@
-// @flow
+/**
+ * QuickSort is an efficient sorting algorithm that utilizes the divide-and-conquer paradigm
+ *
+ * Notes:
+ * -Algorithm derived via Introduction to Algorithm (Cormen et al)
+ * -Has an optimal best and average case (O(nlgn)) but unlikely poor worst case (O(n^2))
+ *   -Worst occurs when QuickSort produces a maximally unbalanced subproblem with n-1 elements
+ *    and one with 0 elements, and happens through every iteration of QuickSort
+ * -Not stable (Other implementations of QuickSort are)
+ * -In-place (Other implementations of QuickSort aren't)
+ * -This implementation uses randomly selected pivots for better performance
+ * @flow
+ */
 import { expect } from 'chai'
 
 
