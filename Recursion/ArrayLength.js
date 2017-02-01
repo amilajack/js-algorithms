@@ -13,7 +13,6 @@
  * @flow
  */
 
-/* eslint no-unused-vars: 0 */
 import { expect } from 'chai';
 
 
