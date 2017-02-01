@@ -8,14 +8,14 @@
  * @complexity: O(n(logn))
  * @flow
  */
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 function PrimeNumberGenerator(limit: number = 100): number[] {
-  const primeNumbers = []
+  const primeNumbers = [];
 
   for (let i = 1; i <= limit; i++) {
-    primeNumbers.push(i)
+    primeNumbers.push(i);
   }
 
   for (let i = 0; i < primeNumbers.length; i++) {
@@ -28,16 +28,16 @@ function PrimeNumberGenerator(limit: number = 100): number[] {
         primeNumbers[d] % primeNumbers[i] === 0
       ) {
         // Perform in-place mutation for better memory efficiency
-        primeNumbers.splice(d, 1)
+        primeNumbers.splice(d, 1);
       }
     }
   }
 
-  return primeNumbers
+  return primeNumbers;
 }
 
 // Test
 test('PrimeNumberGenerator()', () => {
-  expect(PrimeNumberGenerator(10)).to.eql([1, 2, 3, 5, 7])
-  expect(PrimeNumberGenerator(20)).to.eql([1, 2, 3, 5, 7, 11, 13, 17, 19])
-})
+  expect(PrimeNumberGenerator(10)).to.eql([1, 2, 3, 5, 7]);
+  expect(PrimeNumberGenerator(20)).to.eql([1, 2, 3, 5, 7, 11, 13, 17, 19]);
+});

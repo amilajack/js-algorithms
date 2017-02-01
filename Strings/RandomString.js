@@ -3,8 +3,8 @@
  * @flow
  */
 
-import { expect } from 'chai'
-import randomNumber from '../Math/RandomNumber'
+import { expect } from 'chai';
+import randomNumber from '../Math/RandomNumber';
 
 
 /**
@@ -12,20 +12,20 @@ import randomNumber from '../Math/RandomNumber'
  */
 export default function RandomString(stringLength: number): string {
   const dictionary =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-  let generatedRandomString = ''
-  let index
+  let generatedRandomString = '';
+  let index;
 
   for (index = 0; index < stringLength; index++) {
-    const randomDictionaryIndex = Math.floor(randomNumber(0, dictionary.length))
-    generatedRandomString += dictionary[randomDictionaryIndex]
+    const randomDictionaryIndex = Math.floor(randomNumber(0, dictionary.length));
+    generatedRandomString += dictionary[randomDictionaryIndex];
   }
 
-  return generatedRandomString
+  return generatedRandomString;
 }
 
 test('RandomString', () => {
-  expect(RandomString(10)).to.be.a('string')
-  expect(RandomString(10).length).to.equal(10)
-})
+  expect(RandomString(10)).to.be.a('string');
+  expect(RandomString(10).length).to.equal(10);
+});

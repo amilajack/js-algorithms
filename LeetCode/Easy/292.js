@@ -13,13 +13,13 @@
 // removed by your friend.
 //
 // @flow
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 function CanWinNim(n: number): bool {
-  return n / 4 % 1 !== 0
+  return n / 4 % 1 !== 0;
 }
 
 test('CanWinNim()', () => {
-  expect(CanWinNim(4)).to.equal(false)
-})
+  expect(CanWinNim(4)).to.equal(false);
+});

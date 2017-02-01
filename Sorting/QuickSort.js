@@ -12,54 +12,54 @@
  *
  * @flow
  */
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 export default function QuickSort(items: Array<number>): Array<number> {
-  const itemsCopy = [...items]
-  QuickSortRcrs(itemsCopy, 0, itemsCopy.length - 1)
-  return itemsCopy
+  const itemsCopy = [...items];
+  QuickSortRcrs(itemsCopy, 0, itemsCopy.length - 1);
+  return itemsCopy;
 }
 
 function QuickSortRcrs(items: Array<number>, p: number, r: number) {
   if (p < r) {
-    const q = RandomizedPartition(items, p, r)
-    QuickSortRcrs(items, p, q - 1)
-    QuickSortRcrs(items, q + 1, r)
+    const q = RandomizedPartition(items, p, r);
+    QuickSortRcrs(items, p, q - 1);
+    QuickSortRcrs(items, q + 1, r);
   }
 }
 
 function RandomizedPartition(items: Array<number>, p: number, r: number): number {
-  const i = getRandomInt(p, r)
-  Swap(items, i, r)
-  return Partition(items, p, r)
+  const i = getRandomInt(p, r);
+  Swap(items, i, r);
+  return Partition(items, p, r);
 }
 
 function Partition(items: Array<number>, p: number, r: number): number {
-  const x = items[r]
-  let i = p - 1
+  const x = items[r];
+  let i = p - 1;
   for (let j = p; j < r; j++) {
     if (items[j] <= x) {
-      i++
-      Swap(items, i, j)
+      i++;
+      Swap(items, i, j);
     }
   }
-  Swap(items, i + 1, r)
-  return i + 1
+  Swap(items, i + 1, r);
+  return i + 1;
 }
 
 function getRandomInt(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1)) + min
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function Swap(arr: Array<any>, x: any, y: any) {
-  const temp = arr[x]
-  arr[x] = arr[y]
-  arr[y] = temp
+  const temp = arr[x];
+  arr[x] = arr[y];
+  arr[y] = temp;
 }
 
 // Tests
 expect(QuickSort([122, 3, 2, 5, 33, 22, 11]))
-  .to.eql([2, 3, 5, 11, 22, 33, 122])
+  .to.eql([2, 3, 5, 11, 22, 33, 122]);
 expect(QuickSort([4, 9, 1, 34, 12, 6, 5, 18, 51, 21, -5, -3, 89, -2]))
-  .to.eql([-5, -3, -2, 1, 4, 5, 6, 9, 12, 18, 21, 34, 51, 89])
+  .to.eql([-5, -3, -2, 1, 4, 5, 6, 9, 12, 18, 21, 34, 51, 89]);

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "flow": "flow check",
+    "flow-typed": "flow-typed install",
     "lint": "eslint --cache --format=node_modules/eslint-formatter-pretty .",
     "spec": "NODE_ENV=production jest",
     "test": "npm run lint && npm run spec"
@@ -45,6 +46,7 @@
     "eslint-config-bliss": "^0.0.6",
     "eslint-formatter-pretty": "^1.1.0",
     "flow-bin": "^0.38.0",
+    "flow-typed": "^2.0.0",
     "jest-cli": "^18.1.0",
     "tcomb": "^3.2.16"
   },

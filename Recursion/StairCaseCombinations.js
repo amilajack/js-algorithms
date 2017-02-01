@@ -16,21 +16,21 @@
 //       1
 //
 // @flow
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
-type num = number
+type num = number;
 
 // Use recursion to find number of steps
 // @complexity: O(2^n)
 function StairCaseCombinationSlow(stairs: num): num {
-  if (stairs <= 0) return 0
-  if (stairs === 1) return 1
-  if (stairs === 2) return 2
+  if (stairs <= 0) return 0;
+  if (stairs === 1) return 1;
+  if (stairs === 2) return 2;
   return (
     StairCaseCombinationSlow(stairs - 1) +
     StairCaseCombinationSlow(stairs - 2)
-  )
+  );
 }
 
 // This method of solving the problem uses dynamic programming. Its
@@ -42,27 +42,27 @@ function StairCaseCombinationSlow(stairs: num): num {
 // climbStairs(n - 2) = climbStairs(n - 3) + climbStairs(n - 4)
 //
 // @complexity: O(2^(n+1)
-const dict: Map<num, num> = new Map()
+const dict: Map<num, num> = new Map();
 
 function StairCaseCombinationDP(stairs: num): num {
-  if (stairs <= 0) return 0
-  if (stairs === 1) return 1
-  if (stairs === 2) return 2
+  if (stairs <= 0) return 0;
+  if (stairs === 1) return 1;
+  if (stairs === 2) return 2;
 
-  if (dict.has(stairs)) return dict.get(stairs)
+  if (dict.has(stairs)) return dict.get(stairs);
 
   const res =
     StairCaseCombinationDP(stairs - 1) +
-    StairCaseCombinationDP(stairs - 2)
+    StairCaseCombinationDP(stairs - 2);
 
-  dict.set(stairs, res)
+  dict.set(stairs, res);
 
-  return res
+  return res;
 }
 
 test('StairCaseCombination', () => {
-  expect(StairCaseCombinationSlow(4)).to.equal(5)
-  expect(StairCaseCombinationSlow(2)).to.equal(2)
-  expect(StairCaseCombinationDP(4)).to.equal(5)
-  expect(StairCaseCombinationDP(2)).to.equal(2)
-})
+  expect(StairCaseCombinationSlow(4)).to.equal(5);
+  expect(StairCaseCombinationSlow(2)).to.equal(2);
+  expect(StairCaseCombinationDP(4)).to.equal(5);
+  expect(StairCaseCombinationDP(2)).to.equal(2);
+});

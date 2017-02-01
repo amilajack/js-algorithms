@@ -15,27 +15,27 @@
 // Can you do it in O(n) time complexity and O(1) space complexity?
 //
 // @flow
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 function CircularArrayLoop(nums: number[]): bool {
-  const _nums = new Set()
-  let ended = false
-  let index = 0
+  const _nums = new Set();
+  let ended = false;
+  let index = 0;
 
   while (!ended) {
     if (!_nums.has(index)) {
-      _nums.add(index)
+      _nums.add(index);
     } else {
-      ended = false
+      ended = false;
     }
 
-    index += nums[index]
+    index += nums[index];
   }
 
-  return false
+  return false;
 }
 
 test('CircularArrayLoop()', () => {
-  expect(CircularArrayLoop([2, -1, 1, 2, 2])).to.be.an('array')
-})
+  expect(CircularArrayLoop([2, -1, 1, 2, 2])).to.be.an('array');
+});

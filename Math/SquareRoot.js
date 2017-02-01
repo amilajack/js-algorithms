@@ -17,31 +17,31 @@
 // An efficient way of doing this is using a binary search tree.
 //
 // @flow
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
-type num = number
+type num = number;
 
 /**
  * @complexity: O(log(n))
  */
 export default function SquareRoot(number: num): num {
-  let sqrt = 1
-  let head = 1
-  let tail = number
+  let sqrt = 1;
+  let head = 1;
+  let tail = number;
 
   while (sqrt ** 2 !== number) {
-    const middle = Math.floor((tail + head) / 2)
-    sqrt = middle
+    const middle = Math.floor((tail + head) / 2);
+    sqrt = middle;
 
     if (sqrt ** 2 > number) {
-      tail = middle
+      tail = middle;
     } else {
-      head = middle
+      head = middle;
     }
   }
 
-  return sqrt
+  return sqrt;
 }
 
 // @TODO: Taylor Series Method
@@ -49,7 +49,7 @@ export default function SquareRoot(number: num): num {
 // @TODO: Babylonian Method Method
 
 test('SquareRoot()', () => {
-  expect(SquareRoot(9)).to.equal(3)
-  expect(SquareRoot(25)).to.equal(5)
-  expect(SquareRoot(4)).to.equal(2)
-})
+  expect(SquareRoot(9)).to.equal(3);
+  expect(SquareRoot(25)).to.equal(5);
+  expect(SquareRoot(4)).to.equal(2);
+});

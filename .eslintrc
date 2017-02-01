@@ -1,3 +1,21 @@
 {
-  "extends": "bliss"
+  "extends": "bliss",
+  "rules": {
+    "class-methods-use-this": 0,
+    "fp/no-mutation": 0,
+    "fp/no-rest-parameters": 0,
+    "fp/no-this": 0,
+    "fp/no-loops": 0,
+    "fp/no-let": 0,
+    "fp/no-class": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-continue": 0,
+    "no-plusplus": 0,
+    "no-bitwise": 0,
+    "consistent-return": 0,
+    "no-use-before-define": 0,
+    "no-underscore-dangle": 0,
+    "no-mixed-operators": 0,
+    "no-restricted-syntax": 0
+  }
 }

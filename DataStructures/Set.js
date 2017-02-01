@@ -6,13 +6,13 @@
  *
  * @flow
  */
-import { expect } from 'chai'
-import Hash from './Hash'
+import { expect } from 'chai';
+import Hash from './Hash';
 
 
 function Set() {
-  this.items = []
-  this.itemsLength = 0
+  this.items = [];
+  this.itemsLength = 0;
 }
 
 Set.prototype = {
@@ -21,24 +21,24 @@ Set.prototype = {
    * Complexity: O(n)
    */
   add(value: any): bool {
-    this.items[Hash(value)] = value
-    this.itemsLength++
-    return true
+    this.items[Hash(value)] = value;
+    this.itemsLength++;
+    return true;
   },
 
   /**
    * Complexity: O(1)
    */
   contains(value: any): bool {
-    return !!this.items[Hash(value)]
+    return !!this.items[Hash(value)];
   },
 
   /**
    * Complexity: O(1)
    */
   remove(value: any) {
-    this.items[Hash(value)] = null
-    this.itemsLength--
+    this.items[Hash(value)] = null;
+    this.itemsLength--;
   },
 
   /**
@@ -51,16 +51,16 @@ Set.prototype = {
   all(): any[] {
     return this.items.filter((i: any): bool => !!i) // eslint-disable-line
   }
-}
+};
 
 test('Set', () => {
   // Assert insert
-  const _Set = new Set()
+  const _Set = new Set();
 
-  _Set.add('some')
-  expect(_Set.all()).to.eql(['some'])
-  _Set.add('who')
-  expect(_Set.all()).to.eql(['some', 'who'])
-  _Set.remove('who')
-  expect(_Set.all()).to.eql(['some'])
-})
+  _Set.add('some');
+  expect(_Set.all()).to.eql(['some']);
+  _Set.add('who');
+  expect(_Set.all()).to.eql(['some', 'who']);
+  _Set.remove('who');
+  expect(_Set.all()).to.eql(['some']);
+});

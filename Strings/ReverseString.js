@@ -2,7 +2,7 @@
  * A short example showing how to reverse a string
  * @flow
  */
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 /**
@@ -10,14 +10,14 @@ import { expect } from 'chai'
  * @complexity O(n)
  */
 function ReverseStringIterative(string: string): string {
-  let reversedString = ''
-  let index
+  let reversedString = '';
+  let index;
 
   for (index = string.length - 1; index >= 0; index--) {
-    reversedString += string[index]
+    reversedString += string[index];
   }
 
-  return reversedString
+  return reversedString;
 }
 
 /**
@@ -28,19 +28,19 @@ function ReverseStringIterative(string: string): string {
  * 'some' -> 'eoms' -> 'emos'
  */
 function ReverseStringIterativeInplace(string: string): string {
-  const _string = string.split('')
+  const _string = string.split('');
 
   for (let i = 0; i < Math.floor(_string.length / 2); i++) {
-    const first = _string[i]
-    const second = _string[_string.length - 1 - i]
-    _string[i] = second
-    _string[_string.length - 1 - i] = first
+    const first = _string[i];
+    const second = _string[_string.length - 1 - i];
+    _string[i] = second;
+    _string[_string.length - 1 - i] = first;
   }
 
-  return _string.join('')
+  return _string.join('');
 }
 
 test('ReverseString', () => {
-  expect(ReverseStringIterative('some')).to.equal('emos')
-  expect(ReverseStringIterativeInplace('some')).to.equal('emos')
-})
+  expect(ReverseStringIterative('some')).to.equal('emos');
+  expect(ReverseStringIterativeInplace('some')).to.equal('emos');
+});

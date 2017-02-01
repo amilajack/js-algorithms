@@ -24,49 +24,49 @@
  *
  * @flow
  */
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 export default class Stack {
   items: []
 
   constructor(items?: any[]) {
-    this.items = items || []
+    this.items = items || [];
   }
 
   pop(): any {
-    const isEnd = !!this.items.length
+    const isEnd = !!this.items.length;
 
     if (isEnd) {
-      const item = this.items[this.items.length - 1]
-      this.items.splice(this.items.length - 1, 1)
-      return item
+      const item = this.items[this.items.length - 1];
+      this.items.splice(this.items.length - 1, 1);
+      return item;
     }
 
-    return false
+    return false;
   }
 
   push(item: any): Stack {
-    this.items.push(item)
-    return this
+    this.items.push(item);
+    return this;
   }
 
   empty(): bool {
-    return this.items.length === 0
+    return this.items.length === 0;
   }
 
   peek(): any {
-    return this.items[this.items.length - 1]
+    return this.items[this.items.length - 1];
   }
 }
 
 test('Stack', () => {
-  const stack = new Stack(['a', 'b', 'c'])
+  const stack = new Stack(['a', 'b', 'c']);
 
-  expect(stack.push('d').items).to.eql(['a', 'b', 'c', 'd'])
+  expect(stack.push('d').items).to.eql(['a', 'b', 'c', 'd']);
 
   expect(((): any[] => {
-    stack.pop()
-    return stack.items
-  })()).to.eql(['a', 'b', 'c'])
-})
+    stack.pop();
+    return stack.items;
+  })()).to.eql(['a', 'b', 'c']);
+});

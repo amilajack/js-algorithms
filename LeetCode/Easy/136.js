@@ -5,10 +5,10 @@
 // it without using extra memory?
 //
 // @flow
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
-const set = new Set()
+const set = new Set();
 
 /**
  * @complexity: O(n)
@@ -16,19 +16,19 @@ const set = new Set()
 function SingleNumber(nums: number[]): number {
   for (let i = 0; i < nums.length; i++) {
     if (set.has(nums[i])) {
-      set.delete(nums[i])
+      set.delete(nums[i]);
     } else {
-      set.add(nums[i])
+      set.add(nums[i]);
     }
   }
 
-  const item = Array.from(set)[0]
-  set.clear()
+  const item = Array.from(set)[0];
+  set.clear();
 
-  return item
+  return item;
 }
 
 test('SingleNumber()', () => {
-  expect(SingleNumber([1])).to.equal(1)
-  expect(SingleNumber([1, 1, 2, 2, 3, 3, 4])).to.equal(4)
-})
+  expect(SingleNumber([1])).to.equal(1);
+  expect(SingleNumber([1, 1, 2, 2, 3, 3, 4])).to.equal(4);
+});

@@ -1,6 +1,6 @@
 // @flow
 /* eslint no-param-reassign: 0, consistent-return: 0, no-restricted-syntax: 0 */
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 class Node {
@@ -13,11 +13,11 @@ class Node {
   right: Node
 
   constructor(data: number) {
-    this.data = data
+    this.data = data;
   }
 
   isLeaf(): bool {
-    return !this.left && !this.right
+    return !this.left && !this.right;
   }
 }
 
@@ -27,55 +27,55 @@ export default class BinarySearchTree {
   items = [];
 
   constructor(items: Array<number>) {
-    for (const item of items) this.add(item)
+    for (const item of items) this.add(item);
   }
 
   toArray(node?: Node): bool | void {
-    if (!node) node = this.root
+    if (!node) node = this.root;
 
     if (node.isLeaf()) {
-      if (node.left) this.items.push(node.left.data)
-      this.items.push(node.data)
-      if (node.right) this.items.push(node.right.data)
-      return true
+      if (node.left) this.items.push(node.left.data);
+      this.items.push(node.data);
+      if (node.right) this.items.push(node.right.data);
+      return true;
     }
 
-    if (node.left) this.toArray(node.left)
-    this.items.push(node.data)
-    if (node.right) this.toArray(node.right)
+    if (node.left) this.toArray(node.left);
+    this.items.push(node.data);
+    if (node.right) this.toArray(node.right);
   }
 
   add(element: number, root?: Node): bool {
-    let _root = root
+    let _root = root;
 
     if (!this.root) {
-      this.root = new Node(element)
-      return true
+      this.root = new Node(element);
+      return true;
     }
 
-    if (!_root) _root = this.root
+    if (!_root) _root = this.root;
 
     if (!_root.data) {
-      _root.data = element
-      return true
+      _root.data = element;
+      return true;
     }
 
-    console.log(_root.data, element)
+    console.log(_root.data, element);
 
     if (_root.data > element) {
       if (!_root.left) {
-        _root.left = new Node(element)
-        return true
+        _root.left = new Node(element);
+        return true;
       }
-      return this.add(element, _root.left)
+      return this.add(element, _root.left);
     }
 
     if (!_root.right) {
-      _root.right = new Node(element)
-      return true
+      _root.right = new Node(element);
+      return true;
     }
 
-    return this.add(element, _root.right)
+    return this.add(element, _root.right);
   }
 
   remove() {}
@@ -83,14 +83,14 @@ export default class BinarySearchTree {
   find() {}
 }
 
-const bTree = new BinarySearchTree([10, 2, 8, 9, 3])
-bTree.add(11)
-bTree.toArray()
-expect(bTree.items).to.eql([2, 3, 8, 9, 10, 11])
+const bTree = new BinarySearchTree([10, 2, 8, 9, 3]);
+bTree.add(11);
+bTree.toArray();
+expect(bTree.items).to.eql([2, 3, 8, 9, 10, 11]);
 
-const bTreeTwo = new BinarySearchTree([])
-bTree.toArray()
-expect(bTreeTwo.items).to.eql([])
+const bTreeTwo = new BinarySearchTree([]);
+bTree.toArray();
+expect(bTreeTwo.items).to.eql([]);
 
 // const bTreeThree = new BinarySearchTree([1, 2, 3])
 // bTreeThree.remove(1)
