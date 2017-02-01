@@ -19,53 +19,53 @@
  *
  * @flow
  */
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 /**
  * Calculate if a number is happy or unhappy
  */
 function HappyNumberChecker(number: number): bool {
-  const numbers = new Set()
-  let currentNumber = calc(number)
-  let infiniteLoopPreventionLimit = 0
+  const numbers = new Set();
+  let currentNumber = calc(number);
+  let infiniteLoopPreventionLimit = 0;
 
   while (!numbers.has(1) && infiniteLoopPreventionLimit < 1000) {
-    currentNumber = calc(currentNumber)
+    currentNumber = calc(currentNumber);
 
     if (numbers.has(currentNumber)) {
-      return false
+      return false;
     }
 
-    numbers.add(currentNumber)
-    infiniteLoopPreventionLimit++
+    numbers.add(currentNumber);
+    infiniteLoopPreventionLimit++;
 
     if (currentNumber === 1) {
-      return true
+      return true;
     }
   }
 
-  return false
+  return false;
 }
 
 function calc(number: number): number {
-  const castedNumber = number.toString()
+  const castedNumber = number.toString();
 
-  let index
-  let sum = 0
+  let index;
+  let sum = 0;
 
   for (index = 0; index < castedNumber.length; index++) {
-    const int = parseInt(castedNumber[index], 10)
-    const result = int * int
-    sum += result
+    const int = parseInt(castedNumber[index], 10);
+    const result = int * int;
+    sum += result;
   }
 
-  return sum
+  return sum;
 }
 
 // Assert calc
 test('HappyNumberChecker', () => {
-  expect(calc(36)).to.equal(45)
-  expect(HappyNumberChecker(7)).to.equal(true)
-  expect(HappyNumberChecker(2)).to.equal(false)
-})
+  expect(calc(36)).to.equal(45);
+  expect(HappyNumberChecker(7)).to.equal(true);
+  expect(HappyNumberChecker(2)).to.equal(false);
+});

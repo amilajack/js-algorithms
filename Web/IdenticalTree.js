@@ -5,26 +5,26 @@
 // find the root and on the way, create breadcrumbs by marking the left
 
 function TreeNode() {
-  this.parent = {}
-  this.children = []
+  this.parent = {};
+  this.children = [];
 }
 
 function FindRoot(node, TreeB) {
-  let parent = node
-  const breadCrumbs: Array<number> = []
-  
+  let parent = node;
+  const breadCrumbs: Array<number> = [];
+
   // Find root
   while (node.parent) {
-    const index = parent.children.indexOf(node)
-    breadCrumbs.push(index)
-    parent = node.parent
+    const index = parent.children.indexOf(node);
+    breadCrumbs.push(index);
+    parent = node.parent;
   }
-  
-  let found = TreeB.root
-  
+
+  let found = TreeB.root;
+
   for (let i = breadCrumbs.length; i > -1; i--) {
-    found = found[breadCrumbs[i]]
+    found = found[breadCrumbs[i]];
   }
-  
-  return found
+
+  return found;
 }

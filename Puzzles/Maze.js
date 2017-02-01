@@ -17,11 +17,11 @@
 // Following is an example maze. Show
 //
 // @flow
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
-type num = number
-type mazeType = Array<Array<num>>
+type num = number;
+type mazeType = Array<Array<num>>;
 
 // 1 solution
 const maze1 = [
@@ -29,7 +29,7 @@ const maze1 = [
   [1, 1, 0, 1],
   [0, 1, 0, 0],
   [1, 1, 1, 1]
-]
+];
 
 // 1 solution
 const maze2 = [
@@ -37,7 +37,7 @@ const maze2 = [
   [1, 1, 1, 1],
   [0, 0, 0, 1],
   [1, 1, 1, 1]
-]
+];
 
 // 2 solution
 const maze3 = [
@@ -45,37 +45,37 @@ const maze3 = [
   [1, 1, 1, 1],
   [0, 1, 0, 1],
   [1, 1, 1, 1]
-]
+];
 
-const solutions = []
+const solutions = [];
 
 export default function Maze(maze: mazeType, x: num, y: num, path: mazeType = []) {
-  const mazeLength = maze.length
+  const mazeLength = maze.length;
 
   if (x === maze.length - 1 && y === maze.length - 1) {
-    solutions.push(path)
+    solutions.push(path);
   }
 
-  const yPath = [...path]
-  yPath.push([x + 1, y])
+  const yPath = [...path];
+  yPath.push([x + 1, y]);
 
-  const xPath = [...path]
-  xPath.push([x, y + 1])
+  const xPath = [...path];
+  xPath.push([x, y + 1]);
 
   if (maze[x][y] > 0) {
-    if (x + 1 < mazeLength) Maze(maze, x + 1, y, yPath)
-    if (y + 1 < mazeLength) Maze(maze, x, y + 1, xPath)
+    if (x + 1 < mazeLength) Maze(maze, x + 1, y, yPath);
+    if (y + 1 < mazeLength) Maze(maze, x, y + 1, xPath);
   }
 }
 
 test('Maze()', () => {
-  Maze(maze1, 0, 0)
-  expect(solutions[0]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]])
+  Maze(maze1, 0, 0);
+  expect(solutions[0]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]]);
 
-  Maze(maze2, 0, 0)
-  expect(solutions[1]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]])
+  Maze(maze2, 0, 0);
+  expect(solutions[1]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]]);
 
-  Maze(maze3, 0, 0)
-  expect(solutions[2]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]])
-  expect(solutions[3]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]])
-})
+  Maze(maze3, 0, 0);
+  expect(solutions[2]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]]);
+  expect(solutions[3]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]]);
+});

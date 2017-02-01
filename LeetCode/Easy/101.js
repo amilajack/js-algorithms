@@ -28,15 +28,15 @@
  * }
  */
 
-let items = []
+let items = [];
 
 export function convertToArray(node: Object) {
-  if (node.val) items.push(node.val)
-  if (node.left) items.push(node.val)
-  if (node.right) items.push(node.val)
+  if (node.val) items.push(node.val);
+  if (node.left) items.push(node.val);
+  if (node.right) items.push(node.val);
 
-  if (node.left) convertToArray(node.left)
-  if (node.right) convertToArray(node.right)
+  if (node.left) convertToArray(node.left);
+  if (node.right) convertToArray(node.right);
 }
 
 /**
@@ -49,39 +49,39 @@ export function convertToArray(node: Object) {
  * [3, 4, 4, 3], 3 to 6, diff = (2 ** 2) - 1
  */
 export default function isSymmetric(root: Object): bool {
-  items = [1, 2, 2, 3, 5, 4, 3]
+  items = [1, 2, 2, 3, 5, 4, 3];
   // items = [1, 2, 2, 3, 4, 4, 3]
 
   // tree of one node is always symmetric
-  if (items.length <= 1) return true
+  if (items.length <= 1) return true;
 
   // palindrome for items
-  let end = 2
-  let sub = 0
-  let pwr = 1
-  let start = 1
-  let middle = 1
-  const stop = 1
+  let end = 2;
+  let sub = 0;
+  let pwr = 1;
+  let start = 1;
+  let middle = 1;
+  const stop = 1;
 
   while (start < end) {
     // compare the element n to items.last() - n
-    if (items[start] !== items[end - sub]) return false
+    if (items[start] !== items[end - sub]) return false;
 
-    sub++
+    sub++;
 
     // if all elements have been checked, reset sub and update half and end
     if (start > middle) {
-      start = end + 1
-      pwr++
-      sub = 0
-      end += 2 ** pwr
-      middle = Math.floor((end - start) / 2)
+      start = end + 1;
+      pwr++;
+      sub = 0;
+      end += 2 ** pwr;
+      middle = Math.floor((end - start) / 2);
     } else {
-      start++
+      start++;
     }
 
-    if (stop > 100) break
+    if (stop > 100) break;
   }
 
-  return true
+  return true;
 }

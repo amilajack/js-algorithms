@@ -1,43 +1,21 @@
 {
-  "parser": "babel-eslint",
-  "extends": [
-    "airbnb-base",
-    "plugin:fp/recommended"
-    # "plugin:flowtype/recommended"
-  ],
-  "env": {
-    "node": true,
-    "jest": true
-  },
+  "extends": "bliss",
   "rules": {
-    "arrow-parens": 0,
-    "comma-dangle": [2, "never"],
-    "consistent-return": 2,
-    "flowtype/boolean-style": [
-      2,
-      "bool"
-    ],
-    "flowtype-errors/show-errors": 2,
-    "fp/no-nil": 0,
-    "fp/no-mutating-methods": 0,
-    "fp/no-unused-expression": 0,
-    "no-nested-ternary": 0,
-    "no-var": 2,
-    "promise/always-return": 2,
-    "promise/no-return-wrap": 2,
-    "promise/param-names": 2,
-    "promise/catch-or-return": 2,
-    "promise/no-native": "off",
-    "promise/no-nesting": 2,
-    "promise/no-promise-in-callback": 2,
-    "promise/no-callback-in-promise": 2,
-    "promise/avoid-new": 2,
-    "semi": [2, "never"],
-  },
-  "plugins": [
-    "flowtype",
-    "flowtype-errors",
-    "fp",
-    "promise"
-  ]
+    "class-methods-use-this": 0,
+    "fp/no-mutation": 0,
+    "fp/no-rest-parameters": 0,
+    "fp/no-this": 0,
+    "fp/no-loops": 0,
+    "fp/no-let": 0,
+    "fp/no-class": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-continue": 0,
+    "no-plusplus": 0,
+    "no-bitwise": 0,
+    "consistent-return": 0,
+    "no-use-before-define": 0,
+    "no-underscore-dangle": 0,
+    "no-mixed-operators": 0,
+    "no-restricted-syntax": 0
+  }
 }

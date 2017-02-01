@@ -17,17 +17,17 @@
  *                     operations is O(n)
  * @flow
  */
-import { expect } from 'chai'
+import { expect } from 'chai';
 
 
 function HasDupeChars(string: string): bool {
-  const set = new Set(string)
-  return set.size !== string.length
+  const set = new Set(string);
+  return set.size !== string.length;
 }
 
 test('HasDupeChars()', () => {
-  expect(HasDupeChars('aaaaaaaaaaaaaa')).to.equal(true)
-  expect(HasDupeChars('aaaaaaaabaaaaa')).to.equal(true)
-  expect(HasDupeChars('abc')).to.equal(false)
-  expect(HasDupeChars('def')).to.equal(false)
-})
+  expect(HasDupeChars('aaaaaaaaaaaaaa')).to.equal(true);
+  expect(HasDupeChars('aaaaaaaabaaaaa')).to.equal(true);
+  expect(HasDupeChars('abc')).to.equal(false);
+  expect(HasDupeChars('def')).to.equal(false);
+});
