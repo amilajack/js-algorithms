@@ -6,6 +6,7 @@
  *  case (O(n)) but unlikely poor worst case (O(n^2))
  * -This implementation uses randomly selected pivots for better performance
  *
+ * @complexity: O(n)
  * @flow
  */
 

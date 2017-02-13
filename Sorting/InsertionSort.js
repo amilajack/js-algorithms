@@ -1,11 +1,14 @@
 /**
  * InsertionSort is simple sorting algorithm. Is efficient when
  * sorting small data sets. Often used in conjunction with Bucket sort
+ * More specifically, run time requires n checks + (# of inversions)
+ *
  *
  * Notes:
  * - Stable
  * - In-place
  *
+ * @complexity: O(n^2)
  * @flow
  */
 import { expect } from 'chai';

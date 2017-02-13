@@ -7,6 +7,7 @@
  * - Not in-place. Requires O(n) space since each recursive call on MergeSort
  *   creates temporary arrays to store values
  *
+ * @complexity: O(nlgn)
  * @flow
  */
 import { expect } from 'chai';
