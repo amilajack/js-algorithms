@@ -10,6 +10,7 @@
  * - In-place (Other implementations of QuickSort aren't)
  * - This implementation uses randomly selected pivots for better performance
  *
+ * @complexity: O(nlgn)
  * @flow
  */
 import { expect } from 'chai';
