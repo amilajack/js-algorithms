@@ -41,10 +41,9 @@ function CountingSort(elements: number[]): number[] {
   return finalArr;
 }
 
-expect(CountingSort([5, 2, 8, 9])).to.eql([2, 5, 8, 9]);
-
-expect(CountingSort([])).to.eql([]);
-
-expect(CountingSort([1])).to.eql([1]);
-
-expect(CountingSort([4, -2])).to.eql([-2, 4]);
+test(() => {
+  expect(CountingSort([5, 2, 8, 9])).to.eql([2, 5, 8, 9]);
+  expect(CountingSort([])).to.eql([]);
+  expect(CountingSort([1])).to.eql([1]);
+  expect(CountingSort([4, -2])).to.eql([-2, 4]);
+})
