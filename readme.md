@@ -10,6 +10,11 @@ A list of Computer Science concepts **solved** and **explained** in JavaScript (
 
 # Getting Started
 ```bash
+# Clone
+git clone https://github.com/amilajack/js-algorithms.git
+cd js-algorithms
+
+# Install
 npm i -g babel-cli
 npm install
 npm test
@@ -19,8 +24,8 @@ babel-node SomeFileHere.js
 ```
 
 ## Planned Implementations
-- [ ] Algorithms
-- [ ] Data Structures
+- [x] Algorithms
+- [x] Data Structures
 - [ ] Programming Paradigms
 - [ ] Interpreter
 - [ ] Compiler
