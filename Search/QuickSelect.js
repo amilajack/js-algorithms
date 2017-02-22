@@ -9,7 +9,6 @@
  * @complexity: O(n)
  * @flow
  */
-
 import { expect } from 'chai';
 
 
@@ -22,10 +21,13 @@ export default function QuickSelect(items: num[], kth: num): num {
 
 function RandomizedSelect(items: num[], left: num, right: num, i: num): any {
   if (left === right) return items[left];
+
   const pivotIndex = RandomizedPartition(items, left, right);
   const k = pivotIndex - left + 1;
+
   if (i === k) return items[pivotIndex];
   if (i < k) return RandomizedSelect(items, left, pivotIndex - 1, i);
+
   return RandomizedSelect(items, pivotIndex + 1, right, i - k);
 }
 
