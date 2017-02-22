@@ -1,5 +1,4 @@
 // @flow
-/* eslint no-param-reassign: 0, consistent-return: 0, no-restricted-syntax: 0 */
 import { expect } from 'chai';
 
 
@@ -59,8 +58,6 @@ export default class BinarySearchTree {
       _root.data = element;
       return true;
     }
-
-    console.log(_root.data, element);
 
     if (_root.data > element) {
       if (!_root.left) {

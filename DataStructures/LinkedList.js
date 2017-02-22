@@ -81,10 +81,12 @@ class Node {
   }
 }
 
-const linkedList = new LinkedList();
-linkedList.insert('soo');
-linkedList.insert('doo');
+test(() => {
+  const linkedList = new LinkedList();
+  linkedList.insert('soo');
+  linkedList.insert('doo');
 
-expect(linkedList.head.data).to.eql({});
-expect(linkedList.head.next.data).to.equal('doo');
-expect(linkedList.head.next.next.data).to.equal('soo');
+  expect(linkedList.head.data).to.eql({});
+  expect(linkedList.head.next.data).to.equal('doo');
+  expect(linkedList.head.next.next.data).to.equal('soo');
+});

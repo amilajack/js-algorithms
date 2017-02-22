@@ -2,7 +2,6 @@
  * A smal example that genrates a random string of letters and numbers
  * @flow
  */
-
 import { expect } from 'chai';
 import randomNumber from '../Math/RandomNumber';
 
