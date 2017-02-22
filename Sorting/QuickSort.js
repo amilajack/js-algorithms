@@ -18,15 +18,15 @@ import { expect } from 'chai';
 
 export default function QuickSort(items: Array<number>): Array<number> {
   const itemsCopy = [...items];
-  QuickSortRcrs(itemsCopy, 0, itemsCopy.length - 1);
+  QuickSortRecursive(itemsCopy, 0, itemsCopy.length - 1);
   return itemsCopy;
 }
 
-function QuickSortRcrs(items: Array<number>, p: number, r: number) {
+function QuickSortRecursive(items: Array<number>, p: number, r: number) {
   if (p < r) {
     const q = RandomizedPartition(items, p, r);
-    QuickSortRcrs(items, p, q - 1);
-    QuickSortRcrs(items, q + 1, r);
+    QuickSortRecursive(items, p, q - 1);
+    QuickSortRecursive(items, q + 1, r);
   }
 }
 
@@ -39,13 +39,16 @@ function RandomizedPartition(items: Array<number>, p: number, r: number): number
 function Partition(items: Array<number>, p: number, r: number): number {
   const x = items[r];
   let i = p - 1;
+
   for (let j = p; j < r; j++) {
     if (items[j] <= x) {
       i++;
       Swap(items, i, j);
     }
   }
+
   Swap(items, i + 1, r);
+
   return i + 1;
 }
 

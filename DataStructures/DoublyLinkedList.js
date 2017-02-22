@@ -30,9 +30,8 @@ class DoublyLinkedList {
 
   next() {}
 
-  insertList(list: DoublyLinkedList): bool {
-
-  }
+  // @TODO
+  // insertList(list: DoublyLinkedList): bool {}
 
   /**
    * Append node to end of list
@@ -65,10 +64,12 @@ class Node {
   }
 }
 
-const linkedList = new DoublyLinkedList();
-linkedList.insert('soo');
-linkedList.insert('doo');
+test(() => {
+  const linkedList = new DoublyLinkedList();
+  linkedList.insert('soo');
+  linkedList.insert('doo');
 
-expect(linkedList.head.data).to.eql({});
-expect(linkedList.head.next.data).to.equal('doo');
-expect(linkedList.head.next.next.data).to.equal('soo');
+  expect(linkedList.head.data).to.eql({});
+  expect(linkedList.head.next.data).to.equal('doo');
+  expect(linkedList.head.next.next.data).to.equal('soo');
+});

@@ -1,6 +1,5 @@
 // @flow
 // Invert a binary tree
-/* eslint no-param-reassign: 0 */
 function TreeNode(val: any) {
   this.val = val;
   this.left = this.right = null;

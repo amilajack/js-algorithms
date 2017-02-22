@@ -11,6 +11,8 @@
 import { expect } from 'chai';
 
 
+/* eslint no-unused-expressions: 0 */
+
 type num = number;
 
 export default function Flatten(array: Array<Array<num>>, collector: num[] = []): num[] {
@@ -24,12 +26,12 @@ export default function Flatten(array: Array<Array<num>>, collector: num[] = [])
   }
 }
 
-export function FlattenRecrusive(items: Array<any>): Array<any> {
+export function FlattenRecursive(items: Array<any>): Array<any> {
   let concatedItems = [];
 
   for (let i = 0; i < items.length; i++) {
     Array.isArray(items[i])
-      ? concatedItems = concatedItems.concat(FlattenRecrusive(items[i]))
+      ? concatedItems = concatedItems.concat(FlattenRecursive(items[i]))
       : concatedItems.push(items[i]);
   }
 
@@ -42,8 +44,6 @@ test('Flatten', () => {
   )
   .to.eql([13, 15, 41, 54, 1, 3, 4, 5]);
   expect(FlattenRecursive([1, [2]])).to.eql([1, 2]);
-  items = [];
   expect(FlattenRecursive([1, [[[2]]]])).to.eql([1, 2]);
-  items = [];
   expect(FlattenRecursive([1, [2, [[3, 4], 5], 6]])).to.eql([1, 2, 3, 4, 5, 6]);
 });

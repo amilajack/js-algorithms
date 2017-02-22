@@ -9,9 +9,6 @@
  * @complexity: O(k) where k is the range
  * @flow
  */
-
-/* eslint no-param-reassign: 0 */
-
 import { expect } from 'chai';
 
 function CountingSort(elements: number[]): number[] {
@@ -46,4 +43,4 @@ test(() => {
   expect(CountingSort([])).to.eql([]);
   expect(CountingSort([1])).to.eql([1]);
   expect(CountingSort([4, -2])).to.eql([-2, 4]);
-})
+});
