@@ -35,6 +35,7 @@ babel-node SomeFileHere.js
 - [ ] Search Algorithms
 - [ ] Sorting Algorithms
 - [ ] Bitwise Operations
+- [ ] README.md for each folder
 
 ## Contributing
 * Requirements:

@@ -12,6 +12,7 @@
 import { expect } from 'chai';
 
 function CountingSort(elements: number[]): number[] {
+  // finds max, min, and range of input
   let z = 0;
   let max = elements[0];
   let min = elements[0];

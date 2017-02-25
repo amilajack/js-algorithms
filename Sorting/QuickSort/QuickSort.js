@@ -22,32 +22,34 @@ export default function QuickSort(items: Array<number>): Array<number> {
   return itemsCopy;
 }
 
-function QuickSortRecursive(items: Array<number>, p: number, r: number) {
-  if (p < r) {
-    const q = RandomizedPartition(items, p, r);
-    QuickSortRecursive(items, p, q - 1);
-    QuickSortRecursive(items, q + 1, r);
+// Helper function that partitions the array into sub-sections to be sorted
+function QuickSortRecursive(items: Array<number>, left: number, right: number) {
+  if (left < right) {
+    const pivot = RandomizedPartition(items, left, right);
+    QuickSortRecursive(items, left, pivot - 1);
+    QuickSortRecursive(items, pivot + 1, right);
   }
 }
 
-function RandomizedPartition(items: Array<number>, p: number, r: number): number {
-  const i = getRandomInt(p, r);
-  Swap(items, i, r);
-  return Partition(items, p, r);
+function RandomizedPartition(items: Array<number>, left: number, right: number): number {
+  const i = getRandomInt(left, right);
+  Swap(items, i, right);
+  return Partition(items, left, right);
 }
 
-function Partition(items: Array<number>, p: number, r: number): number {
-  const x = items[r];
-  let i = p - 1;
+// Partitions array into two sections (one < pivot, one > pivot)
+function Partition(items: Array<number>, left: number, right: number): number {
+  const x = items[right]; // x is the value of our pivot
+  let i = left - 1; // i is our "wall"
 
-  for (let j = p; j < r; j++) {
+  for (let j = left; j < right; j++) {
     if (items[j] <= x) {
       i++;
       Swap(items, i, j);
     }
   }
 
-  Swap(items, i + 1, r);
+  Swap(items, i + 1, right);
 
   return i + 1;
 }
