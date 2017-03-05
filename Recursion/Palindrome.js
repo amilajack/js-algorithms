@@ -37,8 +37,10 @@ function PalindromeIterative(string: string): bool {
     .replace(/:/g, '')
     .split('');
 
-  for (let i = 0; i < Math.floor(_string.length / 2); i++) {
-    if (_string[_string.length - 1 - i] !== _string[i]) return false;
+  while (_string.length > 2)  {
+    if(_string.shift() !== _string.pop()) {
+      return false;
+    }
   }
 
   return true;
