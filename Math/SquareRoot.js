@@ -17,9 +17,6 @@
 // An efficient way of doing this is using a binary search tree.
 //
 // @flow
-import { expect } from 'chai';
-
-
 type num = number;
 
 /**
@@ -48,8 +45,3 @@ export default function SquareRoot(number: num): num {
 // @TODO: Newtonian Method Method
 // @TODO: Babylonian Method Method
 
-test('SquareRoot()', () => {
-  expect(SquareRoot(9)).to.equal(3);
-  expect(SquareRoot(25)).to.equal(5);
-  expect(SquareRoot(4)).to.equal(2);
-});

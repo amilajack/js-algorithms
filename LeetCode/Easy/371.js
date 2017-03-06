@@ -6,16 +6,10 @@
 // ex. Given a = 1 and b = 2, return 3.
 //
 // @flow
-import { expect } from 'chai';
-
-
 type num = number;
 
-function SumBinaryMethod(first: num, second: num): num {
-  // @NOTE: use XOR
-}
 
-function SumTimelineMethod(first: num, second: num): num {
+export default function SumTimelineMethod(first: num, second: num): num {
   const _first = new Array(Math.abs(first));
   const _second = new Array(Math.abs(second));
   const negatives = [];
@@ -56,15 +50,3 @@ function SumTimelineMethod(first: num, second: num): num {
       : negatives.length * -1
     : positives.length;
 }
-
-test('SumTimelineMethod()', () => {
-  expect(SumTimelineMethod(1, -1)).to.equal(0);
-  expect(SumTimelineMethod(-1, 1)).to.equal(0);
-  expect(SumTimelineMethod(1, 2)).to.equal(3);
-  expect(SumTimelineMethod(10, 20)).to.equal(30);
-
-  expect(SumBinaryMethod(1, -1)).to.equal(0);
-  expect(SumBinaryMethod(-1, 1)).to.equal(0);
-  expect(SumBinaryMethod(1, 2)).to.equal(3);
-  expect(SumBinaryMethod(10, 20)).to.equal(30);
-});

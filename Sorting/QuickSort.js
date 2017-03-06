@@ -13,9 +13,6 @@
  * @complexity: O(nlgn)
  * @flow
  */
-import { expect } from 'chai';
-
-
 export default function QuickSort(items: Array<number>): Array<number> {
   const itemsCopy = [...items];
   QuickSortRecursive(itemsCopy, 0, itemsCopy.length - 1);
@@ -61,9 +58,3 @@ function Swap(arr: Array<any>, x: any, y: any) {
   arr[x] = arr[y];
   arr[y] = temp;
 }
-
-// Tests
-expect(QuickSort([122, 3, 2, 5, 33, 22, 11]))
-  .to.eql([2, 3, 5, 11, 22, 33, 122]);
-expect(QuickSort([4, 9, 1, 34, 12, 6, 5, 18, 51, 21, -5, -3, 89, -2]))
-  .to.eql([-5, -3, -2, 1, 4, 5, 6, 9, 12, 18, 21, 34, 51, 89]);

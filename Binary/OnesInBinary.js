@@ -1,11 +1,8 @@
-// @flow
-import { expect } from 'chai';
-
-
 /**
  * Count the number of one's in the binary representation of a number
+ * @flow
  */
-function OnesInBinary(number: number): number {
+export default function OnesInBinary(number: number): number {
   const binary = new Array(32);
   let _placeholder = number;
 
@@ -19,5 +16,3 @@ function OnesInBinary(number: number): number {
     (p: number, c: number): number => (c === 1 ? p + 1 : p)
   );
 }
-
-expect(OnesInBinary(11)).to.equal(3);

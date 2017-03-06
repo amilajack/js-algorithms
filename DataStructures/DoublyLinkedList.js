@@ -1,8 +1,5 @@
 // @flow
-import { expect } from 'chai';
-
-
-class DoublyLinkedList {
+export default class DoublyLinkedList {
   head: Node
 
   tail: Node
@@ -63,13 +60,3 @@ class Node {
     return this.next !== false;
   }
 }
-
-test(() => {
-  const linkedList = new DoublyLinkedList();
-  linkedList.insert('soo');
-  linkedList.insert('doo');
-
-  expect(linkedList.head.data).to.eql({});
-  expect(linkedList.head.next.data).to.equal('doo');
-  expect(linkedList.head.next.next.data).to.equal('soo');
-});

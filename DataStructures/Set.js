@@ -6,16 +6,15 @@
  *
  * @flow
  */
-import { expect } from 'chai';
 import Hash from './Hash';
 
 
-function Set() {
+function HashSet() {
   this.items = [];
   this.itemsLength = 0;
 }
 
-Set.prototype = {
+HashSet.prototype = {
 
   /**
    * Complexity: O(n)
@@ -53,14 +52,4 @@ Set.prototype = {
   }
 };
 
-test('Set', () => {
-  // Assert insert
-  const _Set = new Set();
-
-  _Set.add('some');
-  expect(_Set.all()).to.eql(['some']);
-  _Set.add('who');
-  expect(_Set.all()).to.eql(['some', 'who']);
-  _Set.remove('who');
-  expect(_Set.all()).to.eql(['some']);
-});
+export default HashSet;

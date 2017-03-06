@@ -4,6 +4,8 @@
 // from an identical DOM tree. See diagram below for clarity.
 // find the root and on the way, create breadcrumbs by marking the left
 
+/* eslint-disable */
+
 function TreeNode() {
   this.parent = {};
   this.children = [];

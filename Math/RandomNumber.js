@@ -3,9 +3,6 @@
 // Here, we can write our own random functions to improve the random functionality
 // @flow
 
-import assert from 'assert';
-
-
 type num = number;
 
 /**
@@ -16,10 +13,6 @@ export default function RandomBetween(min: num, max: num): num {
 }
 
 // Assert randomBetween
-function isBeween(number: num, min: num, max: num): bool {
+export function isBeween(number: num, min: num, max: num): bool {
   return number > min && number < max;
 }
-
-test('RandomBetween()', () => {
-  assert(isBeween(RandomBetween(1, 10), 1, 10));
-});

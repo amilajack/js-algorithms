@@ -2,7 +2,6 @@
  * A smal example that genrates a random string of letters and numbers
  * @flow
  */
-import { expect } from 'chai';
 import randomNumber from '../Math/RandomNumber';
 
 
@@ -23,8 +22,3 @@ export default function RandomString(stringLength: number): string {
 
   return generatedRandomString;
 }
-
-test('RandomString', () => {
-  expect(RandomString(10)).to.be.a('string');
-  expect(RandomString(10).length).to.equal(10);
-});

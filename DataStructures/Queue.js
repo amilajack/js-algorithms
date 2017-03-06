@@ -1,7 +1,4 @@
 // @flow
-import { expect } from 'chai';
-
-
 export default class Queue {
   items: any[]
 
@@ -19,15 +16,3 @@ export default class Queue {
     return item;
   }
 }
-
-test('Queue()', () => {
-  const queue = new Queue();
-
-  expect(queue.add('a')).to.eql(['a']);
-  expect(queue.add('b')).to.eql(['a', 'b']);
-  expect(queue.add('c')).to.eql(['a', 'b', 'c']);
-
-  expect(queue.take()).to.equal('a');
-  expect(queue.take()).to.equal('b');
-  expect(queue.take()).to.equal('c');
-});

@@ -2,9 +2,6 @@
  * Calculate the resultant vector of a given series of component vectors
  * @flow
  */
-import { expect } from 'chai';
-
-
 type num = number;
 
 type vector = {
@@ -18,7 +15,7 @@ type result = {
   totalMag: num
 };
 
-function VectorCalculate(coords: vector[]): result {
+export default function VectorCalculate(coords: vector[]): result {
   const x = coords.map((e: vector): num => e.magnitude * Math.cos(radsToDegrees(e.direction)));
   const y = coords.map((e: vector): num => e.magnitude * Math.sin(radsToDegrees(e.direction)));
 
@@ -44,21 +41,3 @@ function radsToDegrees(rad: num): num {
 function round(number: num): num {
   return Math.round(number * 1000) / 1000;
 }
-
-test('CalculateVector', () => {
-  expect(VectorCalculate([
-    {
-      direction: 155,
-      magnitude: 100
-    },
-    {
-      direction: 155,
-      magnitude: 122
-    }
-  ]))
-  .to.eql({
-    xMag: -201.176,
-    yMag: 93.874,
-    totalMag: 222
-  });
-});

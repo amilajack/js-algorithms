@@ -8,10 +8,7 @@
  *
  * @flow
  */
-import { expect } from 'chai';
-
-
-function CheckAddition(target: number, list: number[]): bool {
+export default function CheckAddition(target: number, list: number[]): bool {
   const set = new Set(list);
 
   return list.some((n: number): bool => {
@@ -19,10 +16,3 @@ function CheckAddition(target: number, list: number[]): bool {
     return set.has(m) && m !== n;
   });
 }
-
-test('CheckAddition', () => {
-  expect(CheckAddition(16, [1, 3, 4, 5, 6, 11])).to.equal(true);
-  expect(CheckAddition(16, [1, 3, 4, 5, 6])).to.equal(false);
-  expect(CheckAddition(10, [2, 3, 5])).to.equal(false);
-  expect(CheckAddition(10, [2, 3, 5, 5])).to.equal(true);
-});

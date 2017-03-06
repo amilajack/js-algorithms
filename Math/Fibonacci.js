@@ -1,12 +1,9 @@
 // @flow
-import { expect } from 'chai';
-
-
 type num = number;
 
 const list = [];
 
-function FibonacciIterative(target: number): num[] {
+export default function FibonacciIterative(target: number): num[] {
   const sequence = [];
 
   if (target >= 1) sequence.push(1);
@@ -19,7 +16,7 @@ function FibonacciIterative(target: number): num[] {
   return sequence;
 }
 
-function FibonacciRecursive(number: num): num[] {
+export function FibonacciRecursive(number: num): num[] {
   return ((): num[] => {
     switch (list.length) {
       case 0:
@@ -39,7 +36,7 @@ function FibonacciRecursive(number: num): num[] {
 
 const dict: Map<num, num> = new Map();
 
-function FibonacciRecursiveDP(stairs: num): num {
+export function FibonacciRecursiveDP(stairs: num): num {
   if (stairs <= 0) return 0;
   if (stairs === 1) return 1;
 
@@ -56,14 +53,3 @@ function FibonacciRecursiveDP(stairs: num): num {
 }
 
 // @TODO: FibonacciBinetsTheorem
-
-test('Fibonacci()', () => {
-  expect(FibonacciIterative(0)).to.eql([]);
-
-  expect(FibonacciIterative(1)).to.eql([1]);
-  expect(FibonacciIterative(1)).to.eql([1, 1]);
-
-  expect(FibonacciRecursive(10)).to.eql([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
-  expect(FibonacciRecursiveDP(10)).to.equal(55);
-  expect(FibonacciIterative(10)).to.eql([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
-});

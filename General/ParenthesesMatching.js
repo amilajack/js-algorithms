@@ -1,5 +1,4 @@
 // @flow
-import { expect } from 'chai';
 import Stack from '../DataStructures/Stack';
 
 
@@ -28,25 +27,3 @@ export default function isBalanced(string: string): bool {
 
   return stack.empty();
 }
-
-test(() => {
-  const testCases = [
-    '12345',
-    '(1 + 2)',
-    '{1 + [2 * 3]}',
-    '{1 + [2 * (3 / 4)]}'
-  ];
-
-  const failingTests = [
-    '123{4{[[[]5',
-    '(1 + 2)))))',
-    '(1-3}',
-    '(1-3}'
-  ];
-
-  expect(testCases.map(isBalanced))
-    .to.eql([true, true, true, true]);
-
-  expect(failingTests.map(isBalanced))
-    .to.eql([false, false, false, false]);
-});

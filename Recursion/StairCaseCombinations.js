@@ -16,20 +16,17 @@
 //       1
 //
 // @flow
-import { expect } from 'chai';
-
-
 type num = number;
 
 // Use recursion to find number of steps
 // @complexity: O(2^n)
-function StairCaseCombinationSlow(stairs: num): num {
+export function StairCaseCombinationRecursive(stairs: num): num {
   if (stairs <= 0) return 0;
   if (stairs === 1) return 1;
   if (stairs === 2) return 2;
   return (
-    StairCaseCombinationSlow(stairs - 1) +
-    StairCaseCombinationSlow(stairs - 2)
+    StairCaseCombinationRecursive(stairs - 1) +
+    StairCaseCombinationRecursive(stairs - 2)
   );
 }
 
@@ -44,7 +41,7 @@ function StairCaseCombinationSlow(stairs: num): num {
 // @complexity: O(2^(n+1)
 const dict: Map<num, num> = new Map();
 
-function StairCaseCombinationDP(stairs: num): num {
+export default function StairCaseCombinationDP(stairs: num): num {
   if (stairs <= 0) return 0;
   if (stairs === 1) return 1;
   if (stairs === 2) return 2;
@@ -59,10 +56,3 @@ function StairCaseCombinationDP(stairs: num): num {
 
   return res;
 }
-
-test('StairCaseCombination', () => {
-  expect(StairCaseCombinationSlow(4)).to.equal(5);
-  expect(StairCaseCombinationSlow(2)).to.equal(2);
-  expect(StairCaseCombinationDP(4)).to.equal(5);
-  expect(StairCaseCombinationDP(2)).to.equal(2);
-});

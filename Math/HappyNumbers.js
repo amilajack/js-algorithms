@@ -19,13 +19,11 @@
  *
  * @flow
  */
-import { expect } from 'chai';
-
 
 /**
  * Calculate if a number is happy or unhappy
  */
-function HappyNumberChecker(number: number): bool {
+export default function HappyNumbers(number: number): bool {
   const numbers = new Set();
   let currentNumber = calc(number);
   let infiniteLoopPreventionLimit = 0;
@@ -48,7 +46,7 @@ function HappyNumberChecker(number: number): bool {
   return false;
 }
 
-function calc(number: number): number {
+export function calc(number: number): number {
   const castedNumber = number.toString();
 
   let index;
@@ -63,9 +61,3 @@ function calc(number: number): number {
   return sum;
 }
 
-// Assert calc
-test('HappyNumberChecker', () => {
-  expect(calc(36)).to.equal(45);
-  expect(HappyNumberChecker(7)).to.equal(true);
-  expect(HappyNumberChecker(2)).to.equal(false);
-});

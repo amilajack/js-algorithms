@@ -3,15 +3,15 @@
 // Given a binary tree, find its maximum depth.
 // The maximum depth is the number of nodes along the longest path from the root
 // node down to the farthest leaf node.
-import { expect } from 'chai';
 
+/* eslint no-multi-assign: 0 */
 
 function TreeNode(val: any) {
   this.val = val;
   this.left = this.right = null;
 }
 
-function MaxDepth(root: TreeNode, count: number = 0): number {
+export default function MaxDepth(root: TreeNode, count: number = 0): number {
   if (!root) return 0;
 
   const first = MaxDepth(root.left, count);
@@ -33,4 +33,4 @@ const t3 = new TreeNode(3);
 
 t.left = t2.right = t3;
 
-expect(MaxDepth(t)).to.equal(2);
+// expect(MaxDepth(t)).to.equal(2);

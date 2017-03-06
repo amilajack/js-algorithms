@@ -9,9 +9,6 @@
  * @complexity: O(n)
  * @flow
  */
-import { expect } from 'chai';
-
-
 type num = number;
 
 export default function QuickSelect(items: num[], kth: num): num {
@@ -62,8 +59,3 @@ function Swap(arr: any[], x: any, y: any) {
   arr[x] = arr[y];
   arr[y] = temp;
 }
-
-expect(QuickSelect([5, 9, 3, 1, 7], 3)).to.equal(5);
-expect(QuickSelect([52, 55, 102, 5, -7, 8, 13, 7], 1)).to.equal(-7);
-expect(QuickSelect([6, 2, -12, 32, 79, 67, 8, 1, 15, -6, 78, 104], 12)).to.equal(104);
-expect(QuickSelect([4, -1, 0, 36, -6, -4, 6, 52, 105, 232, 1, 69], 4)).to.equal(0);

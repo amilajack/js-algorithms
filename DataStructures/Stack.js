@@ -24,9 +24,6 @@
  *
  * @flow
  */
-import { expect } from 'chai';
-
-
 export default class Stack {
   items: []
 
@@ -60,10 +57,3 @@ export default class Stack {
   }
 }
 
-test('Stack', () => {
-  const stack = new Stack(['a', 'b', 'c']);
-
-  expect(stack.push('d').items).to.eql(['a', 'b', 'c', 'd']);
-  stack.pop();
-  expect(stack.items).to.eql(['a', 'b', 'c']);
-});

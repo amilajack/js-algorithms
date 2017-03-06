@@ -1,7 +1,4 @@
 // @flow
-import { expect } from 'chai';
-
-
 export default function Hash(key: string, mapLength: number = 50): number {
   return hashCode(key) % mapLength;
 }
@@ -19,7 +16,3 @@ function hashCode(string: string): number {
 
   return hash >>> 0;
 }
-
-test('Hash', () => {
-  expect(Hash('133')).to.be.a('number');
-});

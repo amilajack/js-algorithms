@@ -11,9 +11,6 @@
  * @complexity: O(n^2)
  * @flow
  */
-import { expect } from 'chai';
-
-
 export default function InsertionSort(items: Array<number>): Array<number> {
   const itemsCopy = [...items];
   let value;                      // the value currently being compared
@@ -32,8 +29,3 @@ export default function InsertionSort(items: Array<number>): Array<number> {
 
   return itemsCopy;
 }
-
-expect(InsertionSort([5, 2, 8, 21, 9, -1]))
-  .to.eql([-1, 2, 5, 8, 9, 21]);
-expect(InsertionSort([31, 2, 0, -12, -520, 7, 210, 21, 82, 16]))
-  .to.eql([-520, -12, 0, 2, 7, 16, 21, 31, 82, 210]);
