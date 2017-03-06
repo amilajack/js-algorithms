@@ -6,6 +6,8 @@
 import { expect } from 'chai';
 
 
+/* eslint no-multi-assign: 0 */
+
 function TreeNode(val: any) {
   this.val = val;
   this.left = this.right = null;

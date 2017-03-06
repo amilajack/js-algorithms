@@ -12,10 +12,7 @@
 //
 // Write the code that will take a string and make this conversion given a
 // number of rows:
-import { expect } from 'chai';
-
-
-function ZigZag(string: string, number: number): string {
+export default function ZigZag(string: string, number: number): string {
   const output = [];
   const middle = number - Math.floor(number / 2);
   let rowNumber = 0;
@@ -43,7 +40,3 @@ function ZigZag(string: string, number: number): string {
 
   return output.join('');
 }
-
-expect(ZigZag('PAYPALISHIRING', 3)).to.equal('PAHNAPLSIIGYIR');
-expect(ZigZag('ABC', 2)).to.equal('ACB');
-expect(ZigZag('ABC', 3)).to.equal('ABC');

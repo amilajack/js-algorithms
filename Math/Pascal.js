@@ -13,13 +13,10 @@
 // ]
 //
 // @flow
-import { expect } from 'chai';
-
-
 type num = number;
 type pt = number[][];
 
-function PascalRecursive(number: num, list: pt = []): pt {
+export default function PascalRecursive(number: num, list: pt = []): pt {
   switch (list.length) {
     case 0:
       list.push([1]);
@@ -51,7 +48,7 @@ function PascalRecursive(number: num, list: pt = []): pt {
   }
 }
 
-function PascalIterative(number: number): pt {
+export function PascalIterative(number: number): pt {
   if (number === 0) return [];
   const rows = [[1]];
 
@@ -71,32 +68,3 @@ function PascalIterative(number: number): pt {
 
   return rows;
 }
-
-// Tests
-test('Pascal()', () => {
-  expect(PascalRecursive(2)).to.eql([
-    [1],
-    [1, 1]
-  ]);
-
-  expect(PascalRecursive(5)).to.eql([
-    [1],
-    [1, 1],
-    [1, 2, 1],
-    [1, 3, 3, 1],
-    [1, 4, 6, 4, 1]
-  ]);
-
-  expect(PascalIterative(2)).to.eql([
-    [1],
-    [1, 1]
-  ]);
-
-  expect(PascalIterative(5)).to.eql([
-    [1],
-    [1, 1],
-    [1, 2, 1],
-    [1, 3, 3, 1],
-    [1, 4, 6, 4, 1]
-  ]);
-});

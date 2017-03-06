@@ -2,14 +2,12 @@
  * A short example showing how to reverse a string
  * @flow
  */
-import { expect } from 'chai';
-
 
 /**
  * Create a new string and append
  * @complexity O(n)
  */
-function ReverseStringIterative(string: string): string {
+export default function ReverseStringIterative(string: string): string {
   let reversedString = '';
   let index;
 
@@ -27,7 +25,7 @@ function ReverseStringIterative(string: string): string {
  *
  * 'some' -> 'eoms' -> 'emos'
  */
-function ReverseStringIterativeInplace(string: string): string {
+export function ReverseStringIterativeInplace(string: string): string {
   const _string = string.split('');
 
   for (let i = 0; i < Math.floor(_string.length / 2); i++) {
@@ -40,7 +38,3 @@ function ReverseStringIterativeInplace(string: string): string {
   return _string.join('');
 }
 
-test('ReverseString', () => {
-  expect(ReverseStringIterative('some')).to.equal('emos');
-  expect(ReverseStringIterativeInplace('some')).to.equal('emos');
-});

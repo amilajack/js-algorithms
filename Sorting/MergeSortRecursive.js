@@ -10,14 +10,11 @@
  * @complexity: O(nlgn)
  * @flow
  */
-import { expect } from 'chai';
-
-
 export default function MergeSortRecursive(items: number[]): number[] {
   return _divide(items);
 }
 
-let _items: Array<Array<number>> = [];
+const _items: Array<Array<number>> = [];
 
 function _divide(array: Array<number>): any {
   switch (array.length) {
@@ -62,10 +59,3 @@ function _merge(first: Array<number>, second: Array<number>): Array<number> {
 
   return merged;
 }
-
-expect(MergeSortRecursive([]))
-    .to.eql([]);
-
-_items = [];
-expect(MergeSortRecursive([1, 3, 2, 10, 7, 5, 4]))
-    .to.eql([1, 2, 3, 4, 5, 7, 10]);

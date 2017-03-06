@@ -5,15 +5,12 @@
 // it without using extra memory?
 //
 // @flow
-import { expect } from 'chai';
-
-
 const set = new Set();
 
 /**
  * @complexity: O(n)
  */
-function SingleNumber(nums: number[]): number {
+export default function SingleNumber(nums: number[]): number {
   for (let i = 0; i < nums.length; i++) {
     if (set.has(nums[i])) {
       set.delete(nums[i]);
@@ -27,8 +24,3 @@ function SingleNumber(nums: number[]): number {
 
   return item;
 }
-
-test('SingleNumber()', () => {
-  expect(SingleNumber([1])).to.equal(1);
-  expect(SingleNumber([1, 1, 2, 2, 3, 3, 4])).to.equal(4);
-});

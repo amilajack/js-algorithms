@@ -12,10 +12,7 @@
  *
  * @flow
  */
-import { expect } from 'chai';
-
-
-function ArrayLength(array: number[]): number {
+export default function ArrayLength(array: number[]): number {
   switch (array.length !== 0) {
     case true: {
       array.splice(0, 1);
@@ -25,7 +22,3 @@ function ArrayLength(array: number[]): number {
       return 0;
   }
 }
-
-test('ArrayLength()', () => {
-  expect(ArrayLength([1, 3, 4, 5])).to.equal(4);
-});

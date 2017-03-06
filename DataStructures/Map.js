@@ -6,7 +6,6 @@
  * TODO: Bucket collision detection and handling
  * @flow
  */
-import { expect } from 'chai';
 import Hash from './Hash';
 
 
@@ -42,26 +41,5 @@ HashMap.prototype.remove = function remove(key: any): HashMap {
   return this;
 };
 
-// Assert insert
-test('Map', () => {
-  const MapOne = new HashMap();
 
-  MapOne.insert('some_random_key', 'some');
-  const generatedHashCodeInsert = Hash('some_random_key', MapOne.mapLength);
-
-  expect(MapOne.items[generatedHashCodeInsert]).to.equal('some');
-  expect(MapOne.all()).to.eql(['some']);
-  MapOne.insert('moo', 'foo');
-  expect(MapOne.all()).to.eql(['some', 'foo']);
-  expect(MapOne.get('moo')).to.equal('foo');
-
-  // Assert remove
-  const MapTwo = new HashMap();
-
-  MapTwo.insert('some_random_key', 'some');
-  expect(MapTwo.get('some_random_key')).to.equal('some');
-
-  MapTwo.remove('some_random_key');
-  const generatedHashCodeDelete = Hash('some_random_key', MapTwo.mapLength);
-  expect(MapTwo.items[generatedHashCodeDelete]).to.equal(undefined);
-});
+export default HashMap;

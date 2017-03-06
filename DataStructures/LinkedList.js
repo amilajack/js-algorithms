@@ -9,10 +9,7 @@
 // Insertion/Deletion: O(1)
 //
 // @flow
-import { expect } from 'chai';
-
-
-class LinkedList {
+export default class LinkedList {
   head: Node
 
   tail: Node
@@ -80,13 +77,3 @@ class Node {
     return true;
   }
 }
-
-test(() => {
-  const linkedList = new LinkedList();
-  linkedList.insert('soo');
-  linkedList.insert('doo');
-
-  expect(linkedList.head.data).to.eql({});
-  expect(linkedList.head.next.data).to.equal('doo');
-  expect(linkedList.head.next.next.data).to.equal('soo');
-});

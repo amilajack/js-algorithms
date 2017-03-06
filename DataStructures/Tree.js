@@ -30,7 +30,3 @@ export default class Tree {
     }
   }
 }
-
-const soo = new Tree();
-const doo = soo.add(soo.root, 'value');
-soo.add(doo, 'no');

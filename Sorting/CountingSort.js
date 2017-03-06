@@ -9,9 +9,7 @@
  * @complexity: O(k) where k is the range
  * @flow
  */
-import { expect } from 'chai';
-
-function CountingSort(elements: number[]): number[] {
+export default function CountingSort(elements: number[]): number[] {
   let z = 0;
   let max = elements[0];
   let min = elements[0];
@@ -37,10 +35,3 @@ function CountingSort(elements: number[]): number[] {
 
   return finalArr;
 }
-
-test(() => {
-  expect(CountingSort([5, 2, 8, 9])).to.eql([2, 5, 8, 9]);
-  expect(CountingSort([])).to.eql([]);
-  expect(CountingSort([1])).to.eql([1]);
-  expect(CountingSort([4, -2])).to.eql([-2, 4]);
-});

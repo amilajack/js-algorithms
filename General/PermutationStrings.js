@@ -1,14 +1,13 @@
-// @flow
-//
-// Given two strings, write a method to decide if one is a permutation of the
-// other.
-import { expect } from 'chai';
-
+/**
+ * Given two strings, write a method to decide if one is a permutation of the
+ * other.
+ * @flow
+ */
 
 /**
  * Complexity: O(n)
  */
-function PermutationString(first: string, second: string): bool {
+export default function PermutationString(first: string, second: string): bool {
   if (first.length !== second.length) return false;
 
   const _first: Map<string, number> = new Map();
@@ -41,7 +40,7 @@ function PermutationString(first: string, second: string): bool {
 /**
  * Complexity: O(nlogn)
  */
-function PermutationStringInPlace(first: string, second: string): bool {
+export function PermutationStringInPlace(first: string, second: string): bool {
   if (first.length !== second.length) return false;
 
   const _first = first.split('').sort();
@@ -53,14 +52,3 @@ function PermutationStringInPlace(first: string, second: string): bool {
 
   return true;
 }
-
-
-expect(PermutationStringInPlace('abc', 'ab')).to.equal(false);
-expect(PermutationString('abcdef', 'xyz')).to.equal(false);
-
-expect(PermutationStringInPlace('abc', 'ab')).to.equal(false);
-expect(PermutationString('abcdef', 'xyz')).to.equal(false);
-
-expect(PermutationStringInPlace('foo', 'off')).to.equal(false);
-expect(PermutationString('foo', 'off')).to.equal(false);
-expect(PermutationString('foo', 'offa')).to.equal(false);

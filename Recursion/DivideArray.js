@@ -1,8 +1,5 @@
 // Recursively divide an array into half until it only has one element
 // @flow
-import { expect } from 'chai';
-
-
 const items = [];
 
 export default function DivideArray(array: number[]): number[][] {
@@ -19,7 +16,3 @@ export default function DivideArray(array: number[]): number[][] {
     }
   }
 }
-
-test('DivideArray()', () => {
-  expect(DivideArray([1, 2, 3, 4, 5])).to.eql([[5], [4], [3], [2], [1]]);
-});

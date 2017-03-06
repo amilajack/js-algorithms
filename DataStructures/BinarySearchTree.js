@@ -1,7 +1,4 @@
 // @flow
-import { expect } from 'chai';
-
-
 class Node {
   data: number
 
@@ -79,17 +76,3 @@ export default class BinarySearchTree {
 
   find() {}
 }
-
-const bTree = new BinarySearchTree([10, 2, 8, 9, 3]);
-bTree.add(11);
-bTree.toArray();
-expect(bTree.items).to.eql([2, 3, 8, 9, 10, 11]);
-
-const bTreeTwo = new BinarySearchTree([]);
-bTree.toArray();
-expect(bTreeTwo.items).to.eql([]);
-
-// const bTreeThree = new BinarySearchTree([1, 2, 3])
-// bTreeThree.remove(1)
-// bTree.toArray()
-// expect(bTreeThree.items).to.eql([2, 3])
