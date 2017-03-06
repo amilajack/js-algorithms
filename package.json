@@ -7,8 +7,8 @@
     "flow": "flow check",
     "flow-typed": "flow-typed install",
     "lint": "eslint --cache --format=node_modules/eslint-formatter-pretty .",
-    "spec": "NODE_ENV=test jest",
-    "test": "npm run lint && npm run spec"
+    "spec": "jest",
+    "test": "npm run spec"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ import { expect } from 'chai';
 
 type num = number;
 
-function BinarySearchRecursive(items: num[], element: num): num {
+export default function BinarySearchRecursive(items: num[], element: num): num {
   const middleIndex = Math.floor(items.length / 2);
 
   // Base Case
@@ -17,7 +17,7 @@ function BinarySearchRecursive(items: num[], element: num): num {
   return BinarySearchRecursive(items.splice(0, middleIndex), element);
 }
 
-function BinarySearchIterative(items: num[], element: num): num {
+export function BinarySearchIterative(items: num[], element: num): num {
   let low = 0;
   let high = items.length - 1;
 
@@ -37,17 +37,3 @@ function BinarySearchIterative(items: num[], element: num): num {
 
   return -1;
 }
-
-
-test('BinarySearchRecursive()', () => {
-  expect(BinarySearchRecursive([1, 3, 5, 13, 25, 50], 25)).to.equal(25);
-  expect(BinarySearchRecursive([1, 13, 35, 713, 3525, 26650], 26650)).to.equal(26650);
-  expect(BinarySearchIterative([1], 1)).to.equal(0);
-  expect(BinarySearchIterative([1, 2], 2)).to.equal(1);
-  expect(BinarySearchIterative([1, 3, 5, 13, 25, 50], 25)).to.equal(4);
-  expect(BinarySearchIterative([1, 13, 35, 713, 3525, 26650], 26650)).to.equal(5);
-  expect(BinarySearchIterative([1, 2, 3, 4, 5], 1)).to.equal(0);
-  expect(BinarySearchIterative([1, 2, 3, 5], 4)).to.equal(-1);
-  expect(BinarySearchIterative([1, 2, 3, 4, 5], 6)).to.equal(-1);
-  expect(BinarySearchIterative([1, 2, 3, 4, 5], 0)).to.equal(-1);
-});

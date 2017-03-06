@@ -28,10 +28,10 @@ describe('Sorting()', () => {
     expect(MergeSortRecursive([1])).toEqual([1]);
     expect(MergeSortRecursive([4, -2])).toEqual([-2, 4]);
     expect(MergeSortRecursive([]))
-      .to.eql([]);
+      .toEqual([]);
     _items = [];
     expect(MergeSortRecursive([1, 3, 2, 10, 7, 5, 4]))
-      .to.eql([1, 2, 3, 4, 5, 7, 10]);
+      .toEqual([1, 2, 3, 4, 5, 7, 10]);
   });
 
   test('FastMiddleShift', () => {

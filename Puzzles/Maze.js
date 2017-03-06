@@ -17,35 +17,8 @@
 // Following is an example maze. Show
 //
 // @flow
-import { expect } from 'chai';
-
-
 type num = number;
 type mazeType = Array<Array<num>>;
-
-// 1 solution
-const maze1 = [
-  [1, 0, 0, 0],
-  [1, 1, 0, 1],
-  [0, 1, 0, 0],
-  [1, 1, 1, 1]
-];
-
-// 1 solution
-const maze2 = [
-  [1, 0, 1, 1],
-  [1, 1, 1, 1],
-  [0, 0, 0, 1],
-  [1, 1, 1, 1]
-];
-
-// 2 solution
-const maze3 = [
-  [1, 0, 1, 1],
-  [1, 1, 1, 1],
-  [0, 1, 0, 1],
-  [1, 1, 1, 1]
-];
 
 const solutions = [];
 
@@ -66,16 +39,6 @@ export default function Maze(maze: mazeType, x: num, y: num, path: mazeType = []
     if (x + 1 < mazeLength) Maze(maze, x + 1, y, yPath);
     if (y + 1 < mazeLength) Maze(maze, x, y + 1, xPath);
   }
+
+  return solutions;
 }
-
-test('Maze()', () => {
-  Maze(maze1, 0, 0);
-  expect(solutions[0]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]]);
-
-  Maze(maze2, 0, 0);
-  expect(solutions[1]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]]);
-
-  Maze(maze3, 0, 0);
-  expect(solutions[2]).to.eql([[1, 0], [1, 1], [2, 1], [3, 1], [3, 2], [3, 3]]);
-  expect(solutions[3]).to.eql([[1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]]);
-});
