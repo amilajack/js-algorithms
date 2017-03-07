@@ -34,8 +34,11 @@ export function PalindromeIterative(string: string): bool {
     .replace(/:/g, '')
     .split('');
 
-  for (let i = 0; i < Math.floor(_string.length / 2); i++) {
-    if (_string[_string.length - 1 - i] !== _string[i]) return false;
+  // A word of only 1 character is already a palindrome, so we skip to check it
+  while (_string.length > 1)  {
+    if(_string.shift() !== _string.pop()) {
+      return false;
+    }
   }
 
   return true;
