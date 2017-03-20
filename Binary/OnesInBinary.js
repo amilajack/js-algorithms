@@ -16,3 +16,5 @@ export default function OnesInBinary(number: number): number {
     (p: number, c: number): number => (c === 1 ? p + 1 : p)
   );
 }
+
+console.log(global.safeCoerce);
