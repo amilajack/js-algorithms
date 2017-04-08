@@ -7,7 +7,6 @@
     "add-module-exports",
     "transform-runtime",
     "syntax-flow",
-    "fail-explicit",
     "transform-flow-strip-types"
   ]
 }
