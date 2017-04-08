@@ -1,6 +1,6 @@
-"use strict";
 
-(exports.__esModule = true, exports.default = DivideArray, require("safe-access-check"))
+
+(exports.__esModule = true, exports.default = DivideArray, require('safe-access-check'));
 // Recursively divide an array into half until it only has one element
 const items = [];
 
@@ -11,7 +11,7 @@ function DivideArray(array) {
       return items;
     default:
       {
-        const middle = Math.ceil(safeCoerce(array.length, "/", 2));
+        const middle = Math.ceil(safeCoerce(array.length, '/', 2));
         const first = array.splice(middle);
         DivideArray(first);
         DivideArray(array);
@@ -19,4 +19,4 @@ function DivideArray(array) {
       }
   }
 }
-module.exports = exports["default"];
+module.exports = exports.default;

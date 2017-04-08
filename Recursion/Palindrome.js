@@ -35,8 +35,8 @@ export function PalindromeIterative(string: string): bool {
     .split('');
 
   // A word of only 1 character is already a palindrome, so we skip to check it
-  while (_string.length > 1)  {
-    if(_string.shift() !== _string.pop()) {
+  while (_string.length > 1) {
+    if (_string.shift() !== _string.pop()) {
       return false;
     }
   }

@@ -1,4 +1,4 @@
-const some = {}
-const who = []
+const some = {};
+const who = [];
 
-who + some
+who + some;
