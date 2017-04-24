@@ -6,6 +6,7 @@ import Hash from '../DataStructures/Hash';
 import LinkedList from '../DataStructures/LinkedList';
 import HashMap from '../DataStructures/Map';
 import Queue from '../DataStructures/Queue';
+import DAG from '../DataStructures/DAG';
 import HashSet from '../DataStructures/Set';
 import Stack from '../DataStructures/Stack';
 import Tree from '../DataStructures/Tree';
@@ -85,13 +86,31 @@ describe('DataStructures', () => {
   test('Queue()', () => {
     const queue = new Queue();
 
-    expect(queue.add('a')).toEqual(['a']);
-    expect(queue.add('b')).toEqual(['a', 'b']);
-    expect(queue.add('c')).toEqual(['a', 'b', 'c']);
+    expect(queue.push('a')).toEqual(['a']);
+    expect(queue.push('b')).toEqual(['a', 'b']);
+    expect(queue.push('c')).toEqual(['a', 'b', 'c']);
+    expect(queue.size()).toEqual(3);
 
-    expect(queue.take()).toEqual('a');
-    expect(queue.take()).toEqual('b');
-    expect(queue.take()).toEqual('c');
+    expect(queue.pop()).toEqual('a');
+    expect(queue.pop()).toEqual('b');
+    expect(queue.pop()).toEqual('c');
+    expect(queue.size()).toEqual(0);
+  });
+
+  test('DAG', () => {
+    const dag = new DAG();
+    dag.insert({ weight: 3, id: 0, children: [] });
+    dag.insert({ weight: 3, id: 1, children: [] });
+    dag.insert({ weight: 3, id: 2, parents: [0], children: [], data: { foo: 'cow' } });
+
+    expect(dag.breadthFirstSearch({ id: 2 })).toEqual({
+      children: [],
+      id: 2,
+      parents: [0],
+      weight: 3,
+      data: { foo: 'cow' }
+    });
+    expect(dag.breadthFirstSearch({ id: 21 })).toEqual(false);
   });
 
   test('Stack', () => {
