@@ -4,6 +4,7 @@ import BinarySearchTree from '../DataStructures/BinarySearchTree';
 import DoublyLinkedList from '../DataStructures/DoublyLinkedList';
 import Hash from '../DataStructures/Hash';
 import LinkedList from '../DataStructures/LinkedList';
+import MaxHeap from '../DataStructures/MaxHeap';
 import HashMap from '../DataStructures/Map';
 import Queue from '../DataStructures/Queue';
 import DAG from '../DataStructures/DAG';
@@ -46,6 +47,23 @@ describe('DataStructures', () => {
     expect(linkedList.head.data).toEqual({});
     expect(linkedList.head.next.data).toEqual('doo');
     expect(linkedList.head.next.next.data).toEqual('soo');
+  });
+
+  test('MaxHeap', () => {
+    const maxHeap = new MaxHeap();
+
+    maxHeap.insert(10);
+    maxHeap.insert(20);
+    maxHeap.insert(30);
+    expect(maxHeap.get()).toEqual([30, 20, 10]);
+
+    // Remove item
+    maxHeap.remove(30);
+    expect(maxHeap.get()).toEqual([20, 10]);
+
+    // Max heaps can allow duplicates
+    maxHeap.insert(30);
+    expect(maxHeap.get()).toEqual([30, 30, 20, 10]);
   });
 
   test('Map', () => {

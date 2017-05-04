@@ -43,6 +43,7 @@ export default class DAGAdjacencyList {
    * @param {number} the node to search for
    *
    * @TODO: Prevent cycles
+   * @TODO: Add runtime
    */
   breadthFirstSearch(target: Node): bool | Node {
     const queue = new Queue();

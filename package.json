@@ -37,10 +37,10 @@
     "chai": "^3.5.0",
     "del": "^2.2.2",
     "eslint": "^3.19.0",
-    "eslint-config-bliss": "^1.0.4",
+    "eslint-config-bliss": "^1.0.5",
     "eslint-formatter-pretty": "^1.1.0",
-    "flow-bin": "^0.44.2",
-    "flow-typed": "^2.1.1",
+    "flow-bin": "^0.45.0",
+    "flow-typed": "^2.1.2",
     "jest-cli": "^19.0.2",
     "tcomb": "^3.2.20"
   },
