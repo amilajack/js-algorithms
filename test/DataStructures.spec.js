@@ -57,13 +57,16 @@ describe('DataStructures', () => {
     maxHeap.insert(30);
     expect(maxHeap.get()).toEqual([30, 20, 10]);
 
-    // Remove item
-    maxHeap.remove(30);
-    expect(maxHeap.get()).toEqual([20, 10]);
-
     // Max heaps can allow duplicates
     maxHeap.insert(30);
-    expect(maxHeap.get()).toEqual([30, 30, 20, 10]);
+    expect(maxHeap.get()).toEqual([30, 30, 10, 20]);
+
+    // Remove item
+    maxHeap.delete(30);
+    expect(maxHeap.get()).toEqual([30, 20, 10]);
+
+    const maxHeap2 = new MaxHeap([13, 2, 4, 16, 73, 744]);
+    expect(maxHeap2.get()).toEqual([744, 73, 16, 4, 2, 13]);
   });
 
   test('Map', () => {

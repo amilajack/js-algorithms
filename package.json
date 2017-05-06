@@ -41,7 +41,7 @@
     "eslint-formatter-pretty": "^1.1.0",
     "flow-bin": "^0.45.0",
     "flow-typed": "^2.1.2",
-    "jest-cli": "^19.0.2",
+    "jest-cli": "^20.0.0",
     "tcomb": "^3.2.20"
   },
   "engines": {
