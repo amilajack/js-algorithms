@@ -1,5 +1,6 @@
 [ignore]
-.*/git/.*
+<PROJECT_ROOT>/node_modules/*
+<PROJECT_ROOT>/git/.*
 
 [include]
 

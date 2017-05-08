@@ -7,6 +7,7 @@
     "fp/no-this": 0,
     "fp/no-loops": 0,
     "fp/no-let": 0,
+    "fp/no-throw": 0,
     "fp/no-class": 0,
     "import/no-extraneous-dependencies": 0,
     "no-continue": 0,

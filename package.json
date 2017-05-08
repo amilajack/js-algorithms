@@ -4,10 +4,11 @@
   "description": "A Repo of algorithms written in javascript and explained",
   "main": "index.js",
   "scripts": {
-    "flow": "flow check",
+    "flow": "flow",
     "flow-typed": "flow-typed install",
     "lint": "eslint --cache --format=node_modules/eslint-formatter-pretty .",
-    "spec": "jest --no-cache",
+    "spec": "jest",
+    "postinstall": "npm run flow-typed",
     "test": "npm run spec"
   },
   "repository": {
@@ -23,7 +24,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.2",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-fail-explicit": "^0.0.6",
     "babel-plugin-syntax-flow": "^6.18.0",
@@ -36,11 +37,11 @@
     "chai": "^3.5.0",
     "del": "^2.2.2",
     "eslint": "^3.19.0",
-    "eslint-config-bliss": "^1.0.3",
+    "eslint-config-bliss": "^1.0.5",
     "eslint-formatter-pretty": "^1.1.0",
-    "flow-bin": "^0.44.0",
-    "flow-typed": "^2.0.0",
-    "jest-cli": "^19.0.2",
+    "flow-bin": "^0.45.0",
+    "flow-typed": "^2.1.2",
+    "jest-cli": "^20.0.0",
     "tcomb": "^3.2.20"
   },
   "engines": {
