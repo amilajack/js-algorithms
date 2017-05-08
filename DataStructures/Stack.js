@@ -1,5 +1,6 @@
 /**
  * Stacks allow data to be popped and pushed to a stack
+ * Last in, first out (LIFO)
  *
  * ---
  * |a|

@@ -8,7 +8,8 @@
 
 function TreeNode(val: any) {
   this.val = val;
-  this.left = this.right = null;
+  this.right = null;
+  this.left = this.right;
 }
 
 function TreeHeight(root: TreeNode, height: number = 0): number {

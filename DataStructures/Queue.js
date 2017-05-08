@@ -1,4 +1,6 @@
 /**
+ * Last in, last out (LILO)
+ *
  * @TODO: Wite a new implementation of a queue that uses a linked list. This will
  *        make the pop() method O(1) time
  *

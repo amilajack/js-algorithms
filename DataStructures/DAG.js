@@ -98,6 +98,12 @@ export default class DAGAdjacencyList {
     return false;
   }
 
+  /**
+   * A DAG must have at least one vertex that has no incoming edges
+   * (no nodes pointing to it)
+   */
+  hasCycle() {}
+
   insert(node: Node) {
     // Add the node to the adjacency list
     if (!this.adjacencyList[node.id]) {
