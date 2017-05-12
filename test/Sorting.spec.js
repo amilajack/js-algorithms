@@ -4,6 +4,7 @@ import InsertionSort from '../Sorting/InsertionSort';
 import MergeSortRecursive from '../Sorting/MergeSortRecursive';
 import FastMiddleShift, { SlowMiddleShift } from '../Sorting/MiddleShift';
 import QuickSort from '../Sorting/QuickSort';
+import HeapSort from '../Sorting/HeapSort';
 import SelectionSort from '../Sorting/SelectionSort';
 
 
@@ -29,7 +30,6 @@ describe('Sorting()', () => {
     expect(MergeSortRecursive([4, -2])).toEqual([-2, 4]);
     expect(MergeSortRecursive([]))
       .toEqual([]);
-    _items = [];
     expect(MergeSortRecursive([1, 3, 2, 10, 7, 5, 4]))
       .toEqual([1, 2, 3, 4, 5, 7, 10]);
   });
@@ -48,5 +48,12 @@ describe('Sorting()', () => {
 
   test('SelectionSort()', () => {
     expect(SelectionSort([122, 3, 2, 5, 33, 22, 11])).toEqual([2, 3, 5, 11, 22, 33, 122]);
+  });
+
+  test.only('HeapSort()', () => {
+    expect(HeapSort([5, 2, 8, 9])).toEqual([2, 5, 8, 9]);
+    expect(HeapSort([])).toEqual([]);
+    expect(HeapSort([1])).toEqual([1]);
+    expect(HeapSort([4, -2])).toEqual([-2, 4]);
   });
 });
