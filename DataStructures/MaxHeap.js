@@ -23,8 +23,14 @@ export default class MaxHeap {
     return this.nodes;
   }
 
-  delete(node: number) {
+  delete(node: number): number {
     const nodeIndex = this.nodes.indexOf(node);
+    this.deleteNodeIndex(nodeIndex);
+    return node;
+  }
+
+  deleteNodeIndex(nodeIndex: number): number {
+    const node = this.nodes[nodeIndex];
     // Swap the node and the last node
     const nodeValue = this.nodes[nodeIndex];
     const lastNodeValue = this.nodes[this.nodes.length - 1];
@@ -33,6 +39,7 @@ export default class MaxHeap {
     this.nodes = this.nodes.filter((e, i) => i !== this.nodes.length - 1);
     // maxHeapify the root
     this.maxHeapify(0);
+    return node;
   }
 
   _determineSwapWithParent(nodeIndex: number) {
