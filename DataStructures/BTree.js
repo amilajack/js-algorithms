@@ -1,28 +1,27 @@
-import {expect} from 'chai'
+// @flow
+class TreeNode {
 
-
-class TreeNode<T> {
   keys: Array<number> = []
 
-  children: Array<TreeNode<T>> = []
+  children: Array<TreeNode> = []
 
-  parent: TreeNode<T>
+  parent: TreeNode
 
   isLeaf() {
-    return this.children.length === 0
+    return this.children.length === 0;
   }
 
   findMiddleChild() {
-    return this.children[Math.ceil(this.children.length / 2)]
+    return this.children[Math.ceil(this.children.length / 2)];
   }
 }
 
-class BTree<T> {
-  root: TreeNode<T>
+export default class BTree {
+  root: TreeNode = new TreeNode();
 
-  k: number = 3
+  t: number = 3
 
-  search(value: number, node: TreeNode<T> = this.root): string {
+  search(value: number, node: TreeNode = this.root): string {
     // For each key of the node's keys
     for (let i = 0; i < node.keys.length; i++) {
       // If the value is less than the current key
@@ -37,10 +36,10 @@ class BTree<T> {
       }
     }
 
-    return -1;
+    return '';
   }
 
-  insert(value: number, node = this.root): boolean {
+  insert(value: number, node = this.root): bool {
     // For each key of the node's keys
     for (let i = 0; i < node.keys.length; i++) {
       // If the value is less than the current key
@@ -58,17 +57,15 @@ class BTree<T> {
     return true;
   }
 
-  split(node: TreeNode<T>) {
+  split(node: TreeNode) {
     // If the node doesn't need to be split, abort
-    if (node.children.length < this.k) {
-      return;
+    if (node.children.length < this.t) {
+
     } else {
       // Otherwise, Split
 
       // Find index of 'middle' key
       const middleIndex = Math.ceil(node.keys.length / 2);
-
-
     }
   }
 }

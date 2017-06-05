@@ -2,7 +2,7 @@
  * Heap Property: Each node has children that are at least as small as it
  * Binary Heap: Perfectly balanced binary heap
  *
- * @TODO: Refactor to add 'MaxHeap'
+ * @TODO: Refactor to add 'MinHeap'
  * @flow
  */
 export default class MaxHeap {
