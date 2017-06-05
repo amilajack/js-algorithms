@@ -21,9 +21,5 @@ export default class PriorityQueue {
     this.heap = new MaxHeap();
   }
 
-  insert(node: PriorityNode) {
-
-  }
-
-
+  insert(node: PriorityNode) {}
 }
