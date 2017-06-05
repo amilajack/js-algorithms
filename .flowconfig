@@ -17,3 +17,4 @@ suppress_type=$FlowFixMe
 suppress_type=$FixMe
 
 munge_underscores=true
+all=true

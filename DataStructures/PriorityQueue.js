@@ -2,9 +2,11 @@
  * A Priority Queue is a special kind of queue that sorts its values
  * This implementation uses numbers to denote the priority of elements
  *
+ * Larger priority numbers denote a higher priority
+ *
  * @flow
  */
-import HeapSort from '../Sorting/HeapSort';
+import MaxHeap from '../DataStructures/MaxHeap';
 
 export class PriorityNode<T> {
   priority: number
@@ -15,13 +17,9 @@ export default class PriorityQueue {
 
   items: Array<PriorityNode>
 
-  constructor(item: Array<PriorityNode>) {
-
+  constructor(items: Array<PriorityNode>) {
+    this.heap = new MaxHeap();
   }
 
-  insert(node: PriorityNode) {
-
-  }
-
-
+  insert(node: PriorityNode) {}
 }
