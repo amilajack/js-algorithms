@@ -24,9 +24,58 @@ export default class LinkedList {
     return !!this.head;
   }
 
-  has() {}
+  revese(node: Node = this.head) {
+    if (!node || !node.next) return node;
+    const reversedNode = this.revese(node.next);
+    node.next.next = node;
+    node.next = null;
+    return reversedNode;
+  }
 
-  next() {}
+  delete(data: any) {
+    const node = this.find(data);
+    if (!node) return;
+  }
+
+  /**
+   * Can be done with merge sort, can be O(nlogn) complexity
+   * Similar to insertion sort
+   * @complexity: O(n^2)
+   */
+  sort(data: any) {
+    let head = this.head;
+
+    while (head.hasNext()) {
+      let innerHead = this.head;
+
+      while (innerHead.hasNext()) {
+        if (
+          head.data > innerHead.data &&
+          head.data < innerHead.next.data
+        ) {
+          // inserts
+        }
+        innerHead = innerHead.next;
+      }
+      head = head.next;
+    }
+  }
+
+  /**
+   * Find a node by its data
+   */
+  find(data: any): Node | false {
+    let node = this.head;
+    while (node.hasNext()) {
+      if (node.data === data) {
+        return node;
+      }
+      node = node.next;
+    }
+    return false;
+  }
+
+  insertAfter = this.insert;
 
   insert(data: any, begin?: Node): bool {
     const node = new Node(data);
@@ -39,14 +88,25 @@ export default class LinkedList {
 
     return true;
   }
+
+  toString() {
+    const items = [];
+    let node = this.head;
+    items.push(node);
+
+    while (node.next) {
+      items.push(node.next);
+      node = node.next;
+    }
+
+    return items;
+  }
 }
 
 class Node {
-  data: Object = {}
+  data: number | string = 0
 
   next: Node | bool = false
-
-  head: Node
 
   constructor(data: any = {}, next: Node | bool = false) {
     this.data = data;
@@ -57,7 +117,9 @@ class Node {
     return this.next !== false;
   }
 
-  // Remove first link
+  /**
+   * Remove first link
+   */
   remove() {
     if (!this.isEmpty() && this.head.hasNext()) {
       this.head = this.head.next;
