@@ -1,6 +1,12 @@
 // @flow
 
 /**
+ * Check Permutation - Given two strings, write a method to decide if one is
+ *  a permutation of the other.
+ */
+
+/**
+ *
  * O(NlgN) time
  * O(N) space
  * @param {*} str1 first string to check
