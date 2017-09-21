@@ -13,9 +13,9 @@
  */
 export default function InsertionSort(items: Array<number>): Array<number> {
   const itemsCopy = [...items];
-  let value;                      // the value currently being compared
-  let i;                          // index of first element in unsorted section
-  let j;                          // index going into sorted section
+  let value; // the value currently being compared
+  let i; // index of first element in unsorted section
+  let j; // index going into sorted section
 
   for (i = 0; i < itemsCopy.length; i++) {
     value = itemsCopy[i];
