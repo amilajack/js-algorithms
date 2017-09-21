@@ -68,11 +68,11 @@ describe('Math', () => {
         magnitude: 122
       }
     ]))
-    .toEqual({
-      xMag: -201.176,
-      yMag: 93.874,
-      totalMag: 222
-    });
+      .toEqual({
+        xMag: -201.176,
+        yMag: 93.874,
+        totalMag: 222
+      });
   });
 
   test('SquareRoot()', () => {

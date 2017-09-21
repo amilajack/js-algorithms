@@ -37,8 +37,8 @@ function _divide(array: Array<number>): any {
 function _merge(first: Array<number>, second: Array<number>): Array<number> {
   const merged = [];
   const [target, source] = first.length > second.length
-                            ? [first, second]
-                            : [second, first];
+    ? [first, second]
+    : [second, first];
 
   for (let i = 0; i < target.length && i < source.length; i++) {
     if (target[i] < source[i]) {

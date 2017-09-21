@@ -6,7 +6,6 @@
  * @flow
  */
 export default class MaxHeap {
-
   nodes: Array<number> = [];
 
   constructor(items: Array<number> = []) {

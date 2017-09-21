@@ -1,6 +1,5 @@
 // @flow
 class TreeNode {
-
   keys: Array<number> = []
 
   children: Array<TreeNode> = []

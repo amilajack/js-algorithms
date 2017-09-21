@@ -14,7 +14,6 @@ export class PriorityNode<T> {
 }
 
 export default class PriorityQueue {
-
   items: Array<PriorityNode>
 
   constructor(items: Array<PriorityNode>) {
