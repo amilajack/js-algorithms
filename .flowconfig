@@ -1,5 +1,4 @@
 [ignore]
-<PROJECT_ROOT>/node_modules/*
 <PROJECT_ROOT>/git/.*
 
 [include]
@@ -10,7 +9,6 @@
 esproposal.class_static_fields=enable
 esproposal.class_instance_fields=enable
 esproposal.export_star_as=enable
-experimental.strict_type_args=true
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
