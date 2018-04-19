@@ -1,12 +1,7 @@
 {
   "presets": [
-    ["env", { "targets": { "node": 7 }}],
+    ["env", { "targets": { "node": "current" }}],
+    "flow",
     "stage-0"
-  ],
-  "plugins": [
-    "add-module-exports",
-    "transform-runtime",
-    "syntax-flow",
-    "transform-flow-strip-types"
   ]
 }

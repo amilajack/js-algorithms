@@ -6,7 +6,7 @@ A list of Computer Science concepts **solved** and **explained** in JavaScript (
 [![David](https://img.shields.io/david/dev/amilajack/js-algorithms.svg?maxAge=86400)](https://david-dm.org/amilajack/js-algorithms?type=dev)
 
 ## Requirements:
-* **node >= 6 and npm >= 3**
+* **node >= 9 and yarn >= 1.6.0**
 
 # Getting Started
 ```bash
@@ -21,7 +21,7 @@ yarn test
 # Run
 yarn add --global babel-cli
 # Running/testing files
-babel-node SomeFileHere.js
+babel-node General/PrintKDistance.js
 ```
 
 ## Planned Implementations
