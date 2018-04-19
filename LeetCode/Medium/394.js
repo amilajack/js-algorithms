@@ -34,14 +34,17 @@
  */
 function joinNTimes(string: string, n: number): string {
   // console.log(string);
-  return (new Array(n + 1)).join(string);
+  return new Array(n + 1).join(string);
 }
 
 // "3[a2[c2[c2[c]]]]"
 
 // "3[a2[c]]"
 
-export default function DecodeString(string: string, continuingString: string = ''): string {
+export default function DecodeString(
+  string: string,
+  continuingString: string = ''
+): string {
   const chars = Array.from(string);
 
   for (let i = 0; i < chars.length; i++) {

@@ -14,7 +14,9 @@ export default class MaxHeap {
 
   insert(node: number) {
     this.nodes.push(node);
-    if (this.nodes.length === 1) { return; }
+    if (this.nodes.length === 1) {
+      return;
+    }
     this._determineSwapWithParent(this.nodes.length - 1);
   }
 
@@ -95,10 +97,7 @@ export default class MaxHeap {
     const rightValue = this.nodes[rightIndex];
 
     // If the root is smaller than any of its children
-    if (
-      leftValue > nodeValue ||
-      rightValue > nodeValue
-    ) {
+    if (leftValue > nodeValue || rightValue > nodeValue) {
       // If left child > right child, swap with root with left, vice versa
       if (leftValue > rightValue) {
         this.nodes[leftIndex] = nodeValue;
@@ -117,6 +116,6 @@ export default class MaxHeap {
   }
 
   getRight(nodeIndex: number) {
-    return nodeIndex === 0 ? 2 : (nodeIndex * 2) + 1;
+    return nodeIndex === 0 ? 2 : nodeIndex * 2 + 1;
   }
 }

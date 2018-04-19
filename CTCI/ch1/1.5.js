@@ -1,5 +1,5 @@
 // @flow
-export default function OneAway(str1: string, str2: string): bool {
+export default function OneAway(str1: string, str2: string): boolean {
   const set1 = new Set(str1);
   const set2 = new Set(str2);
   const diffs = new Array(2);

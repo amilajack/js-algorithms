@@ -8,18 +8,16 @@
  */
 import Hash from './Hash';
 
-
 function HashSet() {
   this.items = [];
   this.itemsLength = 0;
 }
 
 HashSet.prototype = {
-
   /**
    * Complexity: O(n)
    */
-  add(value: any): bool {
+  add(value: any): boolean {
     this.items[Hash(value)] = value;
     this.itemsLength++;
     return true;
@@ -28,7 +26,7 @@ HashSet.prototype = {
   /**
    * Complexity: O(1)
    */
-  contains(value: any): bool {
+  contains(value: any): boolean {
     return !!this.items[Hash(value)];
   },
 
@@ -48,7 +46,7 @@ HashSet.prototype = {
    * length (ex. array[42] = 'some')
    */
   all(): any[] {
-    return this.items.filter((i: any): bool => !!i) // eslint-disable-line
+    return this.items.filter((i: any): boolean => !!i); // eslint-disable-line
   }
 };
 

@@ -8,7 +8,6 @@
  */
 import Hash from './Hash';
 
-
 function HashMap() {
   this.items = [];
   this.mapLength = 50;
@@ -21,7 +20,7 @@ HashMap.prototype.insert = function insert(key: any, value: any): HashMap {
 };
 
 HashMap.prototype.all = function all(): any[] {
-  return this.items.filter((i: any): bool => !!i);
+  return this.items.filter((i: any): boolean => !!i);
 };
 
 /**
@@ -40,6 +39,5 @@ HashMap.prototype.remove = function remove(key: any): HashMap {
   this.items.splice(generatedHashCode, 1);
   return this;
 };
-
 
 export default HashMap;

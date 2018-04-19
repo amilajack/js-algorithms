@@ -12,7 +12,6 @@
  */
 import Factorial from '../Math/Factorial';
 
-
 let permutations = 0;
 
 /**
@@ -27,7 +26,7 @@ export default function StringPermutationsRecursive(string: string): number {
 
   for (let i = 0; i < _string.length; i++) {
     StringPermutationsRecursive(
-      _string.filter((e: any, _i: number): bool => _i !== i).join('')
+      _string.filter((e: any, _i: number): boolean => _i !== i).join('')
     );
   }
 

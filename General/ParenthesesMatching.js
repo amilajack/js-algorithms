@@ -1,7 +1,6 @@
 // @flow
 import Stack from '../DataStructures/Stack';
 
-
 const start = ['{', '(', '['];
 const endings = ['}', ')', ']'];
 
@@ -11,7 +10,7 @@ const endingMappings = {
   ']': '['
 };
 
-export default function isBalanced(string: string): bool {
+export default function isBalanced(string: string): boolean {
   const stack = new Stack();
 
   for (const char of Array.from(string)) {

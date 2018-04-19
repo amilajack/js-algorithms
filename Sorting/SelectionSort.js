@@ -30,4 +30,3 @@ function swap(items: number[], firstIndex: number, secondIndex: number) {
   items[firstIndex] = items[secondIndex];
   items[secondIndex] = temp;
 }
-

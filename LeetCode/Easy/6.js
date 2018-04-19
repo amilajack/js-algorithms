@@ -24,14 +24,16 @@ export default function ZigZag(string: string, number: number): string {
 
     if (rowNumber !== Math.floor(number / 2)) {
       if (index + number + 1 > string.length) {
-        rowNumber++; index = rowNumber;
+        rowNumber++;
+        index = rowNumber;
       } else if (number % 2 === 0) {
         index += number;
       } else {
         index += number + 1;
       }
     } else if (index + middle > string.length) {
-      rowNumber++; index = rowNumber;
+      rowNumber++;
+      index = rowNumber;
     } else {
       index += middle;
     }

@@ -2,7 +2,10 @@
 import assert from 'assert';
 import CheckAddition from '../Math/CheckAddition';
 import FactorialRecursive, { FactorialIterative } from '../Math/Factorial';
-import FibonacciIterative, { FibonacciRecursiveDP, FibonacciRecursive } from '../Math/Fibonacci';
+import FibonacciIterative, {
+  FibonacciRecursiveDP,
+  FibonacciRecursive
+} from '../Math/Fibonacci';
 import HappyNumbers, { calc } from '../Math/HappyNumbers';
 import Integral, { areaNumerical } from '../Math/Integral';
 import PascalRecursive, { PascalIterative } from '../Math/Pascal';
@@ -10,7 +13,6 @@ import PrimeNumberGenerator from '../Math/PrimeNumberGenerator';
 import RandomNumber, { isBeween } from '../Math/RandomNumber';
 import SquareRoot from '../Math/SquareRoot';
 import VectorCalculate from '../Math/VectorCalculate';
-
 
 describe('Math', () => {
   test('CheckAddition', () => {
@@ -58,21 +60,22 @@ describe('Math', () => {
   });
 
   test('CalculateVector', () => {
-    expect(VectorCalculate([
-      {
-        direction: 155,
-        magnitude: 100
-      },
-      {
-        direction: 155,
-        magnitude: 122
-      }
-    ]))
-      .toEqual({
-        xMag: -201.176,
-        yMag: 93.874,
-        totalMag: 222
-      });
+    expect(
+      VectorCalculate([
+        {
+          direction: 155,
+          magnitude: 100
+        },
+        {
+          direction: 155,
+          magnitude: 122
+        }
+      ])
+    ).toEqual({
+      xMag: -201.176,
+      yMag: 93.874,
+      totalMag: 222
+    });
   });
 
   test('SquareRoot()', () => {
@@ -82,10 +85,7 @@ describe('Math', () => {
   });
 
   test('Pascal()', () => {
-    expect(PascalRecursive(2)).toEqual([
-      [1],
-      [1, 1]
-    ]);
+    expect(PascalRecursive(2)).toEqual([[1], [1, 1]]);
 
     expect(PascalRecursive(5)).toEqual([
       [1],
@@ -95,10 +95,7 @@ describe('Math', () => {
       [1, 4, 6, 4, 1]
     ]);
 
-    expect(PascalIterative(2)).toEqual([
-      [1],
-      [1, 1]
-    ]);
+    expect(PascalIterative(2)).toEqual([[1], [1, 1]]);
 
     expect(PascalIterative(5)).toEqual([
       [1],

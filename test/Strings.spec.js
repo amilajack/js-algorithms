@@ -1,11 +1,14 @@
 // @flow
 import { expect as chaiExpect } from 'chai';
 import HasDupeChars from '../Strings/HasDupeChars';
-import StringPermutationsRecursive, { StringPermutationsRecursiveFactorial } from '../Strings/Permutations';
+import StringPermutationsRecursive, {
+  StringPermutationsRecursiveFactorial
+} from '../Strings/Permutations';
 import RandomString from '../Strings/RandomString';
-import ReverseStringIterative, { ReverseStringIterativeInplace } from '../Strings/ReverseString';
+import ReverseStringIterative, {
+  ReverseStringIterativeInplace
+} from '../Strings/ReverseString';
 import SubString from '../Strings/SubString';
-
 
 describe('Strings', () => {
   test('HasDupeChars()', () => {
@@ -19,7 +22,9 @@ describe('Strings', () => {
     expect(StringPermutationsRecursive('super')).toEqual(5 * 4 * 3 * 2 * 1);
     expect(StringPermutationsRecursive('some')).toEqual(4 * 3 * 2 * 1);
 
-    expect(StringPermutationsRecursiveFactorial('super')).toEqual(5 * 4 * 3 * 2 * 1);
+    expect(StringPermutationsRecursiveFactorial('super')).toEqual(
+      5 * 4 * 3 * 2 * 1
+    );
     expect(StringPermutationsRecursiveFactorial('some')).toEqual(4 * 3 * 2 * 1);
   });
 

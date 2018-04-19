@@ -20,16 +20,10 @@ export default function PascalRecursive(number: num, list: pt = []): pt {
   switch (list.length) {
     case 0:
       list.push([1]);
-      return PascalRecursive(
-        number,
-        list
-      );
+      return PascalRecursive(number, list);
     case 1:
       list.push([1, 1]);
-      return PascalRecursive(
-        number,
-        list
-      );
+      return PascalRecursive(number, list);
     case number:
       return list;
     default: {
@@ -40,10 +34,7 @@ export default function PascalRecursive(number: num, list: pt = []): pt {
       }
       _tmp.push(1);
       list.push(_tmp);
-      return PascalRecursive(
-        number,
-        list
-      );
+      return PascalRecursive(number, list);
     }
   }
 }
@@ -54,9 +45,7 @@ export function PascalIterative(number: number): pt {
 
   for (let i = 1; i < number; i++) {
     const some = [1];
-    const length = rows[i - 1]
-      ? rows[i - 1].length - 1
-      : 0;
+    const length = rows[i - 1] ? rows[i - 1].length - 1 : 0;
 
     for (let j = 0; j < length; j++) {
       some.push(rows[i - 1][j] + (rows[i - 1][j + 1] || 0));

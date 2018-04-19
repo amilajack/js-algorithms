@@ -48,7 +48,7 @@ export function convertToArray(node: Object) {
  * [2, 2], 1 to 2, (2 ** 1) - 1
  * [3, 4, 4, 3], 3 to 6, diff = (2 ** 2) - 1
  */
-export default function isSymmetric(root: Object): bool {
+export default function isSymmetric(root: Object): boolean {
   items = [1, 2, 2, 3, 5, 4, 3];
   // items = [1, 2, 2, 3, 4, 4, 3]
 

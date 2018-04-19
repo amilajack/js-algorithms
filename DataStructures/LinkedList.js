@@ -10,17 +10,17 @@
 //
 // @flow
 export default class LinkedList {
-  head: Node
+  head: Node;
 
-  tail: Node
+  tail: Node;
 
-  integrity = new Set()
+  integrity = new Set();
 
   constructor() {
     this.head = new Node({});
   }
 
-  isEmpty(): bool {
+  isEmpty(): boolean {
     return !!this.head;
   }
 
@@ -49,10 +49,7 @@ export default class LinkedList {
       let innerHead = this.head;
 
       while (innerHead.hasNext()) {
-        if (
-          head.data > innerHead.data &&
-          head.data < innerHead.next.data
-        ) {
+        if (head.data > innerHead.data && head.data < innerHead.next.data) {
           // inserts
         }
         innerHead = innerHead.next;
@@ -77,7 +74,7 @@ export default class LinkedList {
 
   insertAfter = this.insert;
 
-  insert(data: any, begin?: Node): bool {
+  insert(data: any, begin?: Node): boolean {
     const node = new Node(data);
     if (begin && this.integrity.has(node)) return false;
     const headNext = (begin || this.head).next;
@@ -104,16 +101,16 @@ export default class LinkedList {
 }
 
 class Node {
-  data: number | string = 0
+  data: number | string = 0;
 
-  next: Node | bool = false
+  next: Node | boolean = false;
 
-  constructor(data: any = {}, next: Node | bool = false) {
+  constructor(data: any = {}, next: Node | boolean = false) {
     this.data = data;
     this.next = next;
   }
 
-  hasNext(): bool {
+  hasNext(): boolean {
     return this.next !== false;
   }
 
@@ -129,7 +126,7 @@ class Node {
   /**
    * Append after node
    */
-  append(data: any): bool {
+  append(data: any): boolean {
     const node = new Node(data);
     const { next } = this;
 

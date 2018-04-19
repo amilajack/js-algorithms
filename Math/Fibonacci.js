@@ -44,8 +44,7 @@ export function FibonacciRecursiveDP(stairs: num): num {
   if (dict.has(stairs)) return dict.get(stairs);
 
   const res =
-    FibonacciRecursiveDP(stairs - 1) +
-    FibonacciRecursiveDP(stairs - 2);
+    FibonacciRecursiveDP(stairs - 1) + FibonacciRecursiveDP(stairs - 2);
 
   dict.set(stairs, res);
 

@@ -26,7 +26,7 @@
  * @flow
  */
 export default class Stack {
-  items: []
+  items: [];
 
   constructor(items?: any[]) {
     this.items = items || [];
@@ -49,7 +49,7 @@ export default class Stack {
     return this;
   }
 
-  empty(): bool {
+  empty(): boolean {
     return this.items.length === 0;
   }
 
@@ -57,4 +57,3 @@ export default class Stack {
     return this.items[this.items.length - 1];
   }
 }
-

@@ -29,5 +29,7 @@ export function SlowMiddleShift(string: string, char: string): string {
  */
 export default function FastMiddleShift(string: string, char: string): string {
   const middleIndex = Math.floor(string.length / 2);
-  return string.substring(0, middleIndex) + char + string.substring(middleIndex);
+  return (
+    string.substring(0, middleIndex) + char + string.substring(middleIndex)
+  );
 }

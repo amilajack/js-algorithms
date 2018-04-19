@@ -13,6 +13,6 @@
 // removed by your friend.
 //
 // @flow
-export default function CanWinNim(n: number): bool {
-  return n / 4 % 1 !== 0;
+export default function CanWinNim(n: number): boolean {
+  return (n / 4) % 1 !== 0;
 }

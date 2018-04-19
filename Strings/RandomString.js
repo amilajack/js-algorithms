@@ -4,7 +4,6 @@
  */
 import randomNumber from '../Math/RandomNumber';
 
-
 /**
  * Generate a random string
  */
@@ -16,7 +15,9 @@ export default function RandomString(stringLength: number): string {
   let index;
 
   for (index = 0; index < stringLength; index++) {
-    const randomDictionaryIndex = Math.floor(randomNumber(0, dictionary.length));
+    const randomDictionaryIndex = Math.floor(
+      randomNumber(0, dictionary.length)
+    );
     generatedRandomString += dictionary[randomDictionaryIndex];
   }
 

@@ -1,18 +1,18 @@
 // @flow
 export default class DoublyLinkedList {
-  head: Node
+  head: Node;
 
-  tail: Node
+  tail: Node;
 
-  head: Node
+  head: Node;
 
-  integrity = new Set()
+  integrity = new Set();
 
   constructor() {
     this.head = new Node({});
   }
 
-  isEmpty(): bool {
+  isEmpty(): boolean {
     return !!this.head;
   }
 
@@ -33,7 +33,7 @@ export default class DoublyLinkedList {
   /**
    * Append node to end of list
    */
-  insert(data: any, begin?: Node): bool {
+  insert(data: any, begin?: Node): boolean {
     const target: Node = begin || this.tail;
     const node: Node = new Node(data);
 
@@ -47,16 +47,16 @@ export default class DoublyLinkedList {
 }
 
 class Node {
-  data: Object = {}
+  data: Object = {};
 
-  next: Node | bool = false
+  next: Node | boolean = false;
 
-  constructor(data: any = {}, next: Node | bool = false) {
+  constructor(data: any = {}, next: Node | boolean = false) {
     this.data = data;
     this.next = next;
   }
 
-  hasNext(): bool {
+  hasNext(): boolean {
     return this.next !== false;
   }
 }

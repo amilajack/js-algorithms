@@ -7,10 +7,16 @@
     "flow": "flow",
     "flow-typed": "flow-typed install",
     "lint": "eslint --cache --format=node_modules/eslint-formatter-pretty .",
-    "lint-fix": "prettier --single-quote --write \"{,!(flow-typed)/**}/*.{js}\" && yarn lint -- --fix",
+    "lint-fix": "npm run lint -- --fix; exit 0",
+    "postlint-fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.js'",
     "spec": "jest",
     "postinstall": "npm run flow-typed",
     "test": "npm run spec"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-fix"
+    }
   },
   "repository": {
     "type": "git",
@@ -40,6 +46,7 @@
     "eslint-formatter-pretty": "^1.3.0",
     "flow-bin": "^0.70.0",
     "flow-typed": "^2.4.0",
+    "husky": "^1.0.0-rc.1",
     "jest-cli": "^22.4.3"
   },
   "engines": {

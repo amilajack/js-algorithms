@@ -13,7 +13,10 @@
 
 type num = number;
 
-export default function Flatten(array: Array<Array<num>>, collector: num[] = []): num[] {
+export default function Flatten(
+  array: Array<Array<num>>,
+  collector: num[] = []
+): num[] {
   switch (array.length > 0) {
     case true: {
       const [first, ...rest] = array;
@@ -29,7 +32,7 @@ export function FlattenRecursive(items: Array<any>): Array<any> {
 
   for (let i = 0; i < items.length; i++) {
     Array.isArray(items[i])
-      ? concatedItems = concatedItems.concat(FlattenRecursive(items[i]))
+      ? (concatedItems = concatedItems.concat(FlattenRecursive(items[i])))
       : concatedItems.push(items[i]);
   }
 

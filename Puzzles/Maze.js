@@ -22,7 +22,12 @@ type mazeType = Array<Array<num>>;
 
 const solutions = [];
 
-export default function Maze(maze: mazeType, x: num, y: num, path: mazeType = []) {
+export default function Maze(
+  maze: mazeType,
+  x: num,
+  y: num,
+  path: mazeType = []
+) {
   const mazeLength = maze.length;
 
   if (x === maze.length - 1 && y === maze.length - 1) {

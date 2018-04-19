@@ -48,6 +48,4 @@ function PrintKDistance(string) {
   return str;
 }
 
-
 console.log(PrintKDistance('AAABBBCC'));
-

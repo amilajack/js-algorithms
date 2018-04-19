@@ -49,8 +49,7 @@ export default function StairCaseCombinationDP(stairs: num): num {
   if (dict.has(stairs)) return dict.get(stairs);
 
   const res =
-    StairCaseCombinationDP(stairs - 1) +
-    StairCaseCombinationDP(stairs - 2);
+    StairCaseCombinationDP(stairs - 1) + StairCaseCombinationDP(stairs - 2);
 
   dict.set(stairs, res);
 

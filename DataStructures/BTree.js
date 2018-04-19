@@ -1,10 +1,10 @@
 // @flow
 class TreeNode {
-  keys: Array<number> = []
+  keys: Array<number> = [];
 
-  children: Array<TreeNode> = []
+  children: Array<TreeNode> = [];
 
-  parent: TreeNode
+  parent: TreeNode;
 
   isLeaf() {
     return this.children.length === 0;
@@ -18,7 +18,7 @@ class TreeNode {
 export default class BTree {
   root: TreeNode = new TreeNode();
 
-  t: number = 3
+  t: number = 3;
 
   search(value: number, node: TreeNode = this.root): string {
     // For each key of the node's keys
@@ -38,7 +38,7 @@ export default class BTree {
     return '';
   }
 
-  insert(value: number, node = this.root): bool {
+  insert(value: number, node = this.root): boolean {
     // For each key of the node's keys
     for (let i = 0; i < node.keys.length; i++) {
       // If the value is less than the current key
@@ -59,7 +59,6 @@ export default class BTree {
   split(node: TreeNode) {
     // If the node doesn't need to be split, abort
     if (node.children.length < this.t) {
-
     } else {
       // Otherwise, Split
 
@@ -68,4 +67,3 @@ export default class BTree {
     }
   }
 }
-

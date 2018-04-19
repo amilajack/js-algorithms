@@ -7,7 +7,10 @@
 /**
  * Complexity: O(n)
  */
-export default function PermutationString(first: string, second: string): bool {
+export default function PermutationString(
+  first: string,
+  second: string
+): boolean {
   if (first.length !== second.length) return false;
 
   const _first: Map<string, number> = new Map();
@@ -40,7 +43,10 @@ export default function PermutationString(first: string, second: string): bool {
 /**
  * Complexity: O(nlogn)
  */
-export function PermutationStringInPlace(first: string, second: string): bool {
+export function PermutationStringInPlace(
+  first: string,
+  second: string
+): boolean {
   if (first.length !== second.length) return false;
 
   const _first = first.split('').sort();

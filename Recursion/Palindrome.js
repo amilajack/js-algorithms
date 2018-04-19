@@ -13,7 +13,7 @@
  * @flow
  * @complexity: O(n)
  */
-export default function PalindromeRecursive(string: string): bool {
+export default function PalindromeRecursive(string: string): boolean {
   // Base case
   if (string.length < 2) return true;
 
@@ -25,7 +25,7 @@ export default function PalindromeRecursive(string: string): bool {
   return PalindromeRecursive(string.slice(1, string.length - 1));
 }
 
-export function PalindromeIterative(string: string): bool {
+export function PalindromeIterative(string: string): boolean {
   const _string = string
     .toLowerCase()
     .replace(/ /g, '')

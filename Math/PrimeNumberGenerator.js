@@ -32,4 +32,3 @@ export default function PrimeNumberGenerator(limit: number = 100): number[] {
 
   return primeNumbers;
 }
-

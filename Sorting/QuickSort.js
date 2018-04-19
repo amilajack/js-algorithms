@@ -27,7 +27,11 @@ function QuickSortRecursive(items: Array<number>, p: number, r: number) {
   }
 }
 
-function RandomizedPartition(items: Array<number>, p: number, r: number): number {
+function RandomizedPartition(
+  items: Array<number>,
+  p: number,
+  r: number
+): number {
   const i = getRandomInt(p, r);
   Swap(items, i, r);
   return Partition(items, p, r);

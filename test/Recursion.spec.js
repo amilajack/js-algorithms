@@ -2,18 +2,36 @@
 import Flatten, { FlattenRecursive } from '../Recursion/Flatten';
 import ArrayLength from '../Recursion/ArrayLength';
 import DivideArray from '../Recursion/DivideArray';
-import PalindromeRecursive, { PalindromeIterative } from '../Recursion/Palindrome';
-import StairCaseCombinationsDP, { StairCaseCombinationRecursive } from '../Recursion/StairCaseCombinations';
-
+import PalindromeRecursive, {
+  PalindromeIterative
+} from '../Recursion/Palindrome';
+import StairCaseCombinationsDP, {
+  StairCaseCombinationRecursive
+} from '../Recursion/StairCaseCombinations';
 
 describe('Recursion', () => {
   test('Flatten', () => {
-    expect(Flatten([[1, 3, 4, 5], [13, 15, 41, 54]]))
-      .toEqual([13, 15, 41, 54, 1, 3, 4, 5]);
+    expect(Flatten([[1, 3, 4, 5], [13, 15, 41, 54]])).toEqual([
+      13,
+      15,
+      41,
+      54,
+      1,
+      3,
+      4,
+      5
+    ]);
 
     expect(FlattenRecursive([1, [2]])).toEqual([1, 2]);
     expect(FlattenRecursive([1, [[[2]]]])).toEqual([1, 2]);
-    expect(FlattenRecursive([1, [2, [[3, 4], 5], 6]])).toEqual([1, 2, 3, 4, 5, 6]);
+    expect(FlattenRecursive([1, [2, [[3, 4], 5], 6]])).toEqual([
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]);
   });
   test('StairCaseCombination', () => {
     expect(StairCaseCombinationRecursive(4)).toEqual(5);

@@ -9,12 +9,12 @@
 import MaxHeap from '../DataStructures/MaxHeap';
 
 export class PriorityNode<T> {
-  priority: number
-  data: T
+  priority: number;
+  data: T;
 }
 
 export default class PriorityQueue {
-  items: Array<PriorityNode>
+  items: Array<PriorityNode>;
 
   constructor(items: Array<PriorityNode>) {
     this.heap = new MaxHeap();

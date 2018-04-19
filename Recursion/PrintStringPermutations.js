@@ -11,10 +11,7 @@ function printStrPerm(chars: Array<string>, string: string) {
   }
 
   for (let i = 0; i < chars.length; i++) {
-    printStrPerm(
-      chars.filter(e => e !== chars[i]),
-      string + chars[i]
-    );
+    printStrPerm(chars.filter(e => e !== chars[i]), string + chars[i]);
   }
 }
 

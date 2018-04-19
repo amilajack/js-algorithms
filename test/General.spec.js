@@ -1,7 +1,8 @@
 // @flow
 import isBalanced from '../General/ParenthesesMatching';
-import PermutationString, { PermutationStringInPlace } from '../General/PermutationStrings';
-
+import PermutationString, {
+  PermutationStringInPlace
+} from '../General/PermutationStrings';
 
 describe('General', () => {
   test('PermutationString', () => {
@@ -24,17 +25,10 @@ describe('General', () => {
       '{1 + [2 * (3 / 4)]}'
     ];
 
-    const failingTests = [
-      '123{4{[[[]5',
-      '(1 + 2)))))',
-      '(1-3}',
-      '(1-3}'
-    ];
+    const failingTests = ['123{4{[[[]5', '(1 + 2)))))', '(1-3}', '(1-3}'];
 
-    expect(testCases.map(isBalanced))
-      .toEqual([true, true, true, true]);
+    expect(testCases.map(isBalanced)).toEqual([true, true, true, true]);
 
-    expect(failingTests.map(isBalanced))
-      .toEqual([false, false, false, false]);
+    expect(failingTests.map(isBalanced)).toEqual([false, false, false, false]);
   });
 });

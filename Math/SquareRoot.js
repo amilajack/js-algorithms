@@ -44,4 +44,3 @@ export default function SquareRoot(number: num): num {
 // @TODO: Taylor Series Method
 // @TODO: Newtonian Method Method
 // @TODO: Babylonian Method Method
-

@@ -12,7 +12,6 @@ import HashSet from '../DataStructures/Set';
 import Stack from '../DataStructures/Stack';
 import Tree from '../DataStructures/Tree';
 
-
 describe('DataStructures', () => {
   test('BinarySearchTree', () => {
     const bTree = new BinarySearchTree([10, 2, 8, 9, 3]);
@@ -122,7 +121,13 @@ describe('DataStructures', () => {
     const dag = new DAG();
     dag.insert({ weight: 3, id: 0, children: [] });
     dag.insert({ weight: 3, id: 1, children: [] });
-    dag.insert({ weight: 3, id: 2, parents: [0], children: [], data: { foo: 'cow' } });
+    dag.insert({
+      weight: 3,
+      id: 2,
+      parents: [0],
+      children: [],
+      data: { foo: 'cow' }
+    });
 
     expect(dag.breadthFirstSearch({ id: 2 })).toEqual({
       children: [],

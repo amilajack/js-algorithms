@@ -45,7 +45,7 @@ export default class DAGAdjacencyList {
    * @TODO: Prevent cycles
    * @TODO: Add runtime
    */
-  breadthFirstSearch(target: Node): bool | Node {
+  breadthFirstSearch(target: Node): boolean | Node {
     const queue = new Queue();
 
     if (!this.adjacencyList[target.id]) {
@@ -53,9 +53,9 @@ export default class DAGAdjacencyList {
     }
 
     // Push the node's immediate children of the first node
-    this.adjacencyList[0]
-      .children
-      .forEach(child => queue.push(this.adjacencyList[child]));
+    this.adjacencyList[0].children.forEach(child =>
+      queue.push(this.adjacencyList[child])
+    );
 
     while (queue.size() > 0) {
       const currentSearchNode = queue.pop();
@@ -64,9 +64,9 @@ export default class DAGAdjacencyList {
         return currentSearchNode;
       }
 
-      this.adjacencyList[currentSearchNode.id]
-        .children
-        .forEach(child => queue.push(this.adjacencyList[child]));
+      this.adjacencyList[currentSearchNode.id].children.forEach(child =>
+        queue.push(this.adjacencyList[child])
+      );
     }
 
     return false;
@@ -82,7 +82,7 @@ export default class DAGAdjacencyList {
    * @param {number} node
    * @param {number} target
    */
-  depthFirstSearch(node: Node, target: Node): bool {
+  depthFirstSearch(node: Node, target: Node): boolean {
     const children = this.adjacencyList[node.id].children;
 
     // Base case
@@ -130,5 +130,5 @@ export class DAGMatrix {
    *
    * Vertex matrixes are better for graphs that are more dense
    */
-  adjacencyMatrix: bool[][] = [];
+  adjacencyMatrix: boolean[][] = [];
 }

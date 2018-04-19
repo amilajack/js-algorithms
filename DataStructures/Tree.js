@@ -1,8 +1,8 @@
 // @flow
 class Node {
-  children: Node[]
+  children: Node[];
 
-  value: string | null
+  value: string | null;
 
   constructor(value: any = null, children: Node[] = []) {
     this.children = children;
@@ -11,7 +11,7 @@ class Node {
 }
 
 export default class Tree {
-  root: Node = new Node()
+  root: Node = new Node();
 
   add(node: Node, value: string): Node {
     const child = new Node(value);
@@ -21,7 +21,7 @@ export default class Tree {
 
   remove() {}
 
-  find(value: any, node: Node): bool {
+  find(value: any, node: Node): boolean {
     if (node.value === value) return true;
     if (node.children.length < 1) return false;
 

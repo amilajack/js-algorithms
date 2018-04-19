@@ -8,7 +8,6 @@
 // @flow
 type num = number;
 
-
 export default function SumTimelineMethod(first: num, second: num): num {
   const _first = new Array(Math.abs(first));
   const _second = new Array(Math.abs(second));
@@ -21,7 +20,7 @@ export default function SumTimelineMethod(first: num, second: num): num {
       positives.push('-');
     } else if (first > 0 && negatives.length > 0) {
       negatives.splice(0, 1);
-    // first is negative
+      // first is negative
     } else if (first < 0 && positives.length === 0) {
       negatives.push('-');
     } else if (first < 0 && positives.length > 0) {
@@ -35,7 +34,7 @@ export default function SumTimelineMethod(first: num, second: num): num {
       positives.push('-');
     } else if (second > 0 && negatives.length > 0) {
       negatives.splice(0, 1);
-    // second is negative
+      // second is negative
     } else if (second < 0 && positives.length === 0) {
       negatives.push('-');
     } else if (second < 0 && positives.length > 0) {

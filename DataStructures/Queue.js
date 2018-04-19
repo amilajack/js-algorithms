@@ -7,7 +7,7 @@
  * @flow
  */
 export default class Queue<T> {
-  items: T[]
+  items: T[];
 
   constructor(items: T[] = []) {
     this.items = items;

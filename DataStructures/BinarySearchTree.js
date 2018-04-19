@@ -1,18 +1,18 @@
 // @flow
 class Node {
-  data: number
+  data: number;
 
-  parent: Node
+  parent: Node;
 
-  left: Node
+  left: Node;
 
-  right: Node
+  right: Node;
 
   constructor(data: number) {
     this.data = data;
   }
 
-  isLeaf(): bool {
+  isLeaf(): boolean {
     return !this.left && !this.right;
   }
 }
@@ -26,7 +26,7 @@ export default class BinarySearchTree {
     for (const item of items) this.add(item);
   }
 
-  toArray(node?: Node): bool | void {
+  toArray(node?: Node): boolean | void {
     if (!node) node = this.root;
 
     if (node.isLeaf()) {
@@ -41,7 +41,7 @@ export default class BinarySearchTree {
     if (node.right) this.toArray(node.right);
   }
 
-  add(element: number, root?: Node): bool {
+  add(element: number, root?: Node): boolean {
     let _root = root;
 
     if (!this.root) {

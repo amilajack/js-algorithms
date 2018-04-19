@@ -17,8 +17,7 @@
 // @flow
 import { expect } from 'chai';
 
-
-function CircularArrayLoop(nums: number[]): bool {
+function CircularArrayLoop(nums: number[]): boolean {
   const _nums = new Set();
   let ended = false;
   let index = 0;

@@ -24,10 +24,7 @@ function _divide(array: Array<number>): any {
     default: {
       const middle = Math.floor(array.length / 2);
       const first = array.splice(middle);
-      return _merge(
-        _divide(first),
-        _divide(array)
-      );
+      return _merge(_divide(first), _divide(array));
     }
   }
 }
@@ -36,9 +33,8 @@ function _divide(array: Array<number>): any {
 // shorter in length so that we don't access an array index that's out of bounds
 function _merge(first: Array<number>, second: Array<number>): Array<number> {
   const merged = [];
-  const [target, source] = first.length > second.length
-    ? [first, second]
-    : [second, first];
+  const [target, source] =
+    first.length > second.length ? [first, second] : [second, first];
 
   for (let i = 0; i < target.length && i < source.length; i++) {
     if (target[i] < source[i]) {

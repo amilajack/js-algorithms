@@ -4,7 +4,6 @@ import ZigZag from '../LeetCode/Easy/6';
 import SingleNumber from '../LeetCode/Easy/136';
 import CanWinNim from '../LeetCode/Easy/292';
 
-
 describe('LeetCode', () => {
   test('SumTimelineMethod()', () => {
     expect(SumTimelineMethod(1, -1)).toEqual(0);

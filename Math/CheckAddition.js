@@ -8,10 +8,10 @@
  *
  * @flow
  */
-export default function CheckAddition(target: number, list: number[]): bool {
+export default function CheckAddition(target: number, list: number[]): boolean {
   const set = new Set(list);
 
-  return list.some((n: number): bool => {
+  return list.some((n: number): boolean => {
     const m = target - n;
     return set.has(m) && m !== n;
   });

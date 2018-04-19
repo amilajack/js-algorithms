@@ -23,7 +23,7 @@
 /**
  * Calculate if a number is happy or unhappy
  */
-export default function HappyNumbers(number: number): bool {
+export default function HappyNumbers(number: number): boolean {
   const numbers = new Set();
   let currentNumber = calc(number);
   let infiniteLoopPreventionLimit = 0;
@@ -60,4 +60,3 @@ export function calc(number: number): number {
 
   return sum;
 }
-

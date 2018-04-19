@@ -30,7 +30,6 @@ const t3 = new TreeNode(3);
 //      / \
 //   null  t3
 
-
 t.left = t2.right = t3;
 
 // expect(MaxDepth(t)).to.equal(2);

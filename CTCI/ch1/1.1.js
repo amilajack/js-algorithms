@@ -7,7 +7,7 @@
  *
  * @flow
  */
-export default function CheckHashAllUniqueChars(string: string): bool {
+export default function CheckHashAllUniqueChars(string: string): boolean {
   const set = new Set();
 
   for (const char of string) {

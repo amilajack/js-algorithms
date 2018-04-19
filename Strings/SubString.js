@@ -9,7 +9,11 @@
 type str = string;
 type num = number;
 
-export default function SubString(string: str, start: num = 0, end: num = string.length): str {
+export default function SubString(
+  string: str,
+  start: num = 0,
+  end: num = string.length
+): str {
   let substring = '';
 
   for (let i = start; i < end + 1; i++) {

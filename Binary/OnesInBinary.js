@@ -12,7 +12,5 @@ export default function OnesInBinary(number: number): number {
     binary[binary.length - 1 - pwr] = 1;
   }
 
-  return binary.reduce(
-    (p: number, c: number): number => (c === 1 ? p + 1 : p)
-  );
+  return binary.reduce((p: number, c: number): number => (c === 1 ? p + 1 : p));
 }

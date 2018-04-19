@@ -1,7 +1,6 @@
 // @flow
 import { expect } from 'chai';
 
-
 type num = number;
 
 export default function BinarySearchRecursive(items: num[], element: num): num {
@@ -11,7 +10,10 @@ export default function BinarySearchRecursive(items: num[], element: num): num {
   if (items.length === 1) return items[0];
 
   if (items[middleIndex] <= element) {
-    return BinarySearchRecursive(items.splice(middleIndex, items.length - 1), element);
+    return BinarySearchRecursive(
+      items.splice(middleIndex, items.length - 1),
+      element
+    );
   }
 
   return BinarySearchRecursive(items.splice(0, middleIndex), element);

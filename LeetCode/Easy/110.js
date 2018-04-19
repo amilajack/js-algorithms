@@ -21,15 +21,14 @@ function TreeHeight(root: TreeNode, height: number = 0): number {
   return (first > sec ? first : sec) + 1;
 }
 
-export default function isBalanced(root: TreeNode): bool {
+export default function isBalanced(root: TreeNode): boolean {
   if (!root) return true;
 
   const first = TreeHeight(root.left);
   const sec = TreeHeight(root.right);
 
   const greatestPlusDiff =
-    ((first > sec ? first : sec) - (first > sec ? sec : first))
-    <= 1;
+    (first > sec ? first : sec) - (first > sec ? sec : first) <= 1;
 
   return greatestPlusDiff
     ? isBalanced(root.left) && isBalanced(root.right)
