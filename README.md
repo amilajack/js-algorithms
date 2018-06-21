@@ -19,7 +19,7 @@ yarn
 yarn test
 
 # Run
-yarn add --global babel-cli
+yarn global add babel-cli
 # Running/testing files
 babel-node General/PrintKDistance.js
 ```
