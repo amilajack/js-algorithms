@@ -39,7 +39,7 @@ function sum(nums: num[]): num {
 }
 
 function radsToDegrees(rad: num): num {
-  return round(rad * Math.PI / 180);
+  return round((rad * Math.PI) / 180);
 }
 
 function round(number: num): num {
