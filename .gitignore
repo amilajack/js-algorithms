@@ -51,3 +51,7 @@ flow-typed
 
 # Editor
 .idea
+
+# npm
+package-lock.json
+npm-shrinkwrap.json
