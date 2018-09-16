@@ -6,7 +6,7 @@ A list of Computer Science concepts **solved** and **explained** in JavaScript (
 [![David](https://img.shields.io/david/dev/amilajack/js-algorithms.svg?maxAge=86400)](https://david-dm.org/amilajack/js-algorithms?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/amilajack/js-algorithms.svg)](https://greenkeeper.io/)
 
 ## Requirements:
-* **node >= 9 and yarn >= 1.6.0**
+* **node >= 10 and yarn >= 1.6.0**
 
 # Getting Started
 ```bash
@@ -19,7 +19,7 @@ yarn
 yarn test
 
 # Run
-yarn global add babel-cli
+yarn global add @babel/cli
 # Running/testing files
 babel-node General/PrintKDistance.js
 ```
