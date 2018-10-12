@@ -30,7 +30,7 @@ describe('Strings', () => {
 
   test('RandomString', () => {
     chaiExpect(RandomString(10)).to.be.a('string');
-    expect(RandomString(10).length).toEqual(10);
+    expect(RandomString(10)).toHaveLength(10);
   });
 
   test('ReverseString', () => {

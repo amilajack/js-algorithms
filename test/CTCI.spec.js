@@ -16,7 +16,7 @@ describe('CTCI', () => {
       tree.insert(3);
       tree.insert(5);
 
-      //0
+      // 0
       // \
       //  3
       //   \

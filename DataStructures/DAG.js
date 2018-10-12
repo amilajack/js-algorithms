@@ -3,10 +3,15 @@ import Queue from './Queue';
 
 export class Node {
   id: number;
+
   parents: Array<number> = [];
+
   children: Array<number> = [];
+
   pi: number = Infinity;
+
   weight: number;
+
   data: any;
 }
 

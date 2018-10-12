@@ -6,10 +6,11 @@
  *
  * @flow
  */
-import MaxHeap from '../DataStructures/MaxHeap';
+import MaxHeap from './MaxHeap';
 
 export class PriorityNode<T> {
   priority: number;
+
   data: T;
 }
 
