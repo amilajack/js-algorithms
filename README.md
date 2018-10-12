@@ -3,7 +3,7 @@ JS Algos
 A list of Computer Science concepts **solved** and **explained** in JavaScript (ES6)
 
 [![Build Status](https://travis-ci.org/amilajack/js-algorithms.svg?branch=master)](https://travis-ci.org/amilajack/js-algorithms)
-[![David](https://img.shields.io/david/dev/amilajack/js-algorithms.svg?maxAge=86400)](https://david-dm.org/amilajack/js-algorithms?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/amilajack/js-algorithms.svg)](https://greenkeeper.io/)
+[![David](https://img.shields.io/david/dev/amilajack/js-algorithms.svg?maxAge=86400)](https://david-dm.org/amilajack/js-algorithms?type=dev)
 
 ## Requirements:
 * **node >= 10 and yarn >= 1.6.0**
