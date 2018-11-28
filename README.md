@@ -3,7 +3,6 @@ JS Algos
 A list of Computer Science concepts **solved** and **explained** in JavaScript (ES6)
 
 [![Build Status](https://travis-ci.org/amilajack/js-algorithms.svg?branch=master)](https://travis-ci.org/amilajack/js-algorithms)
-[![David](https://img.shields.io/david/dev/amilajack/js-algorithms.svg?maxAge=86400)](https://david-dm.org/amilajack/js-algorithms?type=dev)
 
 ## Requirements:
 * **node >= 10 and yarn >= 1.6.0**
@@ -18,7 +17,7 @@ yarn
 # Test
 yarn test
 
-# Run
+# Running individual files
 yarn global add @babel/cli
 # Running/testing files
 babel-node General/PrintKDistance.js
@@ -27,15 +26,10 @@ babel-node General/PrintKDistance.js
 ## Planned Implementations
 - [x] Algorithms
 - [x] Data Structures
-- [ ] Programming Paradigms
-- [ ] Interpreter
-- [ ] Compiler
-- [ ] AST Parser
 - [ ] Challenge Questions
 - [ ] Time/Space Complexity Analysis
 - [ ] Search Algorithms
 - [ ] Sorting Algorithms
-- [ ] Bitwise Operations
 
 ## Contributing
 * Requirements:
