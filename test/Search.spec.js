@@ -2,8 +2,26 @@ import QuickSelect from '../Search/QuickSelect';
 import BinarySearchRecursive, {
   BinarySearchIterative
 } from '../Search/BinarySearch';
+import BFS from '../Search/BreadthFirstSearch';
 
 describe('Search', () => {
+  test('BFS()', () => {
+    const tree = {
+      value: 10,
+      left: {
+        value: 3,
+        left: null,
+        right: null,
+      },
+      right: {
+        value: 30,
+        left: null,
+        right: null,
+      }
+    }
+    expect(BFS(tree)).toEqual([3, 10, 30]);
+  });
+
   test('QuickSelect()', () => {
     expect(QuickSelect([5, 9, 3, 1, 7], 3)).toEqual(5);
     expect(QuickSelect([52, 55, 102, 5, -7, 8, 13, 7], 1)).toEqual(-7);

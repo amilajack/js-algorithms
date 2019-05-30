@@ -31,3 +31,50 @@ export default class Queue<T> {
     return this.items.length;
   }
 }
+
+class Node {
+  next = null;
+
+  constructor(data = {}) {
+    this.data = data;
+  }
+}
+
+export class QueueLinkedList {
+  first = null
+
+  last = null
+
+  /**
+   * Add an item to the queue
+   */
+  add(data) {
+    const node = new Node(data)
+    const {last, first} = this;
+
+    if (first === null) {
+        first = node;
+    }
+    if (last !== null) {
+        last.next = node;
+    }
+    last = node
+  }
+
+  /**
+   * Take an item from the queue
+   */
+  remove() {
+    const {last, first} = this;
+    const {data} = first;
+    if (first === null) {
+      return null;
+    }
+    if (first.next === null) {
+      last = first = null
+    } else {
+      first = first.next
+    }
+    return data;
+  }
+}
