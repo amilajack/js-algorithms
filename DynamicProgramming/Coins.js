@@ -11,7 +11,8 @@ export default function Coins(n: number) {
   if (n < 0) return 0;
   if (n === 0) return 1;
   if (map.has(n)) return map.get(n);
-  const combinations = Coins(n - 1) + Coins(n - 5) + Coins(n - 10) + Coins(n - 25);
+  const combinations =
+    Coins(n - 1) + Coins(n - 5) + Coins(n - 10) + Coins(n - 25);
   map.set(n, combinations);
   return combinations;
 }

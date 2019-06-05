@@ -41,39 +41,39 @@ class Node {
 }
 
 export class QueueLinkedList {
-  first = null
+  first = null;
 
-  last = null
+  last = null;
 
   /**
    * Add an item to the queue
    */
   add(data) {
-    const node = new Node(data)
-    const {last, first} = this;
+    const node = new Node(data);
+    const { last, first } = this;
 
     if (first === null) {
-        first = node;
+      first = node;
     }
     if (last !== null) {
-        last.next = node;
+      last.next = node;
     }
-    last = node
+    last = node;
   }
 
   /**
    * Take an item from the queue
    */
   remove() {
-    const {last, first} = this;
-    const {data} = first;
+    const { last, first } = this;
+    const { data } = first;
     if (first === null) {
       return null;
     }
     if (first.next === null) {
-      last = first = null
+      last = first = null;
     } else {
-      first = first.next
+      first = first.next;
     }
     return data;
   }

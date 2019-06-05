@@ -12,8 +12,8 @@ const getPaths = (root, paths, parent) => {
 };
 
 const binaryTreePaths = function(root) {
-  const paths = []
-  const parent = []
-  getPaths(root, paths, parent)
+  const paths = [];
+  const parent = [];
+  getPaths(root, paths, parent);
   return paths;
 };

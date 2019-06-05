@@ -11,14 +11,14 @@ describe('Search', () => {
       left: {
         value: 3,
         left: null,
-        right: null,
+        right: null
       },
       right: {
         value: 30,
         left: null,
-        right: null,
+        right: null
       }
-    }
+    };
     expect(BFS(tree)).toEqual([3, 10, 30]);
   });
 

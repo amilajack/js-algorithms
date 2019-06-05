@@ -88,7 +88,7 @@ export default class DAGAdjacencyList {
    * @param {number} target
    */
   depthFirstSearch(node: Node, target: Node): boolean {
-    const children = this.adjacencyList[node.id].children;
+    const { children } = this.adjacencyList[node.id];
 
     // Base case
     if (node === target) return true;

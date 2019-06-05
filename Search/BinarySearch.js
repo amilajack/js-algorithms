@@ -25,7 +25,7 @@ export function BinarySearchIterative(items: num[], element: num): num {
 
   while (low < high) {
     const middle = Math.floor((high + low) / 2);
-    cons middleElement = items[middle];
+    const middleElement = items[middle];
     // Check middle element is equal to the element we are looking for. If it is,
     // return it
     if (middleElement === element) return middle;

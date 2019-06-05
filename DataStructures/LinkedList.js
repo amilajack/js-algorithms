@@ -43,7 +43,7 @@ export default class LinkedList {
    * @complexity: O(n^2)
    */
   sort(data: any) {
-    let head = this.head;
+    let { head } = this;
 
     while (head.hasNext()) {
       let innerHead = this.head;

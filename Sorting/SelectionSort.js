@@ -6,7 +6,7 @@
  * @flow
  */
 export default function SelectionSort(elements: number[]): number[] {
-  const length = elements.length;
+  const { length } = elements;
 
   for (let i = 0; i < length; i++) {
     let lowestIndex = i;
