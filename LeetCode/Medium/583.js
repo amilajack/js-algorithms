@@ -7,10 +7,18 @@
 // Output: 2
 // Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
 
+// Note:
+// The length of given words won't exceed 500.
+// Characters in given words can only be lower-case letters.
+
 /**
  * @param {string} word1
  * @param {string} word2
  * @return {number}
+ */
+
+/**
+ * Longest common subsequence
  */
 const LCS = (a, b, n, m, mat) => {
   if (n < 0 || m < 0) return 0;
