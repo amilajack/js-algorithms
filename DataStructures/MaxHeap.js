@@ -1,6 +1,11 @@
 /**
- * Heap Property: Each node has children that are at least as small as it
- * Binary Heap: Perfectly balanced binary heap
+ * Max Heap Property: Each node has children that are less than or equal to their parents.
+ *
+ * Min Heap Property: A min heap has the exact same properties as a max heap with the difference
+ *                    that children are greater than or equal to the parent.
+ *
+ * Binary Heap: Perfectly balanced binary heap. Because of this, the root
+ *              always has the largest value in a max heap.
  *
  * @TODO: Refactor to add 'MinHeap'
  * @flow
