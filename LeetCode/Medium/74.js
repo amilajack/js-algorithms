@@ -2,13 +2,11 @@ const binSearch = (nums, target) => {
   let lo = 0;
   let hi = nums.length - 1;
   while (lo < hi) {
-    console.log(nums, lo, hi);
     const mid = Math.floor((lo + hi) / 2);
     if (nums[mid] === target) return true;
     if (nums[mid] < target) lo = mid + 1;
     else hi = mid;
   }
-  console.log(nums[lo] === target);
   return nums[lo] === target;
 };
 
@@ -25,18 +23,11 @@ export default function searchMatrix(matrix, target) {
     // Search the middle row
     const mid = Math.floor((lo + hi) / 2);
     // If # is in range of the row then bin search row
-    console.log(mid);
     if (matrix[mid].length === 0) return false;
     if (
       matrix[mid][0] <= target &&
       target <= matrix[mid][matrix[mid].length - 1]
     ) {
-      console.log(
-        mid,
-        target,
-        matrix[mid][0],
-        matrix[mid][matrix[mid].length - 1]
-      );
       return binSearch(matrix[mid], target);
     }
     if (matrix[mid][0] > target) {
