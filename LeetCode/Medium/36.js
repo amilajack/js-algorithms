@@ -43,7 +43,7 @@ const validateSquare = (board, i, j) => {
   return true;
 };
 
-const isValidSudoku = function(board) {
+export default function isValidSudoku(board) {
   for (let i = 0; i < board.length; i++) {
     if (!validateRow(board, i)) return false;
   }
@@ -56,4 +56,4 @@ const isValidSudoku = function(board) {
     }
   }
   return true;
-};
+}
