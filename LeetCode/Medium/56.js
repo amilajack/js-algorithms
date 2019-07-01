@@ -17,7 +17,7 @@
  * @param {number[][]} intervals
  * @return {number[][]}
  */
-const merge = function(intervals) {
+export default function merge(intervals) {
   if (intervals.length === 0) return [];
   if (intervals.length === 1) return intervals;
   intervals = intervals.sort((a, b) => {
@@ -40,4 +40,4 @@ const merge = function(intervals) {
     if (i === intervals.length - 2) ans.push([start, end]);
   }
   return ans;
-};
+}
