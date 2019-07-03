@@ -6,17 +6,22 @@
  *  case (O(n)) but unlikely poor worst case (O(n^2))
  * -This implementation uses randomly selected pivots for better performance
  *
- * @complexity: O(n)
+ * @complexity: O(n) (on average )
+ * @complexity: O(n^2) (worst case)
  * @flow
  */
 type num = number;
 
 export default function QuickSelect(items: num[], kth: num): num {
-  const itemsCopy = [...items];
-  return RandomizedSelect(itemsCopy, 0, items.length - 1, kth);
+  return RandomizedSelect(items, 0, items.length - 1, kth);
 }
 
-function RandomizedSelect(items: num[], left: num, right: num, i: num): any {
+export function RandomizedSelect(
+  items: num[],
+  left: num,
+  right: num,
+  i: num
+): any {
   if (left === right) return items[left];
 
   const pivotIndex = RandomizedPartition(items, left, right);
@@ -28,7 +33,7 @@ function RandomizedSelect(items: num[], left: num, right: num, i: num): any {
   return RandomizedSelect(items, pivotIndex + 1, right, i - k);
 }
 
-function RandomizedPartition(items: num[], left: num, right: num): num {
+export function RandomizedPartition(items: num[], left: num, right: num): num {
   const rand = getRandomInt(left, right);
   Swap(items, rand, right);
   return Partition(items, left, right);

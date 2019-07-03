@@ -13,6 +13,9 @@
 // Input: [2,2,1,1,1,2,2]
 // Output: 2
 
+// Time: O(n)
+// Sace: O(1)
+
 /**
  * @param {number[]} nums
  * @return {number}
