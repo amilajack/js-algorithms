@@ -33,8 +33,8 @@ export default function twoSum(list, target) {
     if (map.has(res)) {
       if (res === list[i]) {
         if (map.get(res).length > 1) {
-          const a = map.get(res);
-          return [a[0], a[1]].sort((a, b) => a - b);
+          const indexes = map.get(res);
+          return [indexes[0], indexes[1]].sort((a, b) => a - b);
         }
       } else {
         return [map.get(res)[0], map.get(list[i])[0]].sort((a, b) => a - b);

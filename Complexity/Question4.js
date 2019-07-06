@@ -1,7 +1,8 @@
 let a = 0;
-for (i = 0; i < N; i++) {
-  for (j = 0; j < N; j++) {
-    for (k = 0; k < N; k++) {
+const N = Infinity;
+for (let i = 0; i < N; i++) {
+  for (let j = 0; j < N; j++) {
+    for (let k = 0; k < N; k++) {
       a = a + i + j;
     }
   }

@@ -47,7 +47,7 @@ export default function findMinHeightTrees(n, edges) {
   // While set has more than two nodes, remove them
   while (queue.length) {
     const nodes = queue.shift();
-    const a = [];
+    const b = [];
     for (const node of nodes) {
       ans.delete(node);
       // delete the edges from the current node to other nodes
@@ -55,12 +55,12 @@ export default function findMinHeightTrees(n, edges) {
         adj[child].delete(node);
         adj[node].delete(child);
         if (adj[child].size === 1) {
-          a.push(child);
+          b.push(child);
         }
       }
     }
     if (ans.size < 3) break;
-    if (a.length) queue.push(a);
+    if (b.length) queue.push(b);
   }
 
   return Array.from(ans);

@@ -36,5 +36,5 @@ function CircularArrayLoop(nums: number[]): boolean {
 }
 
 test('CircularArrayLoop()', () => {
-  expect(CircularArrayLoop([2, -1, 1, 2, 2])).to.be.an('array');
+  expect(CircularArrayLoop([2, -1, 1, 2, 2])).instanceOf(Array);
 });

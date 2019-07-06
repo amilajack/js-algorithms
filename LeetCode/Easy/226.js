@@ -2,7 +2,8 @@
 // Invert a binary tree
 function TreeNode(val: any) {
   this.val = val;
-  this.left = this.right = null;
+  this.left = null;
+  this.right = null;
 }
 
 export default function InvertTree(root: TreeNode): TreeNode {

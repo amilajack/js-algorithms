@@ -1,6 +1,4 @@
 // @flow
-import { expect } from 'chai';
-
 type num = number;
 
 export default function BinarySearchRecursive(items: num[], element: num): num {

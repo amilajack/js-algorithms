@@ -50,7 +50,7 @@ export class QueueLinkedList {
    */
   add(data) {
     const node = new Node(data);
-    const { last, first } = this;
+    let { last, first } = this;
 
     if (first === null) {
       first = node;
@@ -65,13 +65,14 @@ export class QueueLinkedList {
    * Take an item from the queue
    */
   remove() {
-    const { last, first } = this;
+    let { first } = this;
     const { data } = first;
     if (first === null) {
       return null;
     }
     if (first.next === null) {
-      last = first = null;
+      this.last = null;
+      first = null;
     } else {
       first = first.next;
     }
