@@ -12,4 +12,4 @@ export default function RotateImage(img: number[][]): number[][] {
 
 const img = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]];
 
-console.log(RotateImage(img));
+RotateImage(img);

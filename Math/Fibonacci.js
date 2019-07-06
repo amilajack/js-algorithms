@@ -3,13 +3,13 @@ type num = number;
 
 const list = [];
 
-export default function FibonacciIterative(target: number): num[] {
+export default function FibonacciIterative(nth: number): num[] {
   const sequence = [];
 
-  if (target >= 1) sequence.push(1);
-  if (target >= 2) sequence.push(1);
+  if (nth >= 1) sequence.push(1);
+  if (nth >= 2) sequence.push(1);
 
-  for (let i = 2; i < target; i++) {
+  for (let i = 2; i < nth; i++) {
     sequence.push(sequence[i - 1] + sequence[i - 2]);
   }
 

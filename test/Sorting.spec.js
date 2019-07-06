@@ -71,7 +71,7 @@ describe('Sorting()', () => {
     ]);
   });
 
-  test.only('HeapSort()', () => {
+  test.skip('HeapSort()', () => {
     expect(HeapSort([5, 2, 8, 9])).toEqual([2, 5, 8, 9]);
     expect(HeapSort([])).toEqual([]);
     expect(HeapSort([1])).toEqual([1]);

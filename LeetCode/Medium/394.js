@@ -33,13 +33,8 @@
  * @flow
  */
 function joinNTimes(string: string, n: number): string {
-  // console.log(string);
   return new Array(n + 1).join(string);
 }
-
-// "3[a2[c2[c2[c]]]]"
-
-// "3[a2[c]]"
 
 export default function DecodeString(
   string: string,

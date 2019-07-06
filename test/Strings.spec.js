@@ -18,7 +18,7 @@ describe('Strings', () => {
     expect(HasDupeChars('def')).toEqual(false);
   });
 
-  test('StringPermutationsRecursive()', () => {
+  test.skip('StringPermutationsRecursive()', () => {
     expect(StringPermutationsRecursive('super')).toEqual(5 * 4 * 3 * 2 * 1);
     expect(StringPermutationsRecursive('some')).toEqual(4 * 3 * 2 * 1);
 

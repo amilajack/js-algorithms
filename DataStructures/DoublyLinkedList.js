@@ -10,6 +10,7 @@ export default class DoublyLinkedList {
 
   constructor() {
     this.head = new Node({});
+    this.tail = this.head;
   }
 
   isEmpty(): boolean {

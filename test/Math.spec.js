@@ -37,7 +37,7 @@ describe('Math', () => {
     expect(FibonacciIterative(0)).toEqual([]);
 
     expect(FibonacciIterative(1)).toEqual([1]);
-    expect(FibonacciIterative(1)).toEqual([1, 1]);
+    expect(FibonacciIterative(2)).toEqual([1, 1]);
 
     expect(FibonacciRecursive(10)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
     expect(FibonacciRecursiveDP(10)).toEqual(55);

@@ -28,12 +28,6 @@ Node.prototype.print = function() {
 
 const root = new Node(0); // start with a node at 0
 
-// for (let i = 0; i < 10; i++) {
-//  root.insert(Math.floor(Math.random() * (20 - -20)) - 20);
-// }
-//
-// console.log(root.print()); // print the tree
-
 Node.prototype.listify = function() {
   const lists = [[this.value]];
   let nextQueue = [this.right, this.left];
@@ -62,4 +56,4 @@ Node.prototype.listify = function() {
   return lists;
 };
 
-console.log(root.listify());
+root.listify();

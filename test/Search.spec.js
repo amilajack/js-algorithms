@@ -19,7 +19,7 @@ describe('Search', () => {
         right: null
       }
     };
-    expect(BFS(tree)).toEqual([3, 10, 30]);
+    expect(BFS(tree)).toEqual([10, 3, 30]);
   });
 
   test('QuickSelect()', () => {
