@@ -32,9 +32,23 @@ export default class LinkedList {
     return reversedNode;
   }
 
-  delete(data: any) {
-    const node = this.find(data);
-    if (!node) return;
+  delete(node: Node) {
+    let curr = this.head;
+    let prev = null;
+    while (curr) {
+      if (curr === node) {
+        if (prev) {
+          prev.next = curr.next;
+          curr = null;
+        } else {
+          this.head = curr.next;
+        }
+        break;
+      } else {
+        prev = curr;
+        curr = curr.next;
+      }
+    }
   }
 
   /**
@@ -42,7 +56,7 @@ export default class LinkedList {
    * Similar to insertion sort
    * @complexity: O(n^2)
    */
-  sort(data: any) {
+  sort() {
     let { head } = this;
 
     while (head.hasNext()) {
