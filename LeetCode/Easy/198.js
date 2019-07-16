@@ -10,21 +10,21 @@
 // Explaination:
 // https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems
 
+const robAux = (nums, i, map) => {
+  if (i >= nums.length) return 0;
+  if (map.has(i)) return map.get(i);
+  const a = robAux(nums, i + 1, map);
+  const b = robAux(nums, i + 2, map);
+  const curr = Math.max(a, b + nums[i]);
+  map.set(i, curr);
+  return curr;
+};
+
 /**
  * @param {number[]} nums
  * @return {number}
  */
-const robAux = (nums, i, map) => {
-  if (i < 0) return 0;
-  if (map.has(i)) return map.get(i);
-  const a = nums[i] + robAux(nums, i - 2, map);
-  const b = robAux(nums, i - 1, map);
-  const res = a > b ? a : b;
-  map.set(i, res);
-  return res;
-};
-
 export default function rob(nums) {
   const map = new Map();
-  return robAux(nums, nums.length - 1, map);
+  return robAux(nums, 0, map);
 }
