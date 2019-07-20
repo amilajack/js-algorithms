@@ -4,9 +4,6 @@ A list of Computer Science concepts **solved** and **explained** in JavaScript (
 
 [![Build Status](https://travis-ci.org/amilajack/js-algorithms.svg?branch=master)](https://travis-ci.org/amilajack/js-algorithms)
 
-## Requirements:
-* **node >= 10 and yarn >= 1.6.0**
-
 # Getting Started
 ```bash
 # Setup
