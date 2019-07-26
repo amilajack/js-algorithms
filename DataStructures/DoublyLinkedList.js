@@ -1,4 +1,19 @@
 // @flow
+class Node {
+  data: Object = {};
+
+  next: Node | boolean = false;
+
+  constructor(data: any = {}, next: Node | boolean = false) {
+    this.data = data;
+    this.next = next;
+  }
+
+  hasNext(): boolean {
+    return this.next !== false;
+  }
+}
+
 export default class DoublyLinkedList {
   head: Node;
 
@@ -44,20 +59,5 @@ export default class DoublyLinkedList {
     target.next = node;
 
     return true;
-  }
-}
-
-class Node {
-  data: Object = {};
-
-  next: Node | boolean = false;
-
-  constructor(data: any = {}, next: Node | boolean = false) {
-    this.data = data;
-    this.next = next;
-  }
-
-  hasNext(): boolean {
-    return this.next !== false;
   }
 }
