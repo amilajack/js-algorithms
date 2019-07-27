@@ -9,7 +9,7 @@ type num = number;
  * Return a random number between a min and max
  */
 export default function RandomBetween(min: num, max: num): num {
-  return Math.random() * (max - min);
+  return Math.random() * (max - min) + min;
 }
 
 // Assert randomBetween
