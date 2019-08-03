@@ -27,7 +27,7 @@ export default function missingNumber(nums) {
   }
   const max = nums.length;
   const sum =
-    max % 2 === 0 ? (max * (max + 1)) / 2 : max + ((max - 1) * max) / 2;
+    max % 2 === 0 ? (max * (max + 1)) / 2 : max + (max * (max - 1)) / 2;
   let iterSum = 0;
   for (const i of nums) {
     iterSum += i;
