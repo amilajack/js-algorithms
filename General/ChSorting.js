@@ -5,11 +5,11 @@
 // Observations:
 // will need for loop to check 'ch'
 // compare words character by character
-
-// three cases
-// a index is 'ch'
+//
+// Three cases:
+// only a index is 'ch'
 // only b index is 'ch'
-// a and b indicies are 'ch'
+// both a and b indicies are 'ch'
 // neither are 'ch'
 
 function isCh(word, i) {
@@ -41,4 +41,5 @@ export default function sortWords(words) {
   return words.sort(compareTwoWords);
 }
 
+// Test:
 // console.log(sortWords(['indigo', 'charisma', 'hotel']));
