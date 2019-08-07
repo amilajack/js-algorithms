@@ -5,32 +5,29 @@
 // For this problem, a height-balanced binary tree is defined as a binary tree
 // in which the depth of the two subtrees of every node never differ by more
 // than 1.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n+1)
 
-function TreeNode(val: any) {
+export function TreeNode(val: any) {
   this.val = val;
   this.right = null;
   this.left = this.right;
 }
 
-function TreeHeight(root: TreeNode, height: number = 0): number {
-  if (!root) return 0;
+const isBalancedAux = node => {
+  if (!node) return 0;
+  const left = isBalancedAux(node.left);
+  const right = isBalancedAux(node.right);
+  if (left === -1 || right === -1 || Math.abs(left - right) > 1) return -1;
+  return Math.max(left, right) + 1;
+};
 
-  const first = TreeHeight(root.left, height);
-  const sec = TreeHeight(root.right, height);
-
-  return (first > sec ? first : sec) + 1;
-}
-
-export default function isBalanced(root: TreeNode): boolean {
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+export default function isBalanced(root) {
   if (!root) return true;
-
-  const first = TreeHeight(root.left);
-  const sec = TreeHeight(root.right);
-
-  const greatestPlusDiff =
-    (first > sec ? first : sec) - (first > sec ? sec : first) <= 1;
-
-  return greatestPlusDiff
-    ? isBalanced(root.left) && isBalanced(root.right)
-    : false;
+  return isBalancedAux(root) !== -1;
 }
