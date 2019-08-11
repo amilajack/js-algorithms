@@ -21,7 +21,7 @@ const letterCasePermutationAux = (S, i, str, res) => {
     res.push(str);
     return;
   }
-  // is a number
+  // If S[i] is a letter
   if (Number.isNaN(parseInt(S[i], 10))) {
     letterCasePermutationAux(S, i + 1, str + S[i].toLowerCase(), res);
     letterCasePermutationAux(S, i + 1, str + S[i].toUpperCase(), res);
