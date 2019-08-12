@@ -29,15 +29,14 @@
  * @param {number} x
  * @return {number}
  */
-const reverse = function(x) {
-  // const isNeg = x >= 0;
+export default function reverse(x) {
   let i = Math.floor(Math.log10(Math.abs(x)));
   let res = 0;
   while (x !== 0) {
     const end = x % 10;
-    x = parseInt(x / 10);
+    x = parseInt(x / 10, 10);
     res += end * 10 ** i;
     i--;
   }
   return Math.abs(res) > 2 ** 31 - 1 ? 0 : res;
-};
+}
