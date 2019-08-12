@@ -8,7 +8,7 @@ const set = new Set();
 /**
  * @complexity: O(n)
  */
-export default function SingleNumber(nums: number[]): number {
+export function SingleNumberSlow(nums: number[]): number {
   for (let i = 0; i < nums.length; i++) {
     if (set.has(nums[i])) {
       set.delete(nums[i]);
@@ -21,4 +21,19 @@ export default function SingleNumber(nums: number[]): number {
   set.clear();
 
   return item;
+}
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ *
+ * @time O(n)
+ * @space O(1)
+ */
+export default function SingleNumber(nums) {
+  let res = 0;
+  for (const item of nums) {
+    res ^= item;
+  }
+  return res;
 }
