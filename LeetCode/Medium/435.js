@@ -22,32 +22,3 @@
 
 // You may assume the interval's end point is always bigger than its start point.
 // Intervals like [1,2] and [2,3] have borders "touching" but they don't overlap each other.
-
-function expandHelper(str, curr, i, res) {
-  if (i >= str.length) {
-    res.push(curr);
-    return;
-  }
-  if (str[i] === '{') {
-    let j = i;
-    while (str[j] !== '}') {
-      j++;
-    }
-    for (let k = i + 1; k < j; k += 2) {
-      if (str[k] === ',') continue;
-      expandHelper(str, curr + str[k], j + 1, res);
-    }
-  } else {
-    expandHelper(str, curr + str[i], i + 1, res);
-  }
-}
-
-/**
- * @param {string} S
- * @return {string[]}
- */
-export default function expand(S) {
-  const res = [];
-  expandHelper(S, '', 0, res);
-  return res.sort();
-}
