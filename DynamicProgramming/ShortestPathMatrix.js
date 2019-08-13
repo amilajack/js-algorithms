@@ -1,7 +1,6 @@
 // What is the length of the shortest path from (0,0) to “N"
-// * Logged in user is always at (0,0)
 // * "#” indicates a blocking body of water
-// * There is always one neighborhood “N”
+// * There is always one neighborhood “N”, can be in any position
 
 // Examples:
 // [
