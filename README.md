@@ -5,6 +5,7 @@ A list of Computer Science concepts **solved** and **explained** in JavaScript (
 [![Build Status](https://travis-ci.org/amilajack/js-algorithms.svg?branch=master)](https://travis-ci.org/amilajack/js-algorithms)
 
 # Getting Started
+
 ```bash
 # Setup
 git clone https://github.com/amilajack/js-algorithms.git
@@ -29,14 +30,6 @@ If this project is saving you (or your team) time, please consider supporting it
     <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
   </a>
 </p>
-
-## Planned Implementations
-- [x] Algorithms
-- [x] Data Structures
-- [ ] Challenge Questions
-- [ ] Time/Space Complexity Analysis
-- [ ] Search Algorithms
-- [ ] Sorting Algorithms
 
 ## Contributing
 * Requirements:
