@@ -42,7 +42,7 @@
     "chai": "^4.2.0",
     "del": "^5.1.0",
     "eslint": "^6.1.0",
-    "eslint-config-bliss": "^4.2.0",
+    "eslint-config-bliss": "^4.3.0",
     "eslint-formatter-pretty": "^2.1.1",
     "eslint-plugin-flowtype-errors": "^4.1.0",
     "flow-bin": "^0.104.0",
