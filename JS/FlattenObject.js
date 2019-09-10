@@ -37,11 +37,10 @@ const flattenDictionaryAux = (obj, parent, isRoot) => {
     if (key === '') {
       newParent = parent;
     }
-    res = Object.assign(
-      {},
-      res,
-      flattenDictionaryAux(val, newParent, key === '')
-    );
+    res = {
+      ...res,
+      ...flattenDictionaryAux(val, newParent, key === '')
+    };
   });
   return res;
 };
