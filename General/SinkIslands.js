@@ -14,12 +14,12 @@ const exampleInput = [
 // Observations:
 // You are on the edge if at least one 0 is adjacent to position
 function shouldSink(grid, i, j) {
-  // if not an island, don't sink
-  if (grid[i][j] === 0) return false;
   // out of bounds
   if (i < 1 || i >= grid.length - 1 || j < 1 || j >= grid[0].length - 1) {
     return false;
   }
+  // if not an island, don't sink
+  if (grid[i][j] === 0) return false;
   if (
     grid[i + 1][j] === 0 ||
     grid[i - 1][j] === 0 ||
@@ -45,6 +45,7 @@ export default function sinkIsland(grid) {
       }
     }
   }
+
   return cp;
 }
 

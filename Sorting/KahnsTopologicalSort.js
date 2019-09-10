@@ -4,7 +4,7 @@
  */
 export default function KahnsTopologicalSort(nodes) {
   const ordering = [];
-  const queue = [];
+  const dfsQueue = [];
 
   // Indexes correspond to node, values correspond to indegree
   // ex. 0 -> 3, node 0 has indegree 3
@@ -24,18 +24,18 @@ export default function KahnsTopologicalSort(nodes) {
   // nodes have no parents so they go first in topological order
   for (let i = 0; i < indegrees.length; i++) {
     if (indegrees[i] === 0) {
-      queue.push(queue);
+      dfsQueue.push(nodes[i]);
     }
   }
 
-  while (queue.length) {
-    const node = queue.shift();
+  while (dfsQueue.length) {
+    const node = dfsQueue.shift();
     ordering.push(node);
     // For each child, decrement indegree because we are removing parent
     for (const child of nodes[node]) {
       indegrees[child]--;
       if (indegrees[child] === 0) {
-        queue.push(child);
+        dfsQueue.push(child);
       }
     }
   }
