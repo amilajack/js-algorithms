@@ -1,3 +1,5 @@
+// Given a string of repl input, determine if the repl input should be executed or not
+
 const expect = require('expect');
 
 function shouldRun(code) {
