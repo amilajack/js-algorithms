@@ -45,7 +45,7 @@
     "eslint-config-bliss": "^4.3.0",
     "eslint-formatter-pretty": "^2.1.1",
     "eslint-plugin-flowtype-errors": "^4.1.0",
-    "flow-bin": "^0.104.0",
+    "flow-bin": "^0.108.0",
     "flow-typed": "^2.6.1",
     "husky": "^3.0.2",
     "jest-cli": "^24.8.0",
