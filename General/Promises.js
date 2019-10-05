@@ -51,7 +51,6 @@ const foo = new MyPromise((resolve, reject) => {
     resolve(data);
   });
 });
-
 foo.then(data => console.log(data));
 
 const bar = new MyPromise((resolve, reject) => {
