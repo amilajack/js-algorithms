@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/amilajack/algorithims#readme",
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
     "@babel/preset-flow": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
@@ -47,9 +47,9 @@
     "eslint-plugin-flowtype-errors": "^4.1.0",
     "flow-bin": "^0.109.0",
     "flow-typed": "^2.6.1",
-    "husky": "^3.0.8",
+    "husky": "^3.0.9",
     "jest-cli": "^24.9.0",
-    "yarn": "^1.19.0"
+    "yarn": "^1.19.1"
   },
   "engines": {
     "node": ">=8",
