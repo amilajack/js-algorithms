@@ -6,6 +6,7 @@ import FastMiddleShift, { SlowMiddleShift } from '../Sorting/MiddleShift';
 import QuickSort from '../Sorting/QuickSort';
 import HeapSort from '../Sorting/HeapSort';
 import SelectionSort from '../Sorting/SelectionSort';
+import BubbleSort from '../Sorting/BubbleSort';
 
 describe('Sorting()', () => {
   test('CountingSort()', () => {
@@ -76,5 +77,11 @@ describe('Sorting()', () => {
     expect(HeapSort([])).toEqual([]);
     expect(HeapSort([1])).toEqual([1]);
     expect(HeapSort([4, -2])).toEqual([-2, 4]);
+  });
+
+  test('BubbleSort()', () => {
+    expect(BubbleSort([1,4.5,6,9,7,12,32,24])).toEqual([ 1, 4.5, 6, 7, 9, 12, 24, 32 ]);
+    expect(BubbleSort([])).toEqual([]);
+    expect(BubbleSort([2, -4])).toEqual([-4, 2]);
   });
 });
