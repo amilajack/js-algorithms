@@ -80,7 +80,16 @@ describe('Sorting()', () => {
   });
 
   test('BubbleSort()', () => {
-    expect(BubbleSort([1,4.5,6,9,7,12,32,24])).toEqual([ 1, 4.5, 6, 7, 9, 12, 24, 32 ]);
+    expect(BubbleSort([1, 4.5, 6, 9, 7, 12, 32, 24])).toEqual([
+      1,
+      4.5,
+      6,
+      7,
+      9,
+      12,
+      24,
+      32
+    ]);
     expect(BubbleSort([])).toEqual([]);
     expect(BubbleSort([2, -4])).toEqual([-4, 2]);
   });
