@@ -19,10 +19,10 @@
 // [D, F, G, C, E];
 // [0, 1, 2, 3, 4];
 
-function swap(A, from, to) {
-  const tmp = A[from];
-  A[from] = A[to];
-  A[to] = tmp;
+function swap(array, from, to) {
+  const tmp = array[from];
+  array[from] = array[to];
+  array[to] = tmp;
 }
 
 function reorderArray(A, B) {
