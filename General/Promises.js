@@ -45,6 +45,22 @@ class MyPromise {
   }
 }
 
+export const race = (...promises) =>
+  new Promise((res, rej) => {
+    promises.forEach(p => p.then(res).catch(rej));
+  });
+
+export const all = (...promises) => {
+  const results = [];
+
+  const merged = promises.reduce(
+    (acc, p) => acc.then(() => p).then(r => results.push(r)),
+    Promise.resolve(null)
+  );
+
+  return merged.then(() => results);
+};
+
 // tests
 const foo = new MyPromise((resolve, reject) => {
   example(true, (error, data) => {

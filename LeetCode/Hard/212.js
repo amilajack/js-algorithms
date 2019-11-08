@@ -1,3 +1,9 @@
+// 212. Word Search II
+// Given a 2D board and a list of words from the dictionary, find all words in the board.
+// Each word must be constructed from letters of sequentially adjacent cell, where "adjacent"
+// cells are those horizontally or vertically neighboring. The same letter cell may not be used
+// more than once in a word.
+
 const findWordsAux = (board, trie, i, j, char, visited, ans) => {
   if (i < 0 || j < 0 || i >= board.length || j >= board[0].length) return;
   if (visited[i][j] === 1) return;
@@ -39,6 +45,8 @@ export default function findWords(board, words) {
   // build a trie
   const trie = createTrie(words);
   const ans = [];
+
+  // Create the visited matrix
   const visited = [];
   for (let i = 0; i < board.length; i++) {
     visited[i] = [];
@@ -46,11 +54,13 @@ export default function findWords(board, words) {
       visited[i][j] = 0;
     }
   }
+
   // Iterate over each position and call recursively
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {
       findWordsAux(board, trie, i, j, '', visited, ans);
     }
   }
+
   return Array.from(new Set(ans));
 }
