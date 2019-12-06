@@ -10,6 +10,9 @@ export function rateLimitV1(fn, ms) {
   };
 }
 
+/**
+ * Tail recurisive solution
+ */
 export default function rateLimit(fn, ms) {
   let isRL = false;
   const argsQueue = [];

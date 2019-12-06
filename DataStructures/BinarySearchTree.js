@@ -1,3 +1,5 @@
+/* eslint max-classes-per-file: off */
+
 // @flow
 class Node {
   data: number;

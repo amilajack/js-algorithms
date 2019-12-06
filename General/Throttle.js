@@ -1,12 +1,10 @@
 // Limiting the rate at which we execute a function.
 
 export default function throttle(func, limit) {
-  let inThrottle;
-  return function throttledFn() {
-    const args = arguments;
-    const context = this;
+  let inThrottle = false;
+  return function throttledFn(...args) {
     if (!inThrottle) {
-      func.apply(context, args);
+      func(...args);
       inThrottle = true;
       setTimeout(() => {
         inThrottle = false;

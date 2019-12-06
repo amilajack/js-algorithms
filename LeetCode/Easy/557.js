@@ -12,7 +12,7 @@
  * @param {string} s
  * @return {string}
  */
-const reverseWords = function(s) {
+export default function reverseWords(s) {
   return s
     .split(' ')
     .map(e =>
@@ -21,4 +21,4 @@ const reverseWords = function(s) {
         .join('')
     )
     .join(' ');
-};
+}

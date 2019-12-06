@@ -5,10 +5,8 @@
 
 export default function debounce(func, delay) {
   let inDebounce;
-  return function debouncedFn() {
-    const context = this;
-    const args = arguments;
+  return function debouncedFn(...args) {
     clearTimeout(inDebounce);
-    inDebounce = setTimeout(() => func.apply(context, args), delay);
+    inDebounce = setTimeout(() => func(...args), delay);
   };
 }

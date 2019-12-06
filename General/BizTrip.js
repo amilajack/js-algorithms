@@ -10,13 +10,12 @@ function bizTripSort(passes) {
     map.set(pass.from, pass.to);
   }
   const toSet = new Set(map.values());
-  const [start] = Array.from(map.entries()).find(([from, to]) => {
+  const [start] = Array.from(map.entries()).find(([from]) => {
     return !toSet.has(from);
   });
   let curr = start;
   for (let i = 0; i < passes.length; i++) {
     curr = map.get(start);
-    // console.log(curr)
   }
   return {
     start,
