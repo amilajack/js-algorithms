@@ -2,7 +2,7 @@ JS Algos
 ============
 A list of Computer Science concepts **solved** and **explained** in JavaScript (ES6)
 
-[![Build Status](https://travis-ci.org/amilajack/js-algorithms.svg?branch=master)](https://travis-ci.org/amilajack/js-algorithms)
+[![Build Status](https://dev.azure.com/amilajack/amilajack/_apis/build/status/amilajack.js-algorithms?branchName=master)](https://dev.azure.com/amilajack/amilajack/_build/latest?definitionId=18&branchName=master)
 
 # Getting Started
 
