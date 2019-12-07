@@ -19,7 +19,7 @@ export default function BubbleSort(numberArray: number[]): number[] {
       }
     }
     // after each round of inside loop, the largest element will fall to the bottom of the array.
-    length -= 1; 
+    length -= 1;
   } while (swapped);
   return numberArray;
 }

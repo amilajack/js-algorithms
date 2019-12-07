@@ -6,7 +6,7 @@
  * }
  */
 
-const verticalTraversalAux = (root, map, mat) => {
+const verticalTraversalAux = (root, map) => {
   if (!root) return;
   const queue = [];
   queue.push([root, 0]);
@@ -27,9 +27,9 @@ const verticalTraversalAux = (root, map, mat) => {
  * @param {TreeNode} root
  * @return {number[][]}
  */
-const verticalTraversal = function(root) {
+export default function verticalTraversal(root) {
   const map = new Map();
-  const mat = new Array().fill(new Array());
+  const mat = [];
   verticalTraversalAux(root, map, mat);
   const keys = Array.from(map.keys()).sort((a, b) => a - b);
   const res = [];
@@ -37,4 +37,4 @@ const verticalTraversal = function(root) {
     res.push(map.get(key));
   }
   return res;
-};
+}

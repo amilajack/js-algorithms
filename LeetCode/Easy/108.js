@@ -15,6 +15,7 @@
 //    -3   9
 //    /   /
 //  -10  5
+import { TreeNode } from '../globals';
 
 export default function sortedArrayToBST(nums) {
   if (nums.length === 0) return null;

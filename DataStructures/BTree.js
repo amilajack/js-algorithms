@@ -56,14 +56,14 @@ export default class BTree {
     return true;
   }
 
-  split(node: TreeNode) {
-    // If the node doesn't need to be split, abort
-    if (node.children.length < this.t) {
-    } else {
-      // Otherwise, Split
+  // split(node: TreeNode) {
+  //   // If the node doesn't need to be split, abort
+  //   if (node.children.length < this.t) {
+  //   } else {
+  //     // Otherwise, Split
 
-      // Find index of 'middle' key
-      const middleIndex = Math.ceil(node.keys.length / 2);
-    }
-  }
+  //     // Find index of 'middle' key
+  //     const middleIndex = Math.ceil(node.keys.length / 2);
+  //   }
+  // }
 }

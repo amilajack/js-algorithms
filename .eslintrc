@@ -5,6 +5,7 @@
     "class-methods-use-this": "off",
     "flowtype-errors/show-errors": "off",
     "import/no-extraneous-dependencies": "off",
+    "max-classes-per-file": "off",
     "no-continue": "off",
     "no-param-reassign": "off",
     "no-plusplus": "off",
@@ -12,6 +13,8 @@
     "no-use-before-define": "off",
     "no-underscore-dangle": "off",
     "no-mixed-operators": "off",
-    "no-restricted-syntax": "off"
+    "no-restricted-syntax": "off",
+    "jest/no-export": "off",
+    "jest/no-standalone-expect": "off"
   }
 }

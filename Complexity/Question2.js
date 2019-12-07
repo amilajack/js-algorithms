@@ -6,5 +6,6 @@ for (let i = n / 2; i <= n; i++) {
     k += n / 2;
   }
 }
+console.log(k, n);
 
 // ANSWER: O(nLogn)

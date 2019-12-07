@@ -6,7 +6,8 @@ function traverse(adj, startNode, endNode) {
   while (queue.length) {
     // Detect cycles
     if (visited.size === adj.size) return -1;
-    let { node, rate, parent } = queue.shift();
+    let { rate } = queue.shift();
+    const { node, parent, name } = queue.shift();
     if (visited.has(node)) continue;
     // use parent and current node to find rate
     const computedRate = adj.get(parent);

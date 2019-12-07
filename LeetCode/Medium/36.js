@@ -34,10 +34,10 @@ const validateSquare = (board, i, j) => {
   const jmin = j * 3;
   const jmax = jmin + 2;
   const set = new Set();
-  for (let i = imin; i <= imax; i++) {
-    for (let j = jmin; j <= jmax; j++) {
-      if (isNum(board[i][j]) && set.has(board[i][j])) return false;
-      set.add(board[i][j]);
+  for (let p = imin; p <= imax; p++) {
+    for (let k = jmin; k <= jmax; k++) {
+      if (isNum(board[p][k]) && set.has(board[p][k])) return false;
+      set.add(board[p][k]);
     }
   }
   return true;

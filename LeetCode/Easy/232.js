@@ -71,7 +71,7 @@ export default class StackQueue {
 /**
  * Initialize your data structure here.
  */
-class StackQueueFast {
+export class StackQueueFast {
   constructor() {
     this.tmpStack = [];
     this.stack = [];

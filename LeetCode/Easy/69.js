@@ -2,11 +2,11 @@
  * @param {number} x
  * @return {number}
  */
-const mySqrt = function(x) {
+export default function mySqrt(x) {
   if (x === 1) return 1;
   let min = 0;
-  let max = parseInt(x / 2);
-  let mid = parseInt((max + min) / 2);
+  let max = Number(x / 2);
+  let mid = Number((max + min) / 2);
   let ans;
   while (!ans) {
     if (mid ** 2 === x) {
@@ -19,8 +19,8 @@ const mySqrt = function(x) {
     }
     if (min === max) return min;
     if (min + 1 === max && min ** 2 < x && max ** 2 > x) return min;
-    if (mid === parseInt((max + min) / 2)) return mid;
-    mid = parseInt((max + min) / 2);
+    if (mid === Number((max + min) / 2)) return mid;
+    mid = Number((max + min) / 2);
   }
   return ans;
-};
+}

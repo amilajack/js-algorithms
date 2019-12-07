@@ -25,11 +25,11 @@ export default function RREF(A) {
       A[k][j] /= val;
     }
 
-    for (let i = 0; i < rows; i++) {
-      if (i === k) continue;
-      val = A[i][lead];
+    for (let z = 0; z < rows; z++) {
+      if (z === k) continue;
+      val = A[z][lead];
       for (let j = 0; j < columns; j++) {
-        A[i][j] -= val * A[k][j];
+        A[z][j] -= val * A[k][j];
       }
     }
     lead++;

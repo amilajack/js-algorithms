@@ -7,8 +7,7 @@
     "flow": "flow",
     "flow-typed": "flow-typed install",
     "lint": "eslint --cache --format=node_modules/eslint-formatter-pretty .",
-    "lint-fix": "yarn lint --fix; exit 0",
-    "postlint-fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.js'",
+    "lint-fix": "yarn lint --fix",
     "spec": "jest",
     "postinstall": "yarn flow-typed",
     "test": "yarn spec"

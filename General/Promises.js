@@ -28,14 +28,13 @@ class MyPromise {
     const resolve = val => {
       this.val = val;
       if (this.queue.length) {
-        const [success, failure] = this.queue.shift();
+        const [success] = this.queue.shift();
         success(this.val);
       }
     };
     const reject = err => {
-      this.err;
-      const [success, failure] = this.queue.shift();
-      failure(this.err);
+      const failure = this.queue.shift()[1];
+      failure(err);
     };
     fn(resolve, reject);
   }
@@ -46,8 +45,8 @@ class MyPromise {
 }
 
 export const race = (...promises) =>
-  new Promise((res, rej) => {
-    promises.forEach(p => p.then(res).catch(rej));
+  new Promise((resolve, reject) => {
+    promises.forEach(p => p.then(resolve).catch(reject));
   });
 
 export const all = (...promises) => {
@@ -62,16 +61,18 @@ export const all = (...promises) => {
 };
 
 // tests
-const foo = new MyPromise((resolve, reject) => {
+const foo = new MyPromise(resolve => {
   example(true, (error, data) => {
     resolve(data);
   });
 });
-foo.then(data => console.log(data));
+foo.then(data => console.log(data)).catch(console.log);
 
 const bar = new MyPromise((resolve, reject) => {
-  example(false, (error, data) => {
+  example(false, error => {
     reject(error);
   });
 });
-bar.then(data => console.log(data), () => console.log('failure'));
+bar
+  .then(data => console.log(data), () => console.log('failure'))
+  .catch(console.log);

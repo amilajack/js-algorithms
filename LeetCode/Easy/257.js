@@ -11,9 +11,9 @@ const getPaths = (root, paths, parent) => {
   if (!root.left && !root.right) paths.push(parent.join('->'));
 };
 
-const binaryTreePaths = function(root) {
+export default function binaryTreePaths(root) {
   const paths = [];
   const parent = [];
   getPaths(root, paths, parent);
   return paths;
-};
+}

@@ -1,6 +1,8 @@
 // Implement a throttler that executes an array of tasks. When the throttler
 // is passed a number, only execute that number of the tasks and passes the other tasks into a queue
 
+/* eslint promise/no-callback-in-promise: off */
+
 function promiseThrottle(tasks: Function<Promise<any>>, limit: number = 4) {
   const queue = [];
   let running = 0;

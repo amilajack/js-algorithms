@@ -10,25 +10,32 @@ export default function Node(value) {
   this.right = null;
 }
 
-Node.prototype.insert = function(value) {
+Node.prototype.insert = function insert(value) {
   if (value < this.value) {
     if (!this.left) {
-      return (this.left = new Node(value));
+      this.left = new Node(value);
+      return;
     }
     return this.left.insert(value);
   }
 
-  return this.right ? this.right.insert(value) : (this.right = new Node(value));
+  if (this.right) {
+    this.right.insert(value);
+  }
+
+  this.right = new Node(value);
+
+  return this.right;
 };
 
-Node.prototype.print = function() {
+Node.prototype.print = function print() {
   const leftstr = this.left ? `${this.left.print()}, ` : '';
   return leftstr + this.value + (this.right ? `, ${this.right.print()}` : '');
 };
 
 const root = new Node(0); // start with a node at 0
 
-Node.prototype.listify = function() {
+Node.prototype.listify = function listify() {
   const lists = [[this.value]];
   let nextQueue = [this.right, this.left];
 
