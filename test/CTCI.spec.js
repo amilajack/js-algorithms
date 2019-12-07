@@ -1,7 +1,7 @@
 import CheckHashAllUniqueChars from '../CTCI/ch1/1.1';
 import TreeDepthLists from '../CTCI/ch4/4.3';
 
-describe('CTCI', () => {
+describe.skip('CTCI', () => {
   describe('Ch. 1.1', () => {
     it('should assert that chars are unique', () => {
       expect(CheckHashAllUniqueChars('foo')).toEqual(false);
