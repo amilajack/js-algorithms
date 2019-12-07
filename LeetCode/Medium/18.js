@@ -24,6 +24,14 @@ function fourSumAux(arr, s, i, sum, sumSoFar, ans, set) {
 export default function fourSum(arr, s) {
   const ans = [];
   const set = new Set();
-  fourSumAux(arr.sort((a, b) => a - b), s, 0, 0, [], ans, set);
+  fourSumAux(
+    arr.sort((a, b) => a - b),
+    s,
+    0,
+    0,
+    [],
+    ans,
+    set
+  );
   return ans;
 }

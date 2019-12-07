@@ -11,16 +11,12 @@ import StairCaseCombinationsDP, {
 
 describe('Recursion', () => {
   test('Flatten', () => {
-    expect(Flatten([[1, 3, 4, 5], [13, 15, 41, 54]])).toEqual([
-      13,
-      15,
-      41,
-      54,
-      1,
-      3,
-      4,
-      5
-    ]);
+    expect(
+      Flatten([
+        [1, 3, 4, 5],
+        [13, 15, 41, 54]
+      ])
+    ).toEqual([13, 15, 41, 54, 1, 3, 4, 5]);
 
     expect(FlattenRecursive([1, [2]])).toEqual([1, 2]);
     expect(FlattenRecursive([1, [[[2]]]])).toEqual([1, 2]);
