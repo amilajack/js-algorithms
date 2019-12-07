@@ -1,8 +1,7 @@
 {
   "name": "js-algorithms",
-  "version": "1.0.0",
+  "author": "Amila Welihinda",
   "description": "A Repo of algorithms written in javascript and explained",
-  "main": "index.js",
   "scripts": {
     "flow": "flow",
     "flow-typed": "flow-typed install",
@@ -17,16 +16,6 @@
       "pre-commit": "yarn lint-fix"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amilajack/js-algorithims.git"
-  },
-  "author": "Amila Welihinda",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/amilajack/algorithims/issues"
-  },
-  "homepage": "https://github.com/amilajack/algorithims#readme",
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
