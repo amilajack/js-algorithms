@@ -5,7 +5,11 @@ const expect = require('expect');
 function shouldRun(code) {
   const stack = [];
   let strIsOpen = false;
-  const mappings = new Map([[')', '('], ['}', '{'], [']', '[']]);
+  const mappings = new Map([
+    [')', '('],
+    ['}', '{'],
+    [']', '[']
+  ]);
 
   const opening = new Set(mappings.values());
 

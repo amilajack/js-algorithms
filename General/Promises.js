@@ -74,5 +74,8 @@ const bar = new MyPromise((resolve, reject) => {
   });
 });
 bar
-  .then(data => console.log(data), () => console.log('failure'))
+  .then(
+    data => console.log(data),
+    () => console.log('failure')
+  )
   .catch(console.log);

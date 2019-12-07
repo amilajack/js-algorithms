@@ -35,7 +35,10 @@ class CustomEventEmitter {
       if (events.size === 1) {
         events.delete(event);
       } else {
-        events.set(event, events.get(event).filter(e => e !== this));
+        events.set(
+          event,
+          events.get(event).filter(e => e !== this)
+        );
       }
     }
     this.on(event, eventCb);
