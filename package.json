@@ -1,8 +1,7 @@
 {
-  "name": "js-algos",
-  "version": "1.0.0",
+  "name": "js-algorithms",
+  "author": "Amila Welihinda",
   "description": "A Repo of algorithms written in javascript and explained",
-  "main": "index.js",
   "scripts": {
     "flow": "flow",
     "flow-typed": "flow-typed install",
@@ -10,23 +9,13 @@
     "lint-fix": "yarn lint --fix",
     "spec": "jest",
     "postinstall": "yarn flow-typed",
-    "test": "yarn spec"
+    "test": "yarn lint && yarn spec"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint-fix"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amilajack/js-algorithims.git"
-  },
-  "author": "Amila Welihinda",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/amilajack/algorithims/issues"
-  },
-  "homepage": "https://github.com/amilajack/algorithims#readme",
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
@@ -54,5 +43,46 @@
   "engines": {
     "node": ">=8",
     "yarn": ">=1.16.0"
+  },
+  "eslintConfig": {
+    "extends": "bliss",
+    "rules": {
+      "consistent-return": "off",
+      "class-methods-use-this": "off",
+      "flowtype-errors/show-errors": "off",
+      "import/no-extraneous-dependencies": "off",
+      "max-classes-per-file": "off",
+      "no-continue": "off",
+      "no-param-reassign": "off",
+      "no-plusplus": "off",
+      "no-bitwise": "off",
+      "no-use-before-define": "off",
+      "no-underscore-dangle": "off",
+      "no-mixed-operators": "off",
+      "no-restricted-syntax": "off",
+      "jest/no-export": "off",
+      "jest/no-standalone-expect": "off"
+    }
+  },
+  "renovate": {
+    "extends": [
+      "bliss"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "@babel/preset-flow"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
   }
 }
