@@ -25,7 +25,7 @@
     "babel-jest": "^24.9.0",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
-    "eslint-config-bliss": "^4.5.0",
+    "eslint-config-bliss": "^4.6.0",
     "eslint-plugin-flowtype-errors": "^4.1.0",
     "eslint-plugin-prettier": "^3.1.1",
     "flow-bin": "^0.113.0",
