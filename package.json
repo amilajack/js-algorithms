@@ -11,8 +11,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-fix && yarn test"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["yarn lint-fix", "yarn test"],
+    "{*.json,.{babelrc,eslintrc,prettierrc,stylelintrc}}": [
+      "prettier --ignore-path .eslintignore --parser json --write"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -59,9 +65,7 @@
     }
   },
   "renovate": {
-    "extends": [
-      "bliss"
-    ]
+    "extends": ["bliss"]
   },
   "babel": {
     "presets": [
@@ -75,8 +79,6 @@
       ],
       "@babel/preset-flow"
     ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
+    "plugins": ["@babel/plugin-proposal-class-properties"]
   }
 }
