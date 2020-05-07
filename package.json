@@ -18,8 +18,7 @@
     "*.{js,jsx,ts,tsx}": ["yarn lint-fix", "yarn test"],
     "{*.json,.{babelrc,eslintrc,prettierrc,stylelintrc}}": [
       "prettier --ignore-path .eslintignore --parser json --write"
-    ],
-    "*.js": "eslint --cache --fix"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
