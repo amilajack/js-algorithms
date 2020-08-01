@@ -1,3 +1,6 @@
+// Levenshtein distance is a string metric for measuring the difference between two sequences.
+// Levenshtein distance may also be referred to as edit distance
+
 function getEmptyArray(N, M) {
   let arr = new Array(N);
   for (let i = 0; i < N; i++) {
@@ -10,6 +13,12 @@ function getEmptyArray(N, M) {
   return arr;
 }
 
+/**
+ * Get the Levenshtein distance of two strings
+ * @param  {String} str1 The first string
+ * @param  {String} str2 The second string
+ * @return {Number}      The Levenshtein distance of two input strings
+ */
 export default function LevenshteinDistance(str1, str2) {
   let dp = getEmptyArray(str1.length + 1, str2.length + 1);
 
