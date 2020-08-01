@@ -1,10 +1,9 @@
-import { expect } from 'chai';
 import Coins from '../DynamicProgramming/Coins';
 import LevenshteinDistance from '../DynamicProgramming/LevenshteinDistance';
 
 describe('DynamicProgramming', () => {
   test('Coins', () => {
-    expect(Coins(10)).equal(9);
+    expect(Coins(10)).toEqual(9);
   });
 
   test('LevenshteinDistance', () => {
@@ -27,7 +26,7 @@ describe('DynamicProgramming', () => {
     ];
 
     for (const test of testCase) {
-      expect(LevenshteinDistance(test.str1, test.str2)).equal(test.ans);
+      expect(LevenshteinDistance(test.str1, test.str2)).toEqual(test.ans);
     }
   });
 });
