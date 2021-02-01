@@ -33,7 +33,7 @@
     "eslint": "^6.8.0",
     "eslint-config-bliss": "^4.7.0",
     "eslint-plugin-flowtype-errors": "^4.4.0",
-    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "flow-bin": "^0.141.0",
     "husky": ">=4.3.0",
     "jest-cli": "^26.6.3",
