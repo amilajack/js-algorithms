@@ -41,7 +41,7 @@
     "yarn": "^1.21.0"
   },
   "engines": {
-    "node": ">=8",
+    "node": ">=v8.17.0",
     "yarn": ">=1.16.0"
   },
   "eslintConfig": {
