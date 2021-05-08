@@ -34,5 +34,5 @@ If this project is saving you (or your team) time, please consider supporting it
 ## Contributing
 * Requirements:
  * Time-space complexities of each method (insert, delete, access, etc)
-* Please feel free to contribute any design patters, algorithms, or other kinds of code
+* Please feel free to contribute any design patterns, algorithms, or other kinds of code
 * All contributions are welcome!
