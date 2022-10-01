@@ -1,5 +1,4 @@
 // @flow
-import { expect as chaiExpect } from 'chai';
 import BinarySearchTree from '../DataStructures/BinarySearchTree';
 import DoublyLinkedList from '../DataStructures/DoublyLinkedList';
 import Hash from '../DataStructures/Hash';
@@ -35,7 +34,7 @@ describe('DataStructures', () => {
   });
 
   test('Hash', () => {
-    chaiExpect(Hash('133')).to.be.a('number');
+    expect(typeof Hash('133')).toBe('number');
   });
 
   test('LinkedList', () => {
