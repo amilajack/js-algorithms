@@ -53,5 +53,4 @@ flow-typed
 .idea
 
 # npm
-package-lock.json
 npm-shrinkwrap.json

@@ -1,0 +1,17 @@
+name: test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+      - name: Install Node.js, NPM
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+      - name: npm install
+        run: npm ci
+      - name: npm test
+        run: npm test
