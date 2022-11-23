@@ -1,5 +1,4 @@
 // @flow
-import { expect as chaiExpect } from 'chai';
 import HasDupeChars from '../Strings/HasDupeChars';
 import StringPermutationsRecursive, {
   StringPermutationsRecursiveFactorial
@@ -29,7 +28,7 @@ describe('Strings', () => {
   });
 
   test('RandomString', () => {
-    chaiExpect(RandomString(10)).to.be.a('string');
+    expect(typeof RandomString(10)).toBe('string');
     expect(RandomString(10)).toHaveLength(10);
   });
 
