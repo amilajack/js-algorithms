@@ -1,5 +1,5 @@
-JS Algos
-============
+# JS Algos
+
 A list of Computer Science concepts **solved** and **explained** in JavaScript (ES6)
 
 [![Build Status](https://dev.azure.com/amilajack/amilajack/_apis/build/status/amilajack.js-algorithms?branchName=master)](https://dev.azure.com/amilajack/amilajack/_build/latest?definitionId=18&branchName=master)
@@ -10,13 +10,13 @@ A list of Computer Science concepts **solved** and **explained** in JavaScript (
 # Setup
 git clone https://github.com/amilajack/js-algorithms.git
 cd js-algorithms
-yarn
+npm install
 
 # Test
-yarn test
+npm test
 
 # Running individual files
-yarn global add @babel/cli
+npm global add @babel/cli
 # Running/testing files
 babel-node General/PrintKDistance.js
 ```
@@ -32,7 +32,8 @@ If this project is saving you (or your team) time, please consider supporting it
 </p>
 
 ## Contributing
-* Requirements:
- * Time-space complexities of each method (insert, delete, access, etc)
-* Please feel free to contribute any design patterns, algorithms, or other kinds of code
-* All contributions are welcome!
+
+- Requirements:
+- Time-space complexities of each method (insert, delete, access, etc)
+- Please feel free to contribute any design patterns, algorithms, or other kinds of code
+- All contributions are welcome!

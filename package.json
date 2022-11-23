@@ -5,9 +5,9 @@
   "scripts": {
     "flow": "flow",
     "lint": "eslint .",
-    "lint-fix": "yarn lint --fix",
+    "lint-fix": "npm run lint --fix",
     "spec": "jest",
-    "test": "yarn lint && yarn spec"
+    "test": "npm run lint && npm run spec"
   },
   "husky": {
     "hooks": {
@@ -16,8 +16,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn lint-fix",
-      "yarn test"
+      "npm run lint-fix",
+      "npm run test"
     ],
     "{*.json,.{babelrc,eslintrc,prettierrc,stylelintrc}}": [
       "prettier --ignore-path .eslintignore --parser json --write"
@@ -39,12 +39,11 @@
     "flow-bin": "^0.148.0",
     "husky": ">=4.3.8",
     "jest-cli": "^26.6.3",
-    "lint-staged": "^10.5.4",
-    "yarn": "^1.22.10"
+    "lint-staged": "^10.5.4"
   },
   "engines": {
     "node": ">=v8.17.0",
-    "yarn": ">=1.22.10"
+    "npm": ">=7"
   },
   "eslintConfig": {
     "extends": "bliss",
