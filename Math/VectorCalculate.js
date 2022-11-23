@@ -6,13 +6,13 @@ type num = number;
 
 type vector = {
   magnitude: num,
-  direction: num
+  direction: num,
 };
 
 type result = {
   xMag: num,
   yMag: num,
-  totalMag: num
+  totalMag: num,
 };
 
 export default function VectorCalculate(coords: vector[]): result {

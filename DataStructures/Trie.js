@@ -8,7 +8,7 @@ export default function PrefixTrie(words: Array<string>) {
       }
       tmp = tmp.get(char);
     }
-    tmp.set('END', null);
+    tmp.set("END", null);
   }
   return trie;
 }

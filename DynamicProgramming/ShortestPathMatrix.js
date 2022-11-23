@@ -39,8 +39,8 @@ export default function findN(grid) {
 }
 
 // Tests
-console.log(findN(['   ', ' ##', '  N']) === 4);
-console.log(findN(['N   ', ' ##', '   ']) === 0);
-console.log(findN([' ##', '###', '   N']) === Infinity);
-console.log(findN([' #N', ' # ', '   ']) === 6);
-console.log(findN(['      ', '# ##  ', '#     ', '# ####', '#   N#']) === 8);
+console.log(findN(["   ", " ##", "  N"]) === 4);
+console.log(findN(["N   ", " ##", "   "]) === 0);
+console.log(findN([" ##", "###", "   N"]) === Infinity);
+console.log(findN([" #N", " # ", "   "]) === 6);
+console.log(findN(["      ", "# ##  ", "#     ", "# ####", "#   N#"]) === 8);

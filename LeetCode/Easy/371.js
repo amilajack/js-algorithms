@@ -17,12 +17,12 @@ export default function SumTimelineMethod(first: num, second: num): num {
   while (_first.length !== 0) {
     // first is positive
     if (_first.length > 0 && first > 0 && negatives.length === 0) {
-      positives.push('-');
+      positives.push("-");
     } else if (first > 0 && negatives.length > 0) {
       negatives.splice(0, 1);
       // first is negative
     } else if (first < 0 && positives.length === 0) {
-      negatives.push('-');
+      negatives.push("-");
     } else if (first < 0 && positives.length > 0) {
       positives.splice(0, 1);
     }
@@ -31,12 +31,12 @@ export default function SumTimelineMethod(first: num, second: num): num {
 
   while (_second.length !== 0) {
     if (_second.length > 0 && second > 0 && negatives.length === 0) {
-      positives.push('-');
+      positives.push("-");
     } else if (second > 0 && negatives.length > 0) {
       negatives.splice(0, 1);
       // second is negative
     } else if (second < 0 && positives.length === 0) {
-      negatives.push('-');
+      negatives.push("-");
     } else if (second < 0 && positives.length > 0) {
       positives.splice(0, 1);
     }

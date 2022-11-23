@@ -40,5 +40,5 @@ export default function ZigZag(string: string, number: number): string {
     i++;
   }
 
-  return output.join('');
+  return output.join("");
 }

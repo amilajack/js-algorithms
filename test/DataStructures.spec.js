@@ -1,18 +1,18 @@
 // @flow
-import BinarySearchTree from '../DataStructures/BinarySearchTree';
-import DoublyLinkedList from '../DataStructures/DoublyLinkedList';
-import Hash from '../DataStructures/Hash';
-import LinkedList from '../DataStructures/LinkedList';
-import MaxHeap from '../DataStructures/MaxHeap';
-import HashMap from '../DataStructures/Map';
-import Queue from '../DataStructures/Queue';
-import DAG from '../DataStructures/DAG';
-import HashSet from '../DataStructures/Set';
-import Stack from '../DataStructures/Stack';
-import Tree from '../DataStructures/Tree';
+import BinarySearchTree from "../DataStructures/BinarySearchTree";
+import DoublyLinkedList from "../DataStructures/DoublyLinkedList";
+import Hash from "../DataStructures/Hash";
+import LinkedList from "../DataStructures/LinkedList";
+import MaxHeap from "../DataStructures/MaxHeap";
+import HashMap from "../DataStructures/Map";
+import Queue from "../DataStructures/Queue";
+import DAG from "../DataStructures/DAG";
+import HashSet from "../DataStructures/Set";
+import Stack from "../DataStructures/Stack";
+import Tree from "../DataStructures/Tree";
 
-describe('DataStructures', () => {
-  test('BinarySearchTree', () => {
+describe("DataStructures", () => {
+  test("BinarySearchTree", () => {
     const bTree = new BinarySearchTree([10, 2, 8, 9, 3]);
     bTree.add(11);
     bTree.toArray();
@@ -23,31 +23,31 @@ describe('DataStructures', () => {
     expect(bTreeTwo.items).toEqual([]);
   });
 
-  test('DoublyLinkedList', () => {
+  test("DoublyLinkedList", () => {
     const linkedList = new DoublyLinkedList();
-    linkedList.insert('soo');
-    linkedList.insert('doo');
+    linkedList.insert("soo");
+    linkedList.insert("doo");
 
     expect(linkedList.head.data).toEqual({});
-    expect(linkedList.head.next.data).toEqual('doo');
-    expect(linkedList.head.next.next.data).toEqual('soo');
+    expect(linkedList.head.next.data).toEqual("doo");
+    expect(linkedList.head.next.next.data).toEqual("soo");
   });
 
-  test('Hash', () => {
-    expect(typeof Hash('133')).toBe('number');
+  test("Hash", () => {
+    expect(typeof Hash("133")).toBe("number");
   });
 
-  test('LinkedList', () => {
+  test("LinkedList", () => {
     const linkedList = new LinkedList();
-    linkedList.insert('soo');
-    linkedList.insert('doo');
+    linkedList.insert("soo");
+    linkedList.insert("doo");
 
     expect(linkedList.head.data).toEqual({});
-    expect(linkedList.head.next.data).toEqual('doo');
-    expect(linkedList.head.next.next.data).toEqual('soo');
+    expect(linkedList.head.next.data).toEqual("doo");
+    expect(linkedList.head.next.next.data).toEqual("soo");
   });
 
-  test('MaxHeap', () => {
+  test("MaxHeap", () => {
     const maxHeap = new MaxHeap();
 
     maxHeap.insert(10);
@@ -67,56 +67,56 @@ describe('DataStructures', () => {
     expect(maxHeap2.get()).toEqual([744, 73, 16, 4, 2, 13]);
   });
 
-  test('Map', () => {
+  test("Map", () => {
     const MapOne = new HashMap();
 
-    MapOne.insert('some_random_key', 'some');
-    const generatedHashCodeInsert = Hash('some_random_key', MapOne.mapLength);
+    MapOne.insert("some_random_key", "some");
+    const generatedHashCodeInsert = Hash("some_random_key", MapOne.mapLength);
 
-    expect(MapOne.items[generatedHashCodeInsert]).toEqual('some');
-    expect(MapOne.all()).toEqual(['some']);
-    MapOne.insert('moo', 'foo');
-    expect(MapOne.all()).toEqual(['some', 'foo']);
-    expect(MapOne.get('moo')).toEqual('foo');
+    expect(MapOne.items[generatedHashCodeInsert]).toEqual("some");
+    expect(MapOne.all()).toEqual(["some"]);
+    MapOne.insert("moo", "foo");
+    expect(MapOne.all()).toEqual(["some", "foo"]);
+    expect(MapOne.get("moo")).toEqual("foo");
 
     // Assert remove
     const MapTwo = new HashMap();
 
-    MapTwo.insert('some_random_key', 'some');
-    expect(MapTwo.get('some_random_key')).toEqual('some');
+    MapTwo.insert("some_random_key", "some");
+    expect(MapTwo.get("some_random_key")).toEqual("some");
 
-    MapTwo.remove('some_random_key');
-    const generatedHashCodeDelete = Hash('some_random_key', MapTwo.mapLength);
+    MapTwo.remove("some_random_key");
+    const generatedHashCodeDelete = Hash("some_random_key", MapTwo.mapLength);
     expect(MapTwo.items[generatedHashCodeDelete]).toEqual(undefined);
   });
 
-  test('Set', () => {
+  test("Set", () => {
     // Assert insert
     const hashSet = new HashSet();
 
-    hashSet.add('some');
-    expect(hashSet.all()).toEqual(['some']);
-    hashSet.add('who');
-    expect(hashSet.all()).toEqual(['some', 'who']);
-    hashSet.remove('who');
-    expect(hashSet.all()).toEqual(['some']);
+    hashSet.add("some");
+    expect(hashSet.all()).toEqual(["some"]);
+    hashSet.add("who");
+    expect(hashSet.all()).toEqual(["some", "who"]);
+    hashSet.remove("who");
+    expect(hashSet.all()).toEqual(["some"]);
   });
 
-  test('Queue()', () => {
+  test("Queue()", () => {
     const queue = new Queue();
 
-    expect(queue.push('a')).toEqual(['a']);
-    expect(queue.push('b')).toEqual(['a', 'b']);
-    expect(queue.push('c')).toEqual(['a', 'b', 'c']);
+    expect(queue.push("a")).toEqual(["a"]);
+    expect(queue.push("b")).toEqual(["a", "b"]);
+    expect(queue.push("c")).toEqual(["a", "b", "c"]);
     expect(queue.size()).toEqual(3);
 
-    expect(queue.pop()).toEqual('a');
-    expect(queue.pop()).toEqual('b');
-    expect(queue.pop()).toEqual('c');
+    expect(queue.pop()).toEqual("a");
+    expect(queue.pop()).toEqual("b");
+    expect(queue.pop()).toEqual("c");
     expect(queue.size()).toEqual(0);
   });
 
-  test('DAG', () => {
+  test("DAG", () => {
     const dag = new DAG();
     dag.insert({ weight: 3, id: 0, children: [] });
     dag.insert({ weight: 3, id: 1, children: [] });
@@ -125,7 +125,7 @@ describe('DataStructures', () => {
       id: 2,
       parents: [0],
       children: [],
-      data: { foo: 'cow' }
+      data: { foo: "cow" },
     });
 
     expect(dag.breadthFirstSearch({ id: 2 })).toEqual({
@@ -133,21 +133,21 @@ describe('DataStructures', () => {
       id: 2,
       parents: [0],
       weight: 3,
-      data: { foo: 'cow' }
+      data: { foo: "cow" },
     });
     expect(dag.breadthFirstSearch({ id: 21 })).toEqual(false);
   });
 
-  test('Stack', () => {
-    const stack = new Stack(['a', 'b', 'c']);
-    expect(stack.push('d').items).toEqual(['a', 'b', 'c', 'd']);
+  test("Stack", () => {
+    const stack = new Stack(["a", "b", "c"]);
+    expect(stack.push("d").items).toEqual(["a", "b", "c", "d"]);
     stack.pop();
-    expect(stack.items).toEqual(['a', 'b', 'c']);
+    expect(stack.items).toEqual(["a", "b", "c"]);
   });
 
-  test('Tree', () => {
+  test("Tree", () => {
     const soo = new Tree();
-    const doo = soo.add(soo.root, 'value');
-    soo.add(doo, 'no');
+    const doo = soo.add(soo.root, "value");
+    soo.add(doo, "no");
   });
 });

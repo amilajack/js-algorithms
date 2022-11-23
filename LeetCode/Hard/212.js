@@ -10,7 +10,7 @@ const findWordsAux = (board, trie, i, j, char, visited, ans) => {
   if (!trie.has(board[i][j])) return;
   char += board[i][j];
   const child = trie.get(board[i][j]);
-  if (child.has('END')) {
+  if (child.has("END")) {
     ans.push(char);
   }
   visited[i][j] = 1;
@@ -21,7 +21,7 @@ const findWordsAux = (board, trie, i, j, char, visited, ans) => {
   visited[i][j] = 0;
 };
 
-const createTrie = words => {
+const createTrie = (words) => {
   const trie = new Map();
   for (const word of words) {
     let tmp = trie;
@@ -31,7 +31,7 @@ const createTrie = words => {
       }
       tmp = tmp.get(char);
     }
-    tmp.set('END', null);
+    tmp.set("END", null);
   }
   return trie;
 };
@@ -58,7 +58,7 @@ export default function findWords(board, words) {
   // Iterate over each position and call recursively
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {
-      findWordsAux(board, trie, i, j, '', visited, ans);
+      findWordsAux(board, trie, i, j, "", visited, ans);
     }
   }
 

@@ -1,5 +1,5 @@
 // @flow
-import MaxHeap from '../DataStructures/MaxHeap';
+import MaxHeap from "../DataStructures/MaxHeap";
 
 export default function HeapSort(items: Array<number>) {
   const heap = new MaxHeap();
@@ -7,7 +7,7 @@ export default function HeapSort(items: Array<number>) {
 
   // Insert every element in the node into the heap. Calling
   // insert() will maxHeapify()
-  items.forEach(item => {
+  items.forEach((item) => {
     heap.insert(item);
   });
 

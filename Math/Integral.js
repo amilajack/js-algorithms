@@ -19,12 +19,7 @@ export default function areaExact(coefs: num[], a: num, b: num): num {
   return addExp(integ(coefs), b) - addExp(integ(coefs), a);
 }
 
-export function areaNumerical(
-  coefs: num[],
-  delta: num = 1,
-  a: num,
-  b: num
-): num {
+export function areaNumerical(coefs: num[], delta: num, a: num, b: num): num {
   let sum = 0;
 
   for (let i = a; i < b; i += delta) {

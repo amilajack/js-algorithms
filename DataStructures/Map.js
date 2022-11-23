@@ -6,7 +6,7 @@
  * TODO: Bucket collision detection and handling
  * @flow
  */
-import Hash from './Hash';
+import Hash from "./Hash";
 
 function HashMap() {
   this.items = [];

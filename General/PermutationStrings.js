@@ -49,8 +49,8 @@ export function PermutationStringInPlace(
 ): boolean {
   if (first.length !== second.length) return false;
 
-  const _first = first.split('').sort();
-  const _second = second.split('').sort();
+  const _first = first.split("").sort();
+  const _second = second.split("").sort();
 
   for (let i = 0; i < _first.length; i++) {
     if (_first[i] !== _second[i]) return false;

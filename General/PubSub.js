@@ -23,7 +23,7 @@ class Publisher {
     return {
       remove: () => {
         this.remove(fn);
-      }
+      },
     };
   }
 
@@ -50,7 +50,7 @@ class Publisher {
 const publisher = new Publisher();
 const fn = (...args) => console.log.call(console, args);
 publisher.add(fn);
-publisher.fire('fire', true); // log foo
+publisher.fire("fire", true); // log foo
 publisher.fire(true); // log foo
 publisher.remove(fn);
 publisher.fire(); // noop

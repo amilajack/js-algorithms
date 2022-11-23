@@ -41,7 +41,7 @@ export default function majorityElement(nums) {
     }
   }
   // Filter any of the two numbers that do not occur more than len / 3 times
-  return [maj1, maj2].filter(e => {
+  return [maj1, maj2].filter((e) => {
     let i = 0;
     for (const num of nums) {
       if (num === e) {

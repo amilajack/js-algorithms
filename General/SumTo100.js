@@ -19,7 +19,7 @@
 
 function sumTo100Aux(n, digits, i, sumSoFar, res) {
   if (digits.length === 9) {
-    const a = digits.join('');
+    const a = digits.join("");
     if (Number(a) === n) {
       res.push(a);
     }

@@ -18,7 +18,7 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-import { ListNode } from '../globals';
+import { ListNode } from "../globals";
 
 export default function addTwoNumbers(l1, l2) {
   let carry = false;

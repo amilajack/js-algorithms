@@ -15,7 +15,7 @@ export function TreeNode(val: any) {
   this.left = this.right;
 }
 
-const isBalancedAux = node => {
+const isBalancedAux = (node) => {
   if (!node) return 0;
   const left = isBalancedAux(node.left);
   const right = isBalancedAux(node.right);

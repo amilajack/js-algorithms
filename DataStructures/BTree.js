@@ -35,7 +35,7 @@ export default class BTree {
       }
     }
 
-    return '';
+    return "";
   }
 
   insert(value: number, node = this.root): boolean {

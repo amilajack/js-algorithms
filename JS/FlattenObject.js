@@ -27,24 +27,24 @@
 // }
 
 const flattenDictionaryAux = (obj, parent, isRoot) => {
-  if (typeof obj !== 'object') {
+  if (typeof obj !== "object") {
     return { [parent]: obj };
   }
   let res = {};
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key) => {
     const val = obj[key];
-    let newParent = isRoot ? key : [parent, key].join('.');
-    if (key === '') {
+    let newParent = isRoot ? key : [parent, key].join(".");
+    if (key === "") {
       newParent = parent;
     }
     res = {
       ...res,
-      ...flattenDictionaryAux(val, newParent, key === '')
+      ...flattenDictionaryAux(val, newParent, key === ""),
     };
   });
   return res;
 };
 
 export default function flattenDictionary(dict) {
-  return flattenDictionaryAux(dict, '', true);
+  return flattenDictionaryAux(dict, "", true);
 }

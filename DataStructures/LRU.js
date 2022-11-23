@@ -48,7 +48,7 @@ class DLL {
 /**
  * @param {number} capacity
  */
-const LRUCache = function(capacity) {
+const LRUCache = function (capacity) {
   this.capacity = capacity;
   this.map = new Map();
   this.dll = new DLL();
@@ -58,7 +58,7 @@ const LRUCache = function(capacity) {
  * @param {number} key
  * @return {number}
  */
-LRUCache.prototype.get = function(key) {
+LRUCache.prototype.get = function (key) {
   if (!this.map.has(key)) return -1;
   const item = this.map.get(key);
   // move item to front of DLL
@@ -78,7 +78,7 @@ LRUCache.prototype.get = function(key) {
  * @param {number} value
  * @return {void}
  */
-LRUCache.prototype.put = function(key, value) {
+LRUCache.prototype.put = function (key, value) {
   // delete in doubly linked list
   if (this.dll.size === this.capacity) {
     this.map.delete(this.dll.tail.val);

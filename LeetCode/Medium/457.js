@@ -34,6 +34,6 @@ function CircularArrayLoop(nums: number[]): boolean {
   return false;
 }
 
-test('CircularArrayLoop()', () => {
+test("CircularArrayLoop()", () => {
   expect(CircularArrayLoop([2, -1, 1, 2, 2])).toBeInstanceOf(Array);
 });

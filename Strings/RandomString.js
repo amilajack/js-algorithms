@@ -2,16 +2,16 @@
  * A smal example that genrates a random string of letters and numbers
  * @flow
  */
-import randomNumber from '../Math/RandomNumber';
+import randomNumber from "../Math/RandomNumber";
 
 /**
  * Generate a random string
  */
 export default function RandomString(stringLength: number): string {
   const dictionary =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-  let generatedRandomString = '';
+  let generatedRandomString = "";
   let index;
 
   for (index = 0; index < stringLength; index++) {

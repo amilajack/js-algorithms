@@ -19,8 +19,6 @@ export default class DoublyLinkedList {
 
   tail: Node;
 
-  head: Node;
-
   integrity = new Set();
 
   constructor() {

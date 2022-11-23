@@ -81,7 +81,7 @@ function bfs(grid, target, iInit, jInit) {
   const visited = new Set();
   while (queue.length) {
     const [i, j, d] = queue.shift();
-    const key = [i, j].join('-');
+    const key = [i, j].join("-");
     if (visited.has(key)) continue;
     visited.add(key);
     if (i < 0 || j < 0 || i >= 4 || j >= 4) continue;
@@ -111,4 +111,4 @@ function entryTime(password, keypad) {
   return totalDist;
 }
 
-console.log(entryTime('15ebb', '0123456789abcdef'));
+console.log(entryTime("15ebb", "0123456789abcdef"));

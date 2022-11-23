@@ -24,7 +24,7 @@ function PrintKDistance(string) {
     }
   }
 
-  let str = '';
+  let str = "";
 
   const itr = 1000;
   let i = 0;
@@ -48,4 +48,4 @@ function PrintKDistance(string) {
   return str;
 }
 
-PrintKDistance('AAABBBCC');
+PrintKDistance("AAABBBCC");

@@ -14,8 +14,8 @@
  * @return true if one string is a permutaiton of the other
  */
 export function checkPermutationSlow(str1: string, str2: string) {
-  const arr1 = str1.split('').sort();
-  const arr2 = str2.split('').sort();
+  const arr1 = str1.split("").sort();
+  const arr2 = str2.split("").sort();
 
   if (arr1.length !== arr2.length) return false;
 

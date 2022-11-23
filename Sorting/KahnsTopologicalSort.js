@@ -17,7 +17,7 @@ export default function KahnsTopologicalSort(nodes) {
   }
 
   if (!indegrees.includes(0)) {
-    throw new Error('Cycle in graph');
+    throw new Error("Cycle in graph");
   }
 
   // Find all nodes of indegree 0 and add them to queue. These
@@ -41,7 +41,7 @@ export default function KahnsTopologicalSort(nodes) {
   }
 
   if (ordering.length !== nodes.length) {
-    throw new Error('Cycle in graph');
+    throw new Error("Cycle in graph");
   }
 
   return ordering;

@@ -26,13 +26,13 @@ function expandHelper(str, curr, i, res) {
     res.push(curr);
     return;
   }
-  if (str[i] === '{') {
+  if (str[i] === "{") {
     let j = i;
-    while (str[j] !== '}') {
+    while (str[j] !== "}") {
       j++;
     }
     for (let k = i + 1; k < j; k += 2) {
-      if (str[k] === ',') continue;
+      if (str[k] === ",") continue;
       expandHelper(str, curr + str[k], j + 1, res);
     }
   } else {
@@ -46,6 +46,6 @@ function expandHelper(str, curr, i, res) {
  */
 export default function expand(S) {
   const res = [];
-  expandHelper(S, '', 0, res);
+  expandHelper(S, "", 0, res);
   return res.sort();
 }

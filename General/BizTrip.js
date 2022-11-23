@@ -19,27 +19,27 @@ function bizTripSort(passes) {
   }
   return {
     start,
-    end: curr
+    end: curr,
   };
 }
 
 console.log(
   bizTripSort([
     {
-      from: 'IP',
-      to: 'NA'
+      from: "IP",
+      to: "NA",
     },
     {
-      from: 'CA',
-      to: 'WA'
+      from: "CA",
+      to: "WA",
     },
     {
-      from: 'BA',
-      to: 'BO'
+      from: "BA",
+      to: "BO",
     },
     {
-      from: 'WA',
-      to: 'BA'
-    }
+      from: "WA",
+      to: "BA",
+    },
   ])
 );

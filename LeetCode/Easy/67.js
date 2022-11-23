@@ -34,5 +34,5 @@ export default function addBinary(a, b) {
     carry = sum > 1 ? 1 : 0;
     ans.push(sum % 2);
   }
-  return ans.reverse().join('');
+  return ans.reverse().join("");
 }

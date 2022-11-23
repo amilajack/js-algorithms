@@ -36,6 +36,6 @@ const letterCasePermutationAux = (S, i, str, res) => {
  */
 export default function letterCasePermutation(S) {
   const res = [];
-  letterCasePermutationAux(S, 0, '', res);
+  letterCasePermutationAux(S, 0, "", res);
   return res;
 }

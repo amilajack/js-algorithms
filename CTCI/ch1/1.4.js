@@ -19,7 +19,7 @@ export default function palindromePermutation(str: string) {
   // for each character, use it as a key and icrment the value in a hash table
   // have a flag that allows only one character to appear once
   // check if all the values in the hash table === 2 or if at most one === 1
-  const newStr = str.replace(/ /g, '').toLowerCase();
+  const newStr = str.replace(/ /g, "").toLowerCase();
   const charCount = new Map();
   for (let i = 0; i < newStr.length; i++) {
     if (!charCount.get(newStr[i])) {

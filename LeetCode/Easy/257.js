@@ -8,7 +8,7 @@ const getPaths = (root, paths, parent) => {
   parent.push(root.val);
   if (root.left) getPaths(root.left, paths, parent);
   if (root.right) getPaths(root.right, paths, parent);
-  if (!root.left && !root.right) paths.push(parent.join('->'));
+  if (!root.left && !root.right) paths.push(parent.join("->"));
 };
 
 export default function binaryTreePaths(root) {

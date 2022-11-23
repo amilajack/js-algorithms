@@ -28,11 +28,11 @@ export default function PalindromeRecursive(string: string): boolean {
 export function PalindromeIterative(string: string): boolean {
   const _string = string
     .toLowerCase()
-    .replace(/ /g, '')
-    .replace(/,/g, '')
-    .replace(/'.'/g, '')
-    .replace(/:/g, '')
-    .split('');
+    .replace(/ /g, "")
+    .replace(/,/g, "")
+    .replace(/'.'/g, "")
+    .replace(/:/g, "")
+    .split("");
 
   // A word of only 1 character is already a palindrome, so we skip to check it
   while (_string.length > 1) {

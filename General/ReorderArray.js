@@ -34,7 +34,7 @@ function reorderArray(A, B) {
   return A;
 }
 
-const A = ['C', 'D', 'E', 'F', 'G'];
+const A = ["C", "D", "E", "F", "G"];
 const B = [3, 0, 4, 1, 2];
 
 console.log(reorderArray(A, B));

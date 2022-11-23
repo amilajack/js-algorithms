@@ -11,7 +11,7 @@
  * @return {boolean}
  */
 
-const isNum = n => n !== '.';
+const isNum = (n) => n !== ".";
 const validateRow = (board, row) => {
   const set = new Set();
   for (let i = 0; i < board.length; i++) {

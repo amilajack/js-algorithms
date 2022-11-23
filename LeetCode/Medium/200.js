@@ -25,8 +25,8 @@ function sink(grid, i, j) {
   if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length) {
     return 0;
   }
-  if (grid[i][j] === '0') return 0;
-  grid[i][j] = '0';
+  if (grid[i][j] === "0") return 0;
+  grid[i][j] = "0";
   sink(grid, i + 1, j);
   sink(grid, i - 1, j);
   sink(grid, i, j + 1);

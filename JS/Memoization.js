@@ -1,7 +1,7 @@
 export default function memoize(fn) {
   const memoTable = new Map();
   return function meoizedFn(...args) {
-    const key = args.join('-');
+    const key = args.join("-");
     if (memoTable.has(key)) return memoTable.get(key);
     const val = fn.apply(this, args);
     memoTable.set(key, val);

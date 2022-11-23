@@ -9,7 +9,7 @@
 
 function fourSumAux(arr, s, i, sum, sumSoFar, ans, set) {
   if (sumSoFar.length === 4 && sum === s) {
-    const hash = sumSoFar.join('-');
+    const hash = sumSoFar.join("-");
     if (set.has(hash)) return;
     set.add(hash);
     ans.push(sumSoFar);

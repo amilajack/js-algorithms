@@ -40,7 +40,7 @@ const merge = (left, right) => {
   return merged;
 };
 
-const mergeSort = arr => {
+const mergeSort = (arr) => {
   // console.log(arr)
   if (arr.length <= 1) return arr;
   const mid = Math.floor(arr.length / 2);

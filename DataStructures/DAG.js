@@ -1,5 +1,5 @@
 // @flow
-import Queue from './Queue';
+import Queue from "./Queue";
 
 export class Node {
   id: number;
@@ -58,7 +58,7 @@ export default class DAGAdjacencyList {
     }
 
     // Push the node's immediate children of the first node
-    this.adjacencyList[0].children.forEach(child =>
+    this.adjacencyList[0].children.forEach((child) =>
       queue.push(this.adjacencyList[child])
     );
 
@@ -69,7 +69,7 @@ export default class DAGAdjacencyList {
         return currentSearchNode;
       }
 
-      this.adjacencyList[currentSearchNode.id].children.forEach(child =>
+      this.adjacencyList[currentSearchNode.id].children.forEach((child) =>
         queue.push(this.adjacencyList[child])
       );
     }

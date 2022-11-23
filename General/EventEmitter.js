@@ -37,7 +37,7 @@ class CustomEventEmitter {
       } else {
         events.set(
           event,
-          events.get(event).filter(e => e !== this)
+          events.get(event).filter((e) => e !== this)
         );
       }
     }
@@ -50,6 +50,6 @@ class CustomEventEmitter {
 }
 
 const event = new CustomEventEmitter();
-event.once('foo', () => console.log('foo'));
-event.emit('foo');
-event.emit('foo');
+event.once("foo", () => console.log("foo"));
+event.emit("foo");
+event.emit("foo");

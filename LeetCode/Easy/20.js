@@ -34,11 +34,11 @@
 export default function isValid(s) {
   const stack = [];
   const map = new Map([
-    [')', '('],
-    ['}', '{'],
-    [']', '[']
+    [")", "("],
+    ["}", "{"],
+    ["]", "["],
   ]);
-  const closing = new Set([')', '}', ']']);
+  const closing = new Set([")", "}", "]"]);
   for (let i = 0; i < s.length; i++) {
     if (stack.length) {
       const top = stack[stack.length - 1];

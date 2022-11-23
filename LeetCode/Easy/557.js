@@ -14,11 +14,7 @@
  */
 export default function reverseWords(s) {
   return s
-    .split(' ')
-    .map(e =>
-      Array.from(e)
-        .reverse()
-        .join('')
-    )
-    .join(' ');
+    .split(" ")
+    .map((e) => Array.from(e).reverse().join(""))
+    .join(" ");
 }

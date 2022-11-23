@@ -29,8 +29,8 @@ Node.prototype.insert = function insert(value) {
 };
 
 Node.prototype.print = function print() {
-  const leftstr = this.left ? `${this.left.print()}, ` : '';
-  return leftstr + this.value + (this.right ? `, ${this.right.print()}` : '');
+  const leftstr = this.left ? `${this.left.print()}, ` : "";
+  return leftstr + this.value + (this.right ? `, ${this.right.print()}` : "");
 };
 
 const root = new Node(0); // start with a node at 0

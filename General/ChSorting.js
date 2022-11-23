@@ -13,7 +13,7 @@
 // neither are 'ch'
 
 function isCh(word, i) {
-  return i + 1 < word.length && word[i] === 'c' && word[i + 1] === 'h';
+  return i + 1 < word.length && word[i] === "c" && word[i + 1] === "h";
 }
 
 function compareTwoWords(a, b) {
@@ -26,8 +26,8 @@ function compareTwoWords(a, b) {
         j++;
         continue;
       }
-      if (aIsCh) return b[j] <= 'h' ? 1 : -1;
-      return a[i] <= 'h' ? -1 : 1;
+      if (aIsCh) return b[j] <= "h" ? 1 : -1;
+      return a[i] <= "h" ? -1 : 1;
     }
     if (a[i] === b[i]) {
       continue;

@@ -24,5 +24,5 @@ export default function addStrings(num1, num2) {
     sum %= 10;
     str.push(sum);
   }
-  return str.reverse().join('');
+  return str.reverse().join("");
 }

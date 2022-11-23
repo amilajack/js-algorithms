@@ -14,7 +14,7 @@ export default function SubString(
   start: num = 0,
   end: num = string.length
 ): str {
-  let substring = '';
+  let substring = "";
 
   for (let i = start; i < end + 1; i++) {
     substring += string[i];

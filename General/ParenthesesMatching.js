@@ -1,13 +1,13 @@
 // @flow
-import Stack from '../DataStructures/Stack';
+import Stack from "../DataStructures/Stack";
 
-const start = ['{', '(', '['];
-const endings = ['}', ')', ']'];
+const start = ["{", "(", "["];
+const endings = ["}", ")", "]"];
 
 const endingMappings = {
-  '}': '{',
-  ')': '(',
-  ']': '['
+  "}": "{",
+  ")": "(",
+  "]": "[",
 };
 
 export default function isBalanced(string: string): boolean {

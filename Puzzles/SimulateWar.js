@@ -3,7 +3,7 @@
 // each player has deck and scoringPile
 // each player take item from deck, compare, add to corrresponding scoringPile
 
-import shuffle from 'lodash/shuffle';
+import { shuffle } from "lodash";
 
 // if more than 2 players
 // need to change how we distribute cards
@@ -36,10 +36,10 @@ export default function simulateWar() {
     }
   }
   if (player1.scoringPile.length === player2.scoringPile.length) {
-    return console.log('tie');
+    return console.log("tie");
   }
   if (player1.scoringPile.length > player2.scoringPile.length) {
-    return console.log('player 1 won');
+    return console.log("player 1 won");
   }
-  return console.log('player2 won');
+  return console.log("player2 won");
 }

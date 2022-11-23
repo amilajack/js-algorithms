@@ -12,12 +12,12 @@ function printStrPerm(chars: Array<string>, string: string) {
 
   for (let i = 0; i < chars.length; i++) {
     printStrPerm(
-      chars.filter(e => e !== chars[i]),
+      chars.filter((e) => e !== chars[i]),
       string + chars[i]
     );
   }
 }
 
 export default function PrintStringPermutations(string: string) {
-  return printStrPerm(Array.from(string), '');
+  return printStrPerm(Array.from(string), "");
 }

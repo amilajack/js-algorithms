@@ -6,7 +6,7 @@
  *
  * @flow
  */
-import Hash from './Hash';
+import Hash from "./Hash";
 
 function HashSet() {
   this.items = [];
@@ -47,7 +47,7 @@ HashSet.prototype = {
    */
   all(): any[] {
     return this.items.filter((i: any): boolean => !!i); // eslint-disable-line
-  }
+  },
 };
 
 export default HashSet;
