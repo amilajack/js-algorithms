@@ -7,7 +7,7 @@
 export default function BubbleSort(arr) {
   return _bubblesort(arr, arr.length);
 }
-  
+
 function _bubblesort(arr, stopIndex) {
   if (stopIndex === 1) {
     return arr;
