@@ -2,7 +2,7 @@
 
 A list of Computer Science concepts **solved** and **explained** in JavaScript (ES6)
 
-[![Build Status](https://dev.azure.com/amilajack/amilajack/_apis/build/status/amilajack.js-algorithms?branchName=master)](https://dev.azure.com/amilajack/amilajack/_build/latest?definitionId=18&branchName=master)
+[![test](https://github.com/amilajack/js-algorithms/actions/workflows/test.yml/badge.svg)](https://github.com/amilajack/js-algorithms/actions/workflows/test.yml)
 
 # Getting Started
 
