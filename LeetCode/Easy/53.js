@@ -14,7 +14,7 @@
  * @param {number[]} nums
  * @return {number}
  */
- export default function maxSubArray(nums) {
+export default function maxSubArray(nums) {
   let maxSum = 0;
   let sum = 0;
   for (let i = 0; i < nums.length; i++) {
